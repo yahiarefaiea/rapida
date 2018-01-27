@@ -2,7 +2,9 @@
   "name": "rapid-environment",
   "version": "0.0.1",
   "description": "Rapid JavaScript development environment",
-  "scripts": {},
+  "scripts": {
+    "start": "babel-node scripts/server.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/nuotrons/RapidKit.git"
@@ -10,5 +12,11 @@
   "author": "Nuotron",
   "license": "MIT",
   "homepage": "https://github.com/nuotrons/RapidKit#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "express": "^4.16.2",
+    "nsp": "^3.1.0"
+  }
 }
