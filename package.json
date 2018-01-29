@@ -2,14 +2,14 @@
   "name": "rapid-environment",
   "version": "0.0.1",
   "description": "Rapid JavaScript development environment",
-  "main": "scripts/server.js",
+  "main": "server/application.js",
   "scripts": {
     "prestart": "npm-run-all --parallel message security",
-    "message": "babel-node scripts/message --color",
+    "message": "babel-node server/message --color",
     "security": "nsp check --color",
-    "start": "npm-run-all --parallel server eslint:watch",
-    "server": "nodemon scripts/server --exec babel-node --color",
-    "eslint": "esw scripts --color",
+    "start": "npm-run-all --parallel app eslint:watch",
+    "app": "nodemon server/application --exec babel-node --color",
+    "eslint": "esw server --color",
     "eslint:watch": "npm run eslint -- --watch"
   },
   "repository": {
@@ -34,6 +34,8 @@
     "nodemon": "^1.14.11",
     "npm-run-all": "^4.1.2",
     "nsp": "^3.1.0",
-    "pug": "^2.0.0-rc.4"
+    "pug": "^2.0.0-rc.4",
+    "pug-lint": "^2.5.0",
+    "pug-lint-config-clock": "^2.0.0"
   }
 }
