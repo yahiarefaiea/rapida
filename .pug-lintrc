@@ -1,0 +1,15 @@
+{
+  "extends": "clock",
+  "disallowAttributeConcatenation": true,
+  "disallowClassLiteralsBeforeIdLiterals": true,
+  "disallowHtmlText": true,
+  "disallowIdAttributeWithStaticValue": true,
+  "disallowIdLiterals": null,
+  "disallowLegacyMixinCall": true,
+  "disallowTagInterpolation": true,
+  "validateAttributeSeparator": {
+    "separator": " ",
+    "multiLineSeparator": "\n  "
+  },
+  "validateExtensions": null
+}

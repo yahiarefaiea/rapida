@@ -7,10 +7,14 @@
     "prestart": "npm-run-all --parallel message security",
     "message": "babel-node server/message --color",
     "security": "nsp check --color",
-    "start": "npm-run-all --parallel app eslint:watch",
-    "app": "nodemon server/application --exec babel-node --color",
+    "start": "npm-run-all --parallel application eslint-watch pug-lint-watch stylint-watch",
+    "application": "nodemon server/application --exec babel-node",
     "eslint": "esw server --color",
-    "eslint:watch": "npm run eslint -- --watch"
+    "eslint-watch": "npm run eslint -- --watch",
+    "pug-lint": "pug-lint source/pug",
+    "pug-lint-watch": "watch \"npm run pug-lint\" source/pug",
+    "stylint": "stylint source/stylus --color",
+    "stylint-watch": "watch \"npm run stylint\" source/stylus"
   },
   "repository": {
     "type": "git",
@@ -36,6 +40,8 @@
     "nsp": "^3.1.0",
     "pug": "^2.0.0-rc.4",
     "pug-lint": "^2.5.0",
-    "pug-lint-config-clock": "^2.0.0"
+    "pug-lint-config-clock": "^2.0.0",
+    "stylint": "^1.5.9",
+    "watch": "^1.0.2"
   }
 }
