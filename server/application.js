@@ -1,12 +1,14 @@
 import express from 'express';
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 
+app.use(express.static('public'));
+app.set('views', 'source/pug');
 app.set('view engine', 'pug');
 
 app.get('/book', function(req, res) {
-  res.render('../source/pug/book', { name: 'Lorem Ipsum', author: 'Sed Do' });
+  res.render('book', { name: 'Death of a dream', author: 'Paul Larosa' });
 });
 
 /* eslint-disable no-unused-vars */

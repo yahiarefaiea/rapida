@@ -9,7 +9,7 @@
     "security": "nsp check --color",
     "start": "npm-run-all --parallel application browser-sync eslint-watch pug-lint-watch stylint-watch",
     "application": "nodemon server/application --exec babel-node",
-    "browser-sync": "browser-sync start --proxy \"localhost:3000\" --port 3001 --files \"source\"",
+    "browser-sync": "browser-sync start --proxy \"localhost:3000\" --port 3001 --files \"source\" \"public\"",
     "eslint": "esw server --color",
     "eslint-watch": "npm run eslint -- --watch",
     "pug-lint": "pug-lint source/pug",
