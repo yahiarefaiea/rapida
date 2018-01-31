@@ -7,15 +7,15 @@
     "prestart": "run-p message security",
     "message": "babel-node server/message --color",
     "security": "nsp check --color",
-    "start": "run-p application browser-sync eslint-watch pug-lint-watch stylint-watch",
+    "start": "run-p application browser-sync eslint-watch stylint-watch pug-lint-watch",
     "application": "nodemon server/application --exec babel-node",
     "browser-sync": "browser-sync start --proxy \"localhost:3000\" --port 3001 --files \"source\" \"public\"",
     "eslint": "esw server --color",
     "eslint-watch": "npm run eslint -- --watch",
-    "pug-lint": "pug-lint source/pug",
-    "pug-lint-watch": "watch \"npm run pug-lint\" source/pug",
     "stylint": "stylint source/stylus --color",
-    "stylint-watch": "watch \"npm run stylint\" source/stylus"
+    "stylint-watch": "watch \"npm run stylint\" source/stylus",
+    "pug-lint": "pug-lint source/pug",
+    "pug-lint-watch": "watch \"npm run pug-lint\" source/pug"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,8 @@
   },
   "homepage": "https://github.com/nuotrons/RapidKit#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "mongoose": "^5.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
