@@ -6,7 +6,7 @@
   "disallowIdAttributeWithStaticValue": true,
   "disallowIdLiterals": null,
   "disallowLegacyMixinCall": true,
-  "disallowTagInterpolation": true,
+  "disallowTagInterpolation": null,
   "validateAttributeSeparator": {
     "separator": " ",
     "multiLineSeparator": "\n  "

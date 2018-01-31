@@ -4,18 +4,17 @@ const port = process.env.PORT || 3000;
 const app = express();
 
 app.use(express.static('public'));
+// app.use(express.static('storage'));
+
 app.set('views', 'source/pug');
 app.set('view engine', 'pug');
+
+app.get('/', function(req, res) {
+  res.redirect('/book');
+});
 
 app.get('/book', function(req, res) {
   res.render('book', { name: 'Death of a dream', author: 'Paul Larosa' });
 });
 
-/* eslint-disable no-unused-vars */
-app.listen(port, function(err) {
-  // if(err) {
-  //
-  // } else {
-  //
-  // }
-});
+app.listen(port);
