@@ -108,7 +108,6 @@
     "semi": [
       "warn",
       "never"
-<<<<<<< HEAD
     ],
     "space-before-blocks": "warn",
     "space-before-function-paren": [
@@ -130,8 +129,6 @@
     "template-curly-spacing": [
       "warn",
       "never"
-=======
->>>>>>> aa0d38228785b926675896da203df73c04105cb2
     ]
   }
 }
