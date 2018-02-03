@@ -4,18 +4,16 @@
   "description": "Rapid JavaScript development environment",
   "main": "bin/www",
   "scripts": {
-    "prestart": "run-p message security",
-    "message": "babel-node server/message --color",
-    "security": "nsp check --color",
-    "start": "run-p application browser-sync eslint-watch stylint-watch pug-lint-watch",
+    "prestart": "nsp check --color",
+    "start": "run-p application browserSync eslint:watch stylint:watch puglint:watch",
     "application": "nodemon bin/www --exec babel-node",
-    "browser-sync": "browser-sync start --proxy \"localhost:3000\" --port 3001 --files \"source\" \"public\"",
-    "eslint": "esw server --color",
-    "eslint-watch": "npm run eslint -- --watch",
-    "stylint": "stylint source/stylus --color",
-    "stylint-watch": "watch \"npm run stylint\" source/stylus",
-    "pug-lint": "pug-lint source/pug",
-    "pug-lint-watch": "watch \"npm run pug-lint\" source/pug"
+    "browserSync": "browser-sync start --proxy \"localhost:3000\" --port 3001 --files \"source\" \"public\"",
+    "eslint": "eslint application.js bin/www source --color",
+    "eslint:watch": "chokidar --initial \"application.js\" \"bin/www\" \"source/**/*.js\" -c \"npm run eslint\"",
+    "stylint": "stylint source --color",
+    "stylint:watch": "chokidar --initial \"source/**/*.styl\" -c \"npm run stylint\"",
+    "puglint": "pug-lint source",
+    "puglint:watch": "chokidar --initial \"source/**/*.pug\" -c \"npm run puglint\""
   },
   "repository": {
     "type": "git",
@@ -41,15 +39,14 @@
     "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.23.6",
     "chalk": "^2.3.0",
+    "chokidar-cli": "^1.2.0",
     "eslint": "^4.17.0",
-    "eslint-watch": "^3.1.3",
     "nodemon": "^1.14.11",
     "npm-run-all": "^4.1.2",
     "nsp": "^3.1.0",
     "pug": "^2.0.0-rc.4",
     "pug-lint": "^2.5.0",
     "pug-lint-config-clock": "^2.0.0",
-    "stylint": "^1.5.9",
-    "watch": "^1.0.2"
+    "stylint": "^1.5.9"
   }
 }
