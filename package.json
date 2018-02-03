@@ -2,13 +2,13 @@
   "name": "rapid-environment",
   "version": "0.0.1",
   "description": "Rapid JavaScript development environment",
-  "main": "server/application.js",
+  "main": "bin/www",
   "scripts": {
     "prestart": "run-p message security",
     "message": "babel-node server/message --color",
     "security": "nsp check --color",
     "start": "run-p application browser-sync eslint-watch stylint-watch pug-lint-watch",
-    "application": "nodemon server/application --exec babel-node",
+    "application": "nodemon bin/www --exec babel-node",
     "browser-sync": "browser-sync start --proxy \"localhost:3000\" --port 3001 --files \"source\" \"public\"",
     "eslint": "esw server --color",
     "eslint-watch": "npm run eslint -- --watch",
@@ -19,17 +19,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nuotrons/RapidKit.git"
+    "url": "git+https://github.com/nuotron/rapid-environment.git"
   },
   "author": "Nuotron <hello@nuotron.co>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nuotrons/RapidKit/issues"
+    "url": "https://github.com/nuotron/rapid-environment/issues"
   },
-  "homepage": "https://github.com/nuotrons/RapidKit#readme",
+  "homepage": "https://github.com/nuotron/rapid-environment#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "debug": "^3.1.0",
     "express": "^4.16.2",
-    "mongoose": "^5.0.2"
+    "mongoose": "^5.0.2",
+    "morgan": "^1.9.0",
+    "serve-favicon": "^2.4.5"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -37,7 +41,7 @@
     "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.23.6",
     "chalk": "^2.3.0",
-    "eslint": "^4.16.0",
+    "eslint": "^4.17.0",
     "eslint-watch": "^3.1.3",
     "nodemon": "^1.14.11",
     "npm-run-all": "^4.1.2",
