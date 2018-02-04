@@ -1,8 +1,8 @@
 import app from '../application'
-const debug = require('debug')('rapid-environment:server')
+import Debug from 'debug'
+const debug = Debug('rapid-environment:server')
 import http from 'http'
 
-/* -disable no-console */
 // get port from environment and store in Express
 const port = normalizePort(process.env.PORT || '3000')
 app.set('port', port)
