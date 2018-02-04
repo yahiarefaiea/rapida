@@ -6,12 +6,14 @@ import cookieParser from 'cookie-parser'
 // create an instance of express
 const app = express()
 
-// view engine setup
-app.set('views', 'source')
+// set view engine
 app.set('view engine', 'pug')
 
-// middlewares setup
-app.use('/storage', express.static('storage')) // todo: use a subdomain instead
+// use middlewares
+// todo: use a subdomain instead, like 'storage.nuotron.co'
+// and use it only if in production mode
+// otherwise, use it as a directory
+app.use('/storage', express.static('storage'))
 app.use(express.static('public'))
 app.use(favicon('storage/favicon.png'))
 app.use(morgan('dev'))
@@ -20,17 +22,18 @@ app.use(express.urlencoded({extended: true}))
 app.use(cookieParser())
 
 
-// our codes goes right here..
-const router = express.Router()
+// codes goes right here..
+// const router = express.Router()
+//
+// /* GET home page */
+// router.get('/', function(req, res, next) {
+//   res.send('Index!!')
+// })
+//
+// app.use('/router', router)
 
-/* GET home page */
-router.get('/', function(req, res, next) {
-  res.send('Index!!')
-})
 
-app.use('/router', router)
-
-
+/* eslint-disable no-unused-vars */
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   const err = new Error('Not Found')
@@ -46,7 +49,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500)
-  // res.render('error') // todo: create an error page
+  // todo: create an error page
   res.send('Something went wrong')
 })
 
