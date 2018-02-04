@@ -2,11 +2,19 @@ import express from 'express'
 import favicon from 'serve-favicon'
 import morgan from 'morgan'
 import cookieParser from 'cookie-parser'
+import mongoose from 'mongoose'
+
+// project imports
+import api from 'api/routes'
+
+// connect to the database
+const db = mongoose.connect('mongodb://localhost/library')
 
 // create an instance of express
 const app = express()
 
 // set view engine
+app.set('views', 'source')
 app.set('view engine', 'pug')
 
 // use middlewares
@@ -21,17 +29,9 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(cookieParser())
 
-
-// codes goes right here..
-// const router = express.Router()
-//
-// /* GET home page */
-// router.get('/', function(req, res, next) {
-//   res.send('Index!!')
-// })
-//
-// app.use('/router', router)
-
+// project middlewares
+// todo: use a subdomain instead
+app.use('/api', api)
 
 /* eslint-disable no-unused-vars */
 // catch 404 and forward to error handler
