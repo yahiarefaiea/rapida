@@ -5,7 +5,7 @@ import cookieParser from 'cookie-parser'
 import mongoose from 'mongoose'
 
 // project imports
-import api from 'api/routes'
+import api from './api/routes'
 
 // connect to the database
 const db = mongoose.connect('mongodb://localhost/library')
@@ -31,7 +31,7 @@ app.use(cookieParser())
 
 // project middlewares
 // todo: use a subdomain instead
-app.use('/api', api)
+app.use('/api', api())
 
 /* eslint-disable no-unused-vars */
 // catch 404 and forward to error handler

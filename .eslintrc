@@ -63,10 +63,6 @@
       "error",
       "never"
     ],
-    "func-style": [
-      "warn",
-      "declaration"
-    ],
     "function-paren-newline": [
       "warn",
       "consistent"
