@@ -6,7 +6,7 @@
   "scripts": {
     "prestart": "nsp check --color",
     "start": "run-p application browserSync eslint:watch stylint:watch puglint:watch",
-    "application": "nodemon bin/www --exec babel-node",
+    "application": "nodemon bin/www --exec babel-node --color",
     "browserSync": "browser-sync start --proxy \"localhost:3000\" --port 3001 --files \"source\" \"public\" --color",
     "eslint": "eslint application.js source api --color",
     "eslint:watch": "chokidar --initial \"application.js\" \"source/**/*.js\" \"api/**/*.js\" -c \"npm run eslint\"",

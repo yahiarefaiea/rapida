@@ -3,12 +3,21 @@ import favicon from 'serve-favicon'
 import morgan from 'morgan'
 import cookieParser from 'cookie-parser'
 import mongoose from 'mongoose'
+import chalk from 'chalk'
 
 // project imports
 import api from './api/routes'
 
+/* eslint-disable no-console */
 // connect to the database
-const db = mongoose.connect('mongodb://localhost/library')
+mongoose.connect('mongodb://localhost/library')
+const db = mongoose.connection
+db.on('error', function() {
+  console.log(chalk.red('Failed to connect to the database'))
+}).once('open', function() {
+  console.log(chalk.green('Successfully connected to the database'))
+})
+/* eslint-enable no-console */
 
 // create an instance of express
 const app = express()
