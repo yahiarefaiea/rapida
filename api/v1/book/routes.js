@@ -7,7 +7,9 @@ import bookController from './controller'
 const book = function() {
   const bookRouter = express.Router()
 
-  // codes goes here
+  // book routes
+  bookRouter.route('/')
+    .get(bookController.getAll)
 
   return bookRouter
 }
