@@ -13,6 +13,13 @@ module.exports = {
         return res.status(500).send(err)
       res.json(books)
     })
+  },
+  get: function(req, res) {
+    Book.findById(req.params.id, function(err, book) {
+      if(err)
+        return res.status(500).send(err)
+      res.json(book)
+    })
   }
   // todo: write other controllers here
 }
