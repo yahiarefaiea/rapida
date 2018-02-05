@@ -1,18 +1,13 @@
 import express from 'express'
 
+// book imports
+import bookController from './controller'
+
 // export function
 const book = function() {
   const bookRouter = express.Router()
 
-
-
-  // book routes
-  // bookRouter.route('/')
-  //   .get(function(req, res) {
-  //     res.send('book')
-  //   })
-
-
+  // codes goes here
 
   return bookRouter
 }
