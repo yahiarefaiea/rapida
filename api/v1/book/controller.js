@@ -1,9 +1,13 @@
 // book imports
-import bookModel from './model'
+import Book from './model'
 
 // export function
 module.exports = {
   getAll: function(req, res) {
-    res.send('Got books')
+    Book.find(function(err, books) {
+      if(err) return res.status(500).send(err)
+      res.json(books)
+    })
   }
+  // todo: write other controllers here
 }

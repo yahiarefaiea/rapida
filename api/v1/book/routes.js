@@ -10,6 +10,7 @@ const book = function() {
   // book routes
   bookRouter.route('/')
     .get(bookController.getAll)
+    // todo: write other routes here
 
   return bookRouter
 }

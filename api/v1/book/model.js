@@ -1,17 +1,13 @@
 import mongoose from 'mongoose'
 
 // export function
-const bookModel = new mongoose.Schema({
-  title: {
-    type: String
-  },
-  author: {
-    type: String
-  },
+const bookSchema = new mongoose.Schema({
+  title: String,
+  author: String,
   read: {
     type: Boolean,
     default: false
   }
 })
 
-module.exports = mongoose.model('book', bookModel)
+module.exports = mongoose.model('Book', bookSchema)
