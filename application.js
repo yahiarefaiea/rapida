@@ -31,7 +31,10 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(cookieParser())
 
-// other stuff goes here..
+// project middlewares
+app.use(subdomain('api', api()))
+app.use(subdomain('control', admin()))
+app.use('/', source())
 
 // catch 404 and forward to error handler
 /* eslint-disable no-unused-vars */
