@@ -43,7 +43,7 @@ app.use('/', source())
 // catch 404 and forward to error handler
 /* eslint-disable no-unused-vars */
 app.use(function(req, res, next) {
-  const err = new Error('Not Found')
+  const err = new Error('Nothing Found')
   err.status = 404
   next(err)
 })
@@ -56,6 +56,12 @@ app.use(function(err, req, res, next) {
 
   // redirect to the error page
   res.status(err.status || 500)
+  if(req.subdomains.includes('api'))
+    res.send('Nothing Found')
+  else if(req.subdomains.includes('control'))
+    res.redirect(`http://control.${config.url}/404`)
+  else
+    res.redirect(`http://${config.url}/404`)
 })
 
 module.exports = app

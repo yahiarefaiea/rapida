@@ -1,4 +1,3 @@
-import config from '../../bin/config'
 import express from 'express'
 
 // v1 imports
@@ -16,7 +15,7 @@ const v1 = function() {
   })
 
   v1Router.get('*', function(req, res) {
-    res.redirect(`http://${config.url()}`)
+    res.send('Nothing Found')
   })
 
   return v1Router

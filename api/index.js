@@ -1,4 +1,3 @@
-import config from '../bin/config'
 import subdomain from 'express-subdomain'
 import express from 'express'
 
@@ -13,7 +12,7 @@ const api = function() {
   apiRouter.use(subdomain('v1', v1()))
 
   apiRouter.get('*', function(req, res) {
-    res.redirect(`http://${config.url()}`)
+    res.send('Nothing Found')
   })
 
   return apiRouter

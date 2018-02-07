@@ -18,6 +18,10 @@ const admin = function() {
     res.send('You\'re in book!')
   })
 
+  adminRouter.get('/404', function(req, res) {
+    res.send('Admin 404')
+  })
+
   return adminRouter
 }
 

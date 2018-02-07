@@ -18,6 +18,10 @@ const source = function() {
     res.send('You\'re in Library!')
   })
 
+  sourceRouter.get('/404', function(req, res) {
+    res.send('Source 404')
+  })
+
   return sourceRouter
 }
 
