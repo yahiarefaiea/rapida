@@ -16,6 +16,7 @@ import source from './source'
 const app = express()
 
 // start message
+/* eslint-disable no-console */
 console.log(chalk.cyan(`Running in ${config.env} mode`))
 
 // connect to the database
@@ -26,6 +27,7 @@ db.on('error', function() {
 }).once('open', function() {
   console.log(chalk.green('Successfully connected to the database'))
 })
+/* eslint-enable no-console */
 
 // use middlewares
 app.use(morgan('dev'))

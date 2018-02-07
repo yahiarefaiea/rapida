@@ -12,11 +12,11 @@ module.exports = {
     return false
   },
   url: function() {
-    if(this.env() === 'development') return `${this.localhost}:${this.port()}`
-    else if(this.env() === 'production') return this.domain
+    if(this.env === 'development') return `${this.localhost}:${this.port()}`
+    else if(this.env === 'production') return this.domain
   },
   database: function() {
-    if(this.env() === 'development') return `mongodb://${this.localhost}/${this.db}`
-    else if(this.env() === 'production') return `mongodb://${this.domain}/${this.db}`
+    if(this.env === 'development') return `mongodb://${this.localhost}/${this.db}`
+    else if(this.env === 'production') return `mongodb://${this.domain}/${this.db}`
   }
 }
