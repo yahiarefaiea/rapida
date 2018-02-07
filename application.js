@@ -7,23 +7,36 @@ import mongoose from 'mongoose'
 import chalk from 'chalk'
 
 // project imports
-import api from './api'
-import admin from './admin'
-import source from './source'
+// import api from './api'
+// import admin from './admin'
+// import source from './source'
+
+// instance of express
+const app = express()
+
+// project variables
+const port = normalizePort(process.env.PORT || '3000')
+const localhost = 'local.dev'
+const domain = 'nuotron.co'
+const database = 'library'
+
+app.set('port', port)
+if(app.get('env') == 'development')
+  app.set('url', `${localhost}:${port}`)
+if(app.get('env') == 'production')
+  app.set('url', domain)
+
+// start message
+console.log(chalk.cyan(`Running in ${app.get('env')} mode..`) // eslint-disable-line no-console
 
 // connect to the database
-/* eslint-disable no-console */
-mongoose.connect('mongodb://local.dev/library')
+mongoose.connect(`mongodb://${localhost}/${database}`)
 const db = mongoose.connection
 db.on('error', function() {
-  console.log(chalk.red('Failed to connect to the database'))
+  console.log(chalk.red('Failed to connect to the database')) // eslint-disable-line no-console
 }).once('open', function() {
-  console.log(chalk.green('Successfully connected to the database'))
+  console.log(chalk.green('Successfully connected to the database')) // eslint-disable-line no-console
 })
-/* eslint-enable no-console */
-
-// create an instance of express
-const app = express()
 
 // use middlewares
 app.use(morgan('dev'))
@@ -32,12 +45,13 @@ app.use(express.urlencoded({extended: true}))
 app.use(cookieParser())
 
 // project middlewares
-app.use(subdomain('api', api()))
-app.use(subdomain('control', admin()))
-app.use('/', source())
+// app.use(subdomain('api', api()))
+// app.use(subdomain('control', admin()))
+// app.use('/', source())
+
+/* eslint-disable no-unused-vars */
 
 // catch 404 and forward to error handler
-/* eslint-disable no-unused-vars */
 app.use(function(req, res, next) {
   const err = new Error('Not Found')
   err.status = 404
@@ -50,8 +64,14 @@ app.use(function(err, req, res, next) {
   res.locals.message = err.message
   res.locals.error = req.app.get('env') === 'development' ? err : {}
 
-  // render the error page
+  // redirect to the error page
   res.status(err.status || 500)
+  // if(req.subdomains.includes('api'))
+  //   res.send('Error from api')
+  // else if(req.subdomains.includes('control'))
+  //   res.send('Error from control')
+  // else
+  //   res.send('Error from source')
 })
 
 module.exports = app
