@@ -15,6 +15,7 @@ const v1 = function() {
     res.redirect(`http://${config.url()}`)
   })
 
+  // todo: remove this test router
   v1Router.get('/book', function(req, res) {
     res.json({name: 'Brian'})
   })
