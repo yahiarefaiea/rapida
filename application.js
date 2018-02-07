@@ -15,24 +15,11 @@ import source from './source'
 // instance of express
 const app = express()
 
-// project variables
-app.set('localhost', config.localhost)
-app.set('domain', config.domain)
-app.set('port', config.port())
-
-if(app.get('env') === 'development') {
-  app.set('url', `${config.localhost}:${config.port()}`)
-  app.set('database', `mongodb://${config.localhost}/${config.database}`)
-} else if(app.get('env') === 'production') {
-  app.set('url', config.domain)
-  app.set('database', `mongodb://${config.domain}/${config.database}`)
-}
-
 // start message
-console.log(chalk.cyan(`Running in ${app.get('env')} mode`))
+console.log(chalk.cyan(`Running in ${config.env} mode`))
 
 // connect to the database
-mongoose.connect(app.get('database'))
+mongoose.connect(config.database())
 const db = mongoose.connection
 db.on('error', function() {
   console.log(chalk.red('Failed to connect to the database'))
@@ -51,9 +38,8 @@ app.use(subdomain('api', api()))
 app.use(subdomain('control', admin()))
 app.use('/', source())
 
-/* eslint-disable no-unused-vars */
-
 // catch 404 and forward to error handler
+/* eslint-disable no-unused-vars */
 app.use(function(req, res, next) {
   const err = new Error('Not Found')
   err.status = 404
@@ -64,7 +50,7 @@ app.use(function(req, res, next) {
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message
-  res.locals.error = req.app.get('env') === 'development' ? err : {}
+  res.locals.error = config.env === 'development' ? err : {}
 
   // redirect to the error page
   res.status(err.status || 500)
