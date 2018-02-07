@@ -15,17 +15,17 @@ const source = function() {
     res.send('You\'re in Source!')
   })
 
-  sourceRouter.get('/source', function(req, res) {
-    res.send('You\'re in source!')
-  })
+  // sourceRouter.get('/source', function(req, res) {
+  //   res.send('You\'re in source!')
+  // })
 
-  sourceRouter.get('/404', function(req, res) {
-    res.status(404).send('Source 404')
-  })
-
-  sourceRouter.get('*', function(req, res) {
-    res.redirect(`http://${config.url()}/404`)
-  })
+  // sourceRouter.get('/404', function(req, res) {
+  //   res.status(404).send('Source 404')
+  // })
+  //
+  // sourceRouter.get('*', function(req, res) {
+  //   res.redirect(`http://${config.url()}/404`)
+  // })
 
   return sourceRouter
 }

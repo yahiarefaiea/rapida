@@ -11,9 +11,9 @@ const api = function() {
   // api middlewares
   apiRouter.use(subdomain('v1', v1()))
 
-  apiRouter.get('*', function(req, res) {
-    res.status(500).send('Nothing to show')
-  })
+  // apiRouter.get('*', function(req, res) {
+  //   res.status(500).send('Nothing to show')
+  // })
 
   return apiRouter
 }
