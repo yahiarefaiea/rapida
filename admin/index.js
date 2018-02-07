@@ -1,20 +1,20 @@
 import express from 'express'
 
 // admin imports
-// import books from './books'
+// import book from './book'
 
 // export function
 const admin = function() {
   const adminRouter = express.Router()
 
   // admin middlewares
-  // adminRouter.use('/books', books())
+  // adminRouter.use('/book', book())
 
   adminRouter.get('/', function(req, res) {
     res.send('You\'re in Control!')
   })
-  adminRouter.get('/books', function(req, res) {
-    res.send('You\'re in Books!')
+  adminRouter.get('/book', function(req, res) {
+    res.send('You\'re in book!')
   })
 
   return adminRouter
