@@ -1,3 +1,4 @@
+import config from '../bin/config'
 import express from 'express'
 
 // source imports
@@ -14,12 +15,16 @@ const source = function() {
     res.send('You\'re in Source!')
   })
 
-  sourceRouter.get('/library', function(req, res) {
-    res.send('You\'re in Library!')
+  sourceRouter.get('/source', function(req, res) {
+    res.send('You\'re in source!')
   })
 
   sourceRouter.get('/404', function(req, res) {
     res.send('Source 404')
+  })
+
+  sourceRouter.get('*', function(req, res) {
+    res.status(404).redirect(`http://${config.url()}/404`)
   })
 
   return sourceRouter

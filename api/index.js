@@ -12,7 +12,7 @@ const api = function() {
   apiRouter.use(subdomain('v1', v1()))
 
   apiRouter.get('*', function(req, res) {
-    res.send('Nothing Found')
+    res.status(500).send('Nothing to show')
   })
 
   return apiRouter

@@ -15,7 +15,7 @@ const v1 = function() {
   })
 
   v1Router.get('*', function(req, res) {
-    res.send('Nothing Found')
+    res.status(500).send('Nothing to show')
   })
 
   return v1Router
