@@ -20,11 +20,11 @@ const source = function() {
   })
 
   sourceRouter.get('/404', function(req, res) {
-    res.send('Source 404')
+    res.status(404).send('Source 404')
   })
 
   sourceRouter.get('*', function(req, res) {
-    res.status(404).redirect(`http://${config.url()}/404`)
+    res.redirect(`http://${config.url()}/404`)
   })
 
   return sourceRouter

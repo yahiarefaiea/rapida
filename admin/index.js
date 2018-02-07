@@ -20,7 +20,7 @@ const admin = function() {
   })
 
   adminRouter.get('/404', function(req, res) {
-    res.send('Admin 404')
+    res.status(404).send('Admin 404')
   })
 
   adminRouter.get('*', function(req, res) {

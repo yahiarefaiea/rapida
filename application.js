@@ -56,12 +56,7 @@ app.use(function(err, req, res, next) {
 
   // redirect to the error page
   res.status(err.status || 500)
-  if(req.subdomains.includes('api'))
-    res.send('Nothing found')
-  else if(req.subdomains.includes('control'))
-    res.redirect(`http://control.${config.url()}/404`)
-  else
-    res.redirect(`http://${config.url()}/404`)
+  res.send('Nothing found')
 })
 
 module.exports = app
