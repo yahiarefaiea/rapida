@@ -12,7 +12,7 @@ const api = function() {
   // api middlewares
   apiRouter.use(subdomain('v1', v1()))
 
-  apiRouter.get('/', function(req, res) {
+  apiRouter.get('*', function(req, res) {
     res.redirect(`http://${config.url()}`)
   })
 

@@ -10,12 +10,10 @@ const source = function() {
   // source middlewares
   // sourceRouter.use('/library', library())
 
-  // todo: remove this test router
   sourceRouter.get('/', function(req, res) {
     res.send('You\'re in Source!')
   })
 
-  // todo: remove this test router
   sourceRouter.get('/library', function(req, res) {
     res.send('You\'re in Library!')
   })

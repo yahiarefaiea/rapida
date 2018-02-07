@@ -11,13 +11,12 @@ const v1 = function() {
   // v1 middlewares
   // v1Router.use('/book', book())
 
-  v1Router.get('/', function(req, res) {
-    res.redirect(`http://${config.url()}`)
-  })
-
-  // todo: remove this test router
   v1Router.get('/book', function(req, res) {
     res.json({name: 'Brian'})
+  })
+
+  v1Router.get('*', function(req, res) {
+    res.redirect(`http://${config.url()}`)
   })
 
   return v1Router
