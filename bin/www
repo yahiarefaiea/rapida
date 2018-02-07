@@ -3,11 +3,14 @@ import Debug from 'debug'
 const debug = Debug('rapid-environment:server')
 import http from 'http'
 
+// get port from Express
+const port = app.get('port')
+
 // create an HTTP server
 const server = http.createServer(app)
 
 // listen on provided port, on all network interfaces
-server.listen(app.get('port'))
+server.listen(port)
 server.on('error', onError)
 server.on('listening', onListening)
 
