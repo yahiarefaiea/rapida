@@ -1,0 +1,55 @@
+{
+  "name": "rapid-environment",
+  "version": "0.0.1",
+  "description": "Rapid JavaScript development environment",
+  "main": "bin/www",
+  "scripts": {
+    "prestart": "nsp check --color",
+    "start": "run-p application browserSync eslint:watch stylint:watch puglint:watch",
+    "application": "nodemon bin/www --exec babel-node --color",
+    "browserSync": "browser-sync start --proxy \"local.dev:3000\" --open \"external\" --host \"local.dev\" --port 3001 --files \"source\" \"admin\" \"public\" --color",
+    "eslint": "eslint *.js source admin api --color",
+    "eslint:watch": "chokidar --initial \"*.js\" \"source/**/*.js\" \"admin/**/*.js\" \"api/**/*.js\" -c \"npm run eslint\"",
+    "stylint": "stylint source admin --color",
+    "stylint:watch": "chokidar --initial \"source/**/*.styl\" \"admin/**/*.styl\" -c \"npm run stylint\"",
+    "puglint": "pug-lint source admin",
+    "puglint:watch": "chokidar --initial \"source/**/*.pug\" \"admin/**/*.pug\" -c \"npm run puglint\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuotron/rapid-environment.git"
+  },
+  "author": "Nuotron <hello@nuotron.co>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nuotron/rapid-environment/issues"
+  },
+  "homepage": "https://github.com/nuotron/rapid-environment#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.23.6",
+    "chalk": "^2.3.0",
+    "chokidar-cli": "^1.2.0",
+    "cookie-parser": "^1.4.3",
+    "debug": "^3.1.0",
+    "eslint": "^4.17.0",
+    "express": "^4.16.2",
+    "express-subdomain": "^1.0.5",
+    "kouto-swiss": "^1.1.0",
+    "mongoose": "^5.0.2",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.14.11",
+    "npm-run-all": "^4.1.2",
+    "nsp": "^3.1.0",
+    "pug": "^2.0.0-rc.4",
+    "pug-lint": "^2.5.0",
+    "pug-lint-config-clock": "^2.0.0",
+    "serve-favicon": "^2.4.5",
+    "stylint": "^1.5.9",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "webpack": "^3.10.0"
+  }
+}
