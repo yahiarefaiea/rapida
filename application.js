@@ -4,7 +4,7 @@ import express from 'express'
 import favicon from 'serve-favicon'
 import morgan from 'morgan'
 import cookieParser from 'cookie-parser'
-// import mongoose from 'mongoose'
+import mongoose from 'mongoose'
 import chalk from 'chalk'
 
 // project imports
@@ -20,13 +20,13 @@ const app = express()
 console.log(chalk.cyan(`Running in ${config.env} mode`))
 
 // connect to the database
-// mongoose.connect(config.database())
-// const db = mongoose.connection
-// db.on('error', function() {
-//   console.log(chalk.red('Failed to connect to the database'))
-// }).once('open', function() {
-//   console.log(chalk.green('Successfully connected to the database'))
-// })
+mongoose.connect(config.database())
+const db = mongoose.connection
+db.on('error', function() {
+  console.log(chalk.red('Failed to connect to the database'))
+}).once('open', function() {
+  console.log(chalk.green('Successfully connected to the database'))
+})
 /* eslint-enable no-console */
 
 // use middlewares
@@ -40,29 +40,6 @@ app.use(subdomain('api', api()))
 app.use(subdomain('control', admin()))
 app.use('/', client())
 
-// catch 404 and forward to error handler
-/* eslint-disable no-unused-vars */
-app.use(function(req, res, next) {
-  const err = new Error('Nothing found')
-  err.status = 404
-  next(err)
-})
-
-// error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message
-  res.locals.error = config.env === 'development' ? err : {}
-
-  // redirect to the error page
-  res.status(err.status || 500)
-  // res.send('Nothing found')
-  if(req.subdomains.includes('api'))
-    res.send('Error from api')
-  else if(req.subdomains.includes('control'))
-    res.send('Error from control')
-  else
-    res.send('Error')
-})
+// errors goes here
 
 module.exports = app
