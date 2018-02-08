@@ -10,7 +10,7 @@ import chalk from 'chalk'
 // project imports
 import api from './api'
 import admin from './admin'
-import source from './source'
+import client from './client'
 
 // instance of express
 const app = express()
@@ -38,7 +38,7 @@ app.use(cookieParser())
 // project middlewares
 app.use(subdomain('api', api()))
 app.use(subdomain('control', admin()))
-app.use('/', source())
+app.use('/', client())
 
 // catch 404 and forward to error handler
 /* eslint-disable no-unused-vars */
