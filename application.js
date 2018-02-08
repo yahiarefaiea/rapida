@@ -40,6 +40,6 @@ app.use(subdomain('api', api()))
 app.use(subdomain('control', admin()))
 app.use('/', client())
 
-// errors goes here
+// error handler
 
 module.exports = app
