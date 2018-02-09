@@ -1,4 +1,5 @@
 import config from './bin/config'
+import Errors from './bin/errors'
 import subdomain from 'express-subdomain'
 import express from 'express'
 import favicon from 'serve-favicon'
@@ -42,6 +43,21 @@ app.use(cookieParser())
 // app.use(subdomain('control', admin()))
 // app.use('/', client())
 
+app.get('/book', function(req, res) {
+  res.send('book')
+})
+
+// catch 404
+app.use(function(req, res, next) {
+  next(new Errors.NotFound())
+})
+
 // error handler
+app.use(function(err, req, res, next) {
+  if(err && err.statusCode)
+    res.status(err.statusCode).send(`${err.statusCode} ${err.message}`)
+  else
+    next(err)
+})
 
 module.exports = app
