@@ -9,9 +9,9 @@ import mongoose from 'mongoose'
 import chalk from 'chalk'
 
 // project imports
-// import api from './api'
-// import admin from './admin'
-// import client from './client'
+import api from './api'
+import admin from './admin'
+import client from './client'
 
 // instance of express
 const app = express()
@@ -39,25 +39,19 @@ app.use(express.urlencoded({extended: true}))
 app.use(cookieParser())
 
 // project middlewares
-// app.use(subdomain('api', api()))
-// app.use(subdomain('control', admin()))
-// app.use('/', client())
-
-app.get('/book', function(req, res) {
-  res.send('book')
-})
-
-// catch 404
-app.use(function(req, res, next) {
-  next(new Errors.NotFound())
-})
+app.use(subdomain('api', api()))
+app.use(subdomain('control', admin()))
+app.use('/', client())
 
 // error handler
 app.use(function(err, req, res, next) {
-  if(err && err.statusCode)
+  if(err && err.statusCode) {
+    if(req.subdomains.includes('api'))
+      new Errors.Unauthorized()
+    else
+      new Errors.NotFound()
     res.status(err.statusCode).send(`${err.statusCode} ${err.message}`)
-  else
-    next(err)
+  } else next(err)
 })
 
 module.exports = app
