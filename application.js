@@ -43,15 +43,4 @@ app.use(subdomain('api', api()))
 app.use(subdomain('control', admin()))
 app.use('/', client())
 
-// error handler
-app.use(function(err, req, res, next) {
-  if(err && err.statusCode) {
-    if(req.subdomains.includes('api'))
-      new Errors.Unauthorized()
-    else
-      new Errors.NotFound()
-    res.status(err.statusCode).send(`${err.statusCode} ${err.message}`)
-  } else next(err)
-})
-
 module.exports = app
