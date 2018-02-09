@@ -5,41 +5,30 @@ class Err extends Error {
   }
 }
 
-class BadRequest extends Err {
-  constructor() {
-    super('Bad Request', 400)
-  }
-}
-
-class Unauthorized extends Err {
-  constructor() {
-    super('Unauthorized Access', 401)
-  }
-}
-
-class Forbidden extends Err {
-  constructor() {
-    super('Forbidden', 403)
-  }
-}
-
-class NotFound extends Err {
-  constructor() {
-    super('Not Found', 404)
-  }
-}
-
-class InternalServerError extends Err {
-  constructor() {
-    super('Internal Server Error', 500)
-  }
-}
-
 module.exports = {
-  Err,
-  BadRequest,
-  Unauthorized,
-  Forbidden,
-  NotFound,
-  InternalServerError
+  BadRequest: class BadRequest extends Err {
+    constructor(message = 'Bad Request') {
+      super(message, 400)
+    }
+  },
+  Unauthorized: class Unauthorized extends Err {
+    constructor(message = 'Unauthorized Access') {
+      super(message, 401)
+    }
+  },
+  Forbidden: class Forbidden extends Err {
+    constructor(message = 'Forbidden') {
+      super(message, 403)
+    }
+  },
+  NotFound: class NotFound extends Err {
+    constructor(message = 'Not Found') {
+      super(message, 404)
+    }
+  },
+  InternalServerError: class InternalServerError extends Err {
+    constructor(message = 'Internal Server Error') {
+      super(message, 500)
+    }
+  }
 }
