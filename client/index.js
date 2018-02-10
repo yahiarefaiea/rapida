@@ -7,7 +7,6 @@ const router = express.Router()
 module.exports = function() {
   return router
     // router middlewares
-    .use(express.static('public'))
     .get('/', function(req, res) {
       res.send('Homepage')
     })
@@ -23,7 +22,7 @@ module.exports = function() {
       const data = {
         status: err.statusCode,
         message: err.message,
-        title: `${this.status} ${this.message}`
+        title: `${err.statusCode} ${err.message}`
       }
       if(err && err.statusCode)
         res.status(err.statusCode).render('client/error', data)
