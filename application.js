@@ -8,8 +8,8 @@ import mongoose from 'mongoose'
 import chalk from 'chalk'
 
 // project imports
-// import api from './api'
-// import admin from './admin'
+import api from './api'
+import admin from './admin'
 import client from './client'
 
 // instance of express
@@ -29,6 +29,9 @@ db.on('error', function() {
 })
 /* eslint-enable no-console */
 
+// set view engine
+app.set('view engine', 'pug')
+
 // use middlewares
 app.use(subdomain('storage', express.static('storage')))
 app.use(favicon('storage/favicon.png'))
@@ -38,8 +41,8 @@ app.use(express.urlencoded({extended: true}))
 app.use(cookieParser())
 
 // project middlewares
-// app.use(subdomain('api', api()))
-// app.use(subdomain('control', admin()))
+app.use(subdomain('api', api()))
+app.use(subdomain('control', admin()))
 app.use('/', client())
 
 module.exports = app
