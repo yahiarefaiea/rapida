@@ -3,10 +3,15 @@ import Errors from '../bin/errors'
 import express from 'express'
 const router = express.Router()
 
+// router imports
+// import library from './library'
+
 // export function
 module.exports = function() {
   return router
     // router middlewares
+    // .use('/library', library())
+
     .get('/', function(req, res) {
       res.send('Homepage')
     })
