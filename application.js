@@ -8,6 +8,7 @@ import mongoose from 'mongoose'
 import chalk from 'chalk'
 
 // project imports
+import storage from './storage'
 import api from './api'
 import admin from './admin'
 import client from './client'
@@ -34,7 +35,7 @@ app.set('views', '')
 app.set('view engine', 'pug')
 
 // use middlewares
-app.use(subdomain('storage', express.static('storage')))
+app.use(subdomain('storage', storage()))
 app.use(favicon('storage/favicon.png'))
 app.use(morgan('dev'))
 app.use(express.json())
