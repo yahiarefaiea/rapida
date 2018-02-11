@@ -1,5 +1,4 @@
 // api v1 router
-// import Errors from '../bin/errors'
 import express from 'express'
 const router = express.Router()
 
