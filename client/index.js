@@ -12,13 +12,6 @@ module.exports = function() {
     // router middlewares
     // .use('/library', library())
 
-    .get('/', function(req, res) {
-      res.send('Homepage')
-    })
-    .get('/library', function(req, res) {
-      res.send('Library')
-    })
-
     // error handler
     .use(function(req, res, next) {
       next(new Errors.NotFound())
