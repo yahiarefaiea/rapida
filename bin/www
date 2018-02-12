@@ -5,7 +5,7 @@ const debug = Debug('rapid-environment:server')
 import http from 'http'
 
 // get port from Express
-const port = config.port()
+const port = config.port
 
 // create an HTTP server
 const server = http.createServer(app)
