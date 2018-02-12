@@ -11,8 +11,8 @@ module.exports = {
     if(port >= 0) return port
     return false
   },
-  url: function() {
-    if(this.env === 'development') return `${this.localhost}:${this.port()}`
+  host: function() {
+    if(this.env === 'development') return `${this.localhost}`
     else if(this.env === 'production') return this.domain
   },
   database: function() {
