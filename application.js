@@ -1,6 +1,7 @@
 import config from './bin/config'
 import subdomain from 'express-subdomain'
 import express from 'express'
+import compression from 'compression'
 import favicon from 'serve-favicon'
 import morgan from 'morgan'
 import cookieParser from 'cookie-parser'
@@ -37,6 +38,7 @@ app.set('view engine', 'pug')
 // use middlewares
 app.use(subdomain('storage', storage()))
 app.use(favicon('storage/favicon.png'))
+app.use(compression())
 app.use(morgan('dev'))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
