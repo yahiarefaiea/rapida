@@ -1,7 +1,7 @@
 // api router
-import Errors from '../bin/errors'
 import subdomain from 'express-subdomain'
 import express from 'express'
+import errHandle from 'rapid-error-handler'
 const router = express.Router()
 
 // router imports
@@ -15,7 +15,7 @@ module.exports = function() {
 
     // error handler
     .use(function(req, res, next) {
-      next(new Errors.Forbidden())
+      next(new errHandle.Forbidden())
     })
     .use(function(err, req, res, next) {
       if(err && err.statusCode)

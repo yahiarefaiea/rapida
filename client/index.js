@@ -1,6 +1,6 @@
 // client router
-import Errors from '../bin/errors'
 import express from 'express'
+import errHandle from 'rapid-error-handler'
 const router = express.Router()
 
 // router imports
@@ -14,7 +14,7 @@ module.exports = function() {
 
     // error handler
     .use(function(req, res, next) {
-      next(new Errors.NotFound())
+      next(new errHandle.NotFound())
     })
     .use(function(err, req, res, next) {
       const data = {
