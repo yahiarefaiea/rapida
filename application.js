@@ -1,6 +1,11 @@
 import config from './bin/config'
 import subdomain from 'express-subdomain'
 import express from 'express'
+import favicon from 'serve-favicon'
+import compression from 'compression'
+import morgan from 'morgan'
+import bodyParser from 'body-parser'
+import cookieParser from 'cookie-parser'
 import mongoose from 'mongoose'
 import chalk from 'chalk'
 
@@ -33,12 +38,12 @@ app.set('view engine', 'pug')
 
 // use middlewares
 app.use(subdomain('storage', storage()))
-app.use(express.favicon('storage/favicon.png'))
-app.use(express.compress())
-app.use(express.logger('dev'))
-app.use(express.json())
-app.use(express.urlencoded({extended: true}))
-app.use(express.cookieParser())
+app.use(favicon('storage/favicon.png'))
+app.use(compression())
+app.use(morgan('dev'))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(cookieParser())
 
 // project middlewares
 app.use(subdomain('api', api()))
