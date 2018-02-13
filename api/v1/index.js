@@ -8,6 +8,6 @@ import book from './book'
 // export function
 module.exports = function() {
   return router
-  // router middlewares
-  .use('/book', book())
+    // router middlewares
+    .use('/book', book())
 }
