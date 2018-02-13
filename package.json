@@ -1,7 +1,7 @@
 {
   "name": "rapid-error-handler",
   "version": "0.0.1",
-  "description": "Error handling made easy",
+  "description": "Error handling made easier",
   "main": "index.js",
   "repository": {
     "type": "git",
