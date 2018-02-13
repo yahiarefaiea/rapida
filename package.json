@@ -6,7 +6,9 @@
   "scripts": {
     "prestart": "nsp check --color",
     "start": "run-p application eslint:watch stylint:watch puglint:watch",
+    "start:prod": "cross-env NODE_ENV=production npm run application:prod",
     "application": "nodemon bin/www --exec babel-node --color",
+    "application:prod": "babel-node bin/www --color",
     "eslint": "eslint *.js client admin api storage/index.js --color",
     "eslint:watch": "chokidar --initial --silent \"*.js\" \"client/**/*.js\" \"admin/**/*.js\" \"api/**/*.js\" \"storage/index.js\" -c \"npm run eslint\"",
     "stylint": "stylint client admin --color",
