@@ -1,5 +1,5 @@
-import Book from './model'
 import errHandle from 'rapid-error-handler'
+import Book from './model'
 
 // export function
 module.exports = {
@@ -9,6 +9,11 @@ module.exports = {
 
   // post new item
   post: function(req, res, next) {
+    const book = new Book(req.body)
+
+    book.save(function(err) {
+      handler(err, res, next, 201, book)
+    })
   },
 
   // find one item
@@ -29,7 +34,7 @@ module.exports = {
 }
 
 // handler function
-// function handler(err, req, res, next, status, msg) {
-//   if(err) next(new Errors.BadRequest(err))
-//   else res.status(status).send(msg)
-// }
+function handler(err, res, next, status, message) {
+  if(err) next(new errHandle.BadRequest(err))
+  else res.status(status).send(message)
+}
