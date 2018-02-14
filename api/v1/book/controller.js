@@ -5,6 +5,13 @@ import Book from './model'
 module.exports = {
   // get all items
   getAll: function(req, res, next) {
+    const query = {}
+    if(req.query.read)
+      query.read = req.query.read
+
+    Book.find(query, function(err, books) {
+      handler(err, res, next, books)
+    })
   },
 
   // post new item
@@ -12,7 +19,7 @@ module.exports = {
     const book = new Book(req.body)
 
     book.save(function(err) {
-      handler(err, res, next, 201, book)
+      handler(err, res, next, book, 201)
     })
   },
 
@@ -34,7 +41,7 @@ module.exports = {
 }
 
 // handler function
-function handler(err, res, next, status, message) {
+function handler(err, res, next, message, status = 200) {
   if(err) next(new errHandle.BadRequest(err))
   else res.status(status).send(message)
 }
