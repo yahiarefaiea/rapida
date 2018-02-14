@@ -1,7 +1,7 @@
 import config from './config'
 import app from '../application'
 import Debug from 'debug'
-const debug = Debug('rapid-environment:server')
+const debug = Debug(`${config.project}:server`)
 import http from 'http'
 import browserSync from 'browser-sync'
 
