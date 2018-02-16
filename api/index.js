@@ -19,7 +19,7 @@ module.exports = function() {
     })
     .use(function(err, req, res, next) {
       if(err && err.statusCode)
-        res.status(err.statusCode).json({status: err.statusCode, message: err.message})
+        res.status(err.statusCode).send({status: err.statusCode, message: err.message})
       else next(err)
     })
 }

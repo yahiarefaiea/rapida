@@ -52,7 +52,7 @@ module.exports = {
   delete: function(req, res, next) {
     req.book.remove(function(err) {
       handler(err, next, function() {
-        res.status(204).send('Book has removed')
+        res.status(204).send({status: 204, message: 'Book has removed'})
       })
     })
   }
