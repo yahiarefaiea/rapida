@@ -6,8 +6,7 @@ module.exports = {
   // get all items
   getAll: function(req, res, next) {
     const query = {}
-    if(req.query.read)
-      query.read = req.query.read
+    if(req.query.read) query.read = req.query.read
 
     Book.find(query, function(err, books) {
       handler(err, next, function() {
@@ -46,6 +45,14 @@ module.exports = {
 
   // update an item
   patch: function(req, res, next) {
+    if(req.body._id) delete req.body._id
+    for(const x in req.body) req.book[x] = req.body[x]
+
+    req.book.save(function(err) {
+      handler(err, next, function() {
+        res.send(req.book)
+      })
+    })
   },
 
   // delete an item
