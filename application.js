@@ -28,7 +28,7 @@ const db = mongoose.connection
 db.on('error', function() {
   console.log(chalk.red(`Failed to connect to the \`${config.db.name}\` database`))
 }).once('open', function() {
-  console.log(chalk.green(`Successfully connected to the \`${config.db.name}\` database`))
+  console.log(chalk.cyan(`Successfully connected to the \`${config.db.name}\` database`))
 })
 /* eslint-enable no-console */
 
