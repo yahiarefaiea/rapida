@@ -40,7 +40,7 @@ module.exports = {
   },
 
   // get one item
-  get: function(req, res, next) {
+  get: function(req, res) {
     res.send(req.book)
   },
 
