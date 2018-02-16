@@ -17,6 +17,8 @@ module.exports = {
 
   // post new item
   post: function(req, res, next) {
+    if(req.body._id) delete req.body._id
+    if(req.body.timestamp) delete req.body.timestamp
     const book = new Book(req.body)
 
     book.save(function(err) {
@@ -46,6 +48,7 @@ module.exports = {
   // update an item
   patch: function(req, res, next) {
     if(req.body._id) delete req.body._id
+    if(req.body.timestamp) delete req.body.timestamp
     for(const x in req.body) req.book[x] = req.body[x]
 
     req.book.save(function(err) {
