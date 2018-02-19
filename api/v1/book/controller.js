@@ -53,11 +53,12 @@ module.exports = {
 
   // get one item
   get: function(req, res) {
-    const returnBook = req.book.toJSON()
-    const readLink = `http://${req.headers.host}/book?read=${returnBook.read}`
-    returnBook.links = {}
-    returnBook.links.filterByRead = readLink.replace(' ', '%20')
-    res.send(returnBook)
+    const response = bookResponse(req.book)
+    response.filterByRead = {
+      type: 'GET',
+      url: `http://${req.headers.host}/book?read=${response.read}`
+    }
+    res.send({book: response})
   },
 
   // update an item
