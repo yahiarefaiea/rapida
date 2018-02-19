@@ -1,4 +1,6 @@
 import errHandle from 'rapid-error-handler'
+import startCase from 'lodash/startCase'
+import toLower from 'lodash/toLower'
 import Book from './model'
 
 // export function
@@ -120,6 +122,7 @@ function bookUrl(req, book) {
 // book strict function
 function bookStrict(req) {
   if(req.body._id) delete req.body._id
+  if(req.body.title) req.body.title = startCase(toLower(req.body.title))
   if(req.body.createdAt) delete req.body.createdAt
   if(req.body.updatedAt) delete req.body.updatedAt
 }
