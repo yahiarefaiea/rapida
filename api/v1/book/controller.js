@@ -28,7 +28,10 @@ module.exports = {
 
     book.save(function(err) {
       handler(err, next, function() {
-        res.status(201).send(book)
+        res.status(201).send({
+          message: 'New book added',
+          book: bookResponse(req, book)
+        })
       })
     })
   },
