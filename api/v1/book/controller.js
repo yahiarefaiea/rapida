@@ -22,8 +22,7 @@ module.exports = {
 
   // post new item
   post: function(req, res, next) {
-    if(req.body._id) delete req.body._id
-    if(req.body.timestamp) delete req.body.timestamp
+    bookStrict(req)
     const book = new Book(req.body)
 
     book.save(function(err) {
@@ -100,4 +99,11 @@ function bookResponse(req, book) {
       url: `http://${req.headers.host}/book/${book._id}`
     }
   }
+}
+
+// book strict function
+function bookStrict(req) {
+  if(req.body._id) delete req.body._id
+  if(req.body.createdAt) delete req.body.createdAt
+  if(req.body.updatedAt) delete req.body.updatedAt
 }
