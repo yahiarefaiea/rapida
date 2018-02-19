@@ -4,11 +4,11 @@ import mongoose from 'mongoose'
 module.exports = mongoose.model('Book', new mongoose.Schema({
   title: {
     type: String,
-    required: true
+    required: [true, 'title must be provided']
   },
   author: {
     type: String,
-    required: true
+    required: [true, 'author must be provided']
   },
   read: {
     type: Boolean,
