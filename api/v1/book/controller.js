@@ -13,7 +13,9 @@ module.exports = {
         res.send({
           total: books.length,
           books: books.map(function(book) {
-            return bookResponse(req, book)
+            const response = bookResponse(book)
+            response.request = bookUrl(req, book)
+            return response
           })
         })
       })
@@ -29,7 +31,7 @@ module.exports = {
       handler(err, next, function() {
         res.status(201).send({
           message: 'New book added',
-          book: bookResponse(req, book)
+          book: bookResponse(book)
         })
       })
     })
@@ -86,18 +88,22 @@ function handler(err, next, callback) {
 }
 
 // book response function
-function bookResponse(req, book) {
+function bookResponse(book) {
   return {
     _id: book._id,
     title: book.title,
     author: book.author,
     read: book.read,
     createdAt: book.createdAt,
-    updatedAt: book.updatedAt,
-    request: {
-      type: 'GET',
-      url: `http://${req.headers.host}/book/${book._id}`
-    }
+    updatedAt: book.updatedAt
+  }
+}
+
+// book url function
+function bookUrl(req, book) {
+  return {
+    type: 'GET',
+    url: `http://${req.headers.host}/book/${book._id}`
   }
 }
 
