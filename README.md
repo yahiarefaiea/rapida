@@ -6,3 +6,4 @@ Rapid JavaScript development environment
 
 # Todos
 - [ ] Handle subdomains in BrowserSync
+- [ ] Split api error messages into an array
