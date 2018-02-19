@@ -13,18 +13,7 @@ module.exports = {
         res.send({
           total: books.length,
           books: books.map(function(book) {
-            return {
-              _id: book._id,
-              title: book.title,
-              author: book.author,
-              read: book.read,
-              createdAt: book.createdAt,
-              updatedAt: book.updatedAt,
-              request: {
-                type: 'GET',
-                url: `http://${req.headers.host}/book/${book._id}`
-              }
-            }
+            return bookResponse(req, book)
           })
         })
       })
@@ -92,4 +81,20 @@ module.exports = {
 function handler(err, next, callback) {
   if(err) next(new errHandle.BadRequest(err))
   else callback()
+}
+
+// book response function
+function bookResponse(req, book) {
+  return {
+    _id: book._id,
+    title: book.title,
+    author: book.author,
+    read: book.read,
+    createdAt: book.createdAt,
+    updatedAt: book.updatedAt,
+    request: {
+      type: 'GET',
+      url: `http://${req.headers.host}/book/${book._id}`
+    }
+  }
 }
