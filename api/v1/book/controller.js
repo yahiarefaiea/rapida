@@ -32,7 +32,8 @@ module.exports = {
     book.save(function(err) {
       handler(err, next, function() {
         res.status(201).send({
-          message: 'New book added',
+          status: 201,
+          message: 'Book has added',
           book: response
         })
       })
@@ -63,13 +64,16 @@ module.exports = {
 
   // update an item
   patch: function(req, res, next) {
-    if(req.body._id) delete req.body._id
-    if(req.body.timestamp) delete req.body.timestamp
-    for(const x in req.body) req.book[x] = req.body[x]
+    bookStrict(req)
+    for(const p in req.body) req.book[p] = req.body[p]
 
     req.book.save(function(err) {
       handler(err, next, function() {
-        res.send(req.book)
+        res.send({
+          status: 200,
+          message: 'Book has updated',
+          book: bookResponse(req.book)
+        })
       })
     })
   },
@@ -78,7 +82,10 @@ module.exports = {
   delete: function(req, res, next) {
     req.book.remove(function(err) {
       handler(err, next, function() {
-        res.status(204).send({status: 204, message: 'Book has removed'})
+        res.send({
+          status: 200,
+          message: 'Book has removed'
+        })
       })
     })
   }
