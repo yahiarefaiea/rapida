@@ -10,14 +10,23 @@ module.exports = {
 
     Book.find(query, function(err, books) {
       handler(err, next, function() {
-        const returnBooks = []
-        books.forEach(function(element) {
-          const book = element.toJSON()
-          book.links = {}
-          book.links.self = `http://${req.headers.host}/book/${book._id}`
-          returnBooks.push(book)
+        res.send({
+          total: books.length,
+          books: books.map(function(book) {
+            return {
+              _id: book._id,
+              title: book.title,
+              author: book.author,
+              read: book.read,
+              createdAt: book.createdAt,
+              updatedAt: book.updatedAt,
+              request: {
+                type: 'GET',
+                url: `http://${req.headers.host}/book/${book._id}`
+              }
+            }
+          })
         })
-        res.send(returnBooks)
       })
     })
   },
