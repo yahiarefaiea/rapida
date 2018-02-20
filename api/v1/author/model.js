@@ -2,17 +2,19 @@ import mongoose from 'mongoose'
 
 // export function
 module.exports = mongoose.model('Author', new mongoose.Schema({
-  title: {
-    type: String,
-    required: [true, 'title must be provided']
+  name: {
+    first: {
+      type: String
+    },
+    last: {
+      type: String
+    }
   },
-  author: {
-    type: String,
-    required: [true, 'author must be provided']
+  username: {
+    type: String
   },
-  read: {
-    type: Boolean,
-    default: false
+  email: {
+    type: String
   }
 }, {
   timestamps: true
