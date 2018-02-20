@@ -7,6 +7,9 @@ module.exports = mongoose.model('Book', new mongoose.Schema({
     maxlength: [48, 'title must be less than 48 characters'],
     required: [true, 'title must be provided']
   },
+  // author must be an `objectId`
+  // but for simplifying the environment
+  // we pasted out here like that
   author: {
     name: {
       first: {
