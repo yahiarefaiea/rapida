@@ -104,7 +104,13 @@ function bookResponse(book) {
   return {
     _id: book._id,
     title: book.title,
-    author: book.author,
+    author: {
+      name: {
+        first: book.author.name.first,
+        last: book.author.name.last
+      },
+      email: book.author.email
+    },
     read: book.read,
     createdAt: book.createdAt,
     updatedAt: book.updatedAt
