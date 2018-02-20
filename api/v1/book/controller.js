@@ -95,8 +95,11 @@ module.exports = {
 
 // handler function
 function handler(err, next, callback) {
-  if(err) next(new errHandle.BadRequest(err))
-  else callback()
+  if(err) {
+    if(err.name === 'MongoError' && err.code === 11000)
+      next(new errHandle.BadRequest('email already exists'))
+    else next(new errHandle.BadRequest(err))
+  } else callback()
 }
 
 // book response function

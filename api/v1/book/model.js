@@ -25,7 +25,7 @@ module.exports = mongoose.model('Book', new mongoose.Schema({
     },
     email: {
       type: String,
-      unique: [true, 'email already exists'],
+      unique: true,
       required: [true, 'email must be provided'],
       validate: {
         validator: function(email) {
