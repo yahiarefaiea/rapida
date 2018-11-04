@@ -4,7 +4,6 @@
   "description": "Rapid JavaScript development environment",
   "main": "bin/www",
   "scripts": {
-    "prestart": "nsp check --color",
     "start": "run-p application eslint:watch stylint:watch puglint:watch",
     "start:prod": "cross-env NODE_ENV=production npm run application:prod",
     "application": "nodemon bin/www --exec babel-node --color",
@@ -14,12 +13,17 @@
     "stylint": "stylint client admin --color",
     "stylint:watch": "chokidar --initial --silent \"client/**/*.styl\" \"admin/**/*.styl\" -c \"npm run stylint\"",
     "puglint": "pug-lint client admin",
-    "puglint:watch": "chokidar --initial --silent \"client/**/*.pug\" \"admin/**/*.pug\" -c \"npm run puglint\""
+    "puglint:watch": "chokidar --initial --silent \"client/**/*.pug\" \"admin/**/*.pug\" -c \"npm run puglint\"",
+    "share": "run-p application localtunnel",
+    "localtunnel": "lt --port 3000"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nuotron/rapid-environment.git"
   },
+  "keywords": [
+    "mars"
+  ],
   "author": "Nuotron <hello@nuotron.co>",
   "license": "MIT",
   "bugs": {
@@ -28,34 +32,34 @@
   "homepage": "https://github.com/nuotron/rapid-environment#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "body-parser": "^1.18.2",
-    "browser-sync": "^2.23.6",
-    "chalk": "^2.3.0",
-    "chokidar-cli": "^1.2.0",
-    "compression": "^1.7.1",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "body-parser": "^1.18.3",
+    "browser-sync": "^2.26.3",
+    "chalk": "^2.4.1",
+    "chokidar-cli": "^1.2.1",
+    "compression": "^1.7.3",
     "cookie-parser": "^1.4.3",
-    "cross-env": "^5.1.3",
-    "debug": "^3.1.0",
-    "eslint": "^4.17.0",
-    "express": "^4.16.2",
+    "cross-env": "^5.2.0",
+    "debug": "^3.2.6",
+    "eslint": "^4.19.1",
+    "express": "^4.16.4",
     "express-subdomain": "^1.0.5",
     "kouto-swiss": "^1.1.0",
-    "lodash": "^4.17.5",
-    "mongoose": "^5.0.2",
-    "morgan": "^1.9.0",
-    "nodemon": "^1.14.11",
-    "npm-run-all": "^4.1.2",
-    "nsp": "^3.1.0",
-    "pug": "^2.0.0-rc.4",
+    "localtunnel": "^1.9.1",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.3.9",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.5",
+    "npm-run-all": "^4.1.3",
+    "pug": "^2.0.3",
     "pug-lint": "^2.5.0",
     "pug-lint-config-clock": "^2.0.0",
-    "rapid-error-handler": "^0.0.1",
-    "serve-favicon": "^2.4.5",
+    "rapid-error-handler": "0.0.1",
+    "serve-favicon": "^2.5.0",
     "stylint": "^1.5.9",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.1",
-    "webpack": "^3.10.0"
+    "stylus-loader": "^3.0.2",
+    "webpack": "^3.12.0"
   }
 }
