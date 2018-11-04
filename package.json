@@ -22,7 +22,15 @@
     "url": "git+https://github.com/nuotron/rapid-environment.git"
   },
   "keywords": [
-    "mars"
+    "mvc",
+    "feature-based",
+    "web-framework",
+    "starter-kit",
+    "boilerplate",
+    "express",
+    "rapid",
+    "REST",
+    "API"
   ],
   "author": "Nuotron <hello@nuotron.co>",
   "license": "MIT",
