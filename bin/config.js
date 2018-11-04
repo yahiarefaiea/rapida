@@ -4,11 +4,11 @@ import pkg from '../package.json'
 module.exports = {
   project: pkg.name,
   env: process.env.NODE_ENV || 'development',
-  host: process.env.HOST || 'local.dev',
-  port: process.env.PORT || '3000',
+  host: process.env.HOST || 'localtest.me',
+  port: process.env.PORT || 3000,
   db: {
-    host: process.env.DB_HOST || 'local.dev',
-    port: process.env.DB_PORT || '27017',
+    host: process.env.DB_HOST || 'localtest.me',
+    port: process.env.DB_PORT || 27017,
     name: process.env.DB_NAME || pkg.name
   },
   database: function() {
