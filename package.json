@@ -37,6 +37,7 @@
   "bugs": {
     "url": "https://github.com/nuotron/rapid-environment/issues"
   },
+  "homepage": "https://github.com/nuotron/rapid-environment#readme",
   "dependencies": {
     "browser-sync": "^2.26.3",
     "chokidar-cli": "^1.2.1",
@@ -48,7 +49,6 @@
     "pug-lint-config-clock": "^2.0.0",
     "stylint": "^1.5.9"
   },
-  "homepage": "https://github.com/nuotron/rapid-environment#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
