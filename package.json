@@ -15,7 +15,7 @@
     "puglint": "pug-lint client admin",
     "puglint:watch": "chokidar --initial --silent \"client/**/*.pug\" \"admin/**/*.pug\" -c \"npm run puglint\"",
     "share": "run-p application localtunnel",
-    "localtunnel": "lt --port 3000"
+    "localtunnel": "lt --port 3000 --subdomain rapid"
   },
   "repository": {
     "type": "git",
