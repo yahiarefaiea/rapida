@@ -23,7 +23,10 @@ const app = express()
 console.log(chalk.cyan(`Running in ${config.env} mode`))
 
 // connect to the database
-mongoose.connect(config.database())
+mongoose.connect(config.database(), {
+  useCreateIndex: true,
+  useNewUrlParser: true
+})
 const db = mongoose.connection
 db.on('error', function() {
   console.log(chalk.red(`Failed to connect to the \`${config.db.name}\` database`))
