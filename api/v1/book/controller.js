@@ -67,7 +67,7 @@ module.exports = {
   // update an item
   patch: function(req, res, next) {
     bookStrict(req.body)
-    for(const p in req.body) req.book[p] = req.body[p]
+    for(const key in req.body) req.book[key] = req.body[key]
 
     req.book.save(function(err) {
       handler(err, next, function() {
@@ -129,9 +129,13 @@ function bookUrl(req, book) {
 function bookStrict(req) {
   if(req._id) delete req._id
   if(req.title) req.title = startCase(toLower(req.title))
-  if(req.author.name.first) req.author.name.first = startCase(toLower(req.author.name.first))
-  if(req.author.name.last) req.author.name.last = startCase(toLower(req.author.name.last))
-  if(req.author.email) req.author.email = toLower(req.author.email)
+  if(req.author) {
+    if(req.author.name) {
+      if(req.author.name.first) req.author.name.first = startCase(toLower(req.author.name.first))
+      if(req.author.name.last) req.author.name.last = startCase(toLower(req.author.name.last))
+    }
+    if(req.author.email) req.author.email = toLower(req.author.email)
+  }
   if(req.createdAt) delete req.createdAt
   if(req.updatedAt) delete req.updatedAt
 }
