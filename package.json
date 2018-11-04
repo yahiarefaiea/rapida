@@ -37,6 +37,17 @@
   "bugs": {
     "url": "https://github.com/nuotron/rapid-environment/issues"
   },
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "chokidar-cli": "^1.2.1",
+    "eslint": "^4.19.1",
+    "kouto-swiss": "^1.1.0",
+    "localtunnel": "^1.9.1",
+    "nodemon": "^1.18.5",
+    "pug-lint": "^2.5.0",
+    "pug-lint-config-clock": "^2.0.0",
+    "stylint": "^1.5.9"
+  },
   "homepage": "https://github.com/nuotron/rapid-environment#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -60,16 +71,5 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "webpack": "^3.12.0"
-  },
-  "dependencies": {
-    "browser-sync": "^2.26.3",
-    "chokidar-cli": "^1.2.1",
-    "eslint": "^4.19.1",
-    "kouto-swiss": "^1.1.0",
-    "localtunnel": "^1.9.1",
-    "nodemon": "^1.18.5",
-    "pug-lint": "^2.5.0",
-    "pug-lint-config-clock": "^2.0.0",
-    "stylint": "^1.5.9"
   }
 }
