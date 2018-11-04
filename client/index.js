@@ -8,6 +8,7 @@ const router = express.Router()
 
 // export function
 module.exports = function() {
+  const base = 'client'
   return router
     // router middlewares
     // .use('/library', library())
@@ -23,7 +24,7 @@ module.exports = function() {
         title: `${err.statusCode} ${err.message}`
       }
       if(err && err.statusCode)
-        res.status(err.statusCode).render('client/error', data)
+        res.status(err.statusCode).render(`${base}/error`, data)
       else next(err)
     })
 }

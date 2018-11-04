@@ -8,6 +8,7 @@ const router = express.Router()
 
 // export function
 module.exports = function() {
+  const base = 'admin'
   return router
     // router middlewares
     // .use('/book', book())
@@ -23,7 +24,7 @@ module.exports = function() {
         title: `${err.statusCode} ${err.message}`
       }
       if(err && err.statusCode)
-        res.status(err.statusCode).render('admin/error', data)
+        res.status(err.statusCode).render(`${base}/error`, data)
       else next(err)
     })
 }
