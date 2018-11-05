@@ -8,7 +8,7 @@ const router = express.Router()
 
 // export function
 module.exports = function() {
-  const base = 'admin'
+  const base = './admin'
   return router
     // router middlewares
     // .use('/book', book())

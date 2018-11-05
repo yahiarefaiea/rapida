@@ -8,7 +8,7 @@ const router = express.Router()
 
 // export function
 module.exports = function() {
-  const base = 'client'
+  const base = './client'
   return router
     // router middlewares
     // .use('/library', library())
