@@ -32,6 +32,7 @@ server.on('error', onError)
 server.on('listening', onListening)
 
 // event listener for HTTP server 'error' event
+/* eslint-disable no-console */
 function onError(error) {
   if(error.syscall !== 'listen') {
     throw error
