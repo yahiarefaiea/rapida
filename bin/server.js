@@ -3,31 +3,15 @@ import app from '../application'
 import Debug from 'debug'
 const debug = Debug(`${config.project}:server`)
 import http from 'http'
-import browserSync from 'browser-sync'
 
-// get port from Express
+// get port from config
 const port = config.port
 
 // create an HTTP server
 const server = http.createServer(app)
 
-// browser sync configuration
-function bs() {
-  if(config.env === 'development') {
-    browserSync({
-      ui: false,
-      files: ['client', 'admin', 'api', 'storage'],
-      proxy: `${config.host}:${config.port}`,
-      port: parseInt(config.port) + 1,
-      online: false,
-      open: false,
-      host: config.host
-    })
-  }
-}
-
 // listen on provided port, on all network interfaces
-server.listen(port, bs)
+server.listen(port)
 server.on('error', onError)
 server.on('listening', onListening)
 
