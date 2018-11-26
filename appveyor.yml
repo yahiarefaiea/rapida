@@ -1,0 +1,18 @@
+# environment variables
+environment:
+  matrix:
+  - nodejs_version: '7'
+
+# install scripts
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - npm install
+
+# test scripts
+test_script:
+  - node --version
+  - npm --version
+  - npm test
+
+# don't actually build
+build: off
