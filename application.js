@@ -1,12 +1,13 @@
 import config from './bin/config'
 import express from 'express'
 import favicon from 'serve-favicon'
+import webpack from 'webpack'
+import webpackConfig from './webpack.config'
 import chalk from 'chalk'
-import storage from './storage'
-import ui from './ui'
 
 // instance of express
 const app = express()
+const compiler = webpack(webpackConfig)
 
 // start message
 // eslint-disable-next-line no-console
@@ -19,8 +20,14 @@ app.set('view engine', 'pug')
 // use middlewares
 app.use(express.static('storage'))
 app.use(favicon('storage/favicon.png'))
+app.use(require('webpack-dev-middleware')(compiler, {
+  noInfo: true,
+  publicPath: webpackConfig.output.publicPath
+}))
 
 // project middlewares
-app.use('/', ui())
+app.get('*', function(req, res) {
+  res.render('./ui/index')
+})
 
 module.exports = app
