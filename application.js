@@ -12,7 +12,8 @@ import api from './api'
 const app = express()
 
 // start message
-console.log(chalk.cyan(`Running in ${config.env} mode`)) // eslint-disable-line no-console
+// eslint-disable-next-line no-console
+console.log(chalk.cyan(`Running in ${config.env} mode`))
 
 // connect to the database
 mongoose.connect(config.database(), {
@@ -21,9 +22,11 @@ mongoose.connect(config.database(), {
 })
 const db = mongoose.connection
 db.on('error', function() {
-  console.log(chalk.red(`Failed to connect to the \`${config.db.name}\` database`)) // eslint-disable-line no-console
+  // eslint-disable-next-line no-console
+  console.log(chalk.red(`Failed to connect to the \`${config.db.name}\` database`))
 }).once('open', function() {
-  console.log(chalk.cyan(`Successfully connected to the \`${config.db.name}\` database`)) // eslint-disable-line no-console
+  // eslint-disable-next-line no-console
+  console.log(chalk.cyan(`Successfully connected to the \`${config.db.name}\` database`))
 })
 
 // use middlewares
