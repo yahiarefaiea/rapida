@@ -5,7 +5,7 @@ const debug = Debug(`${config.project}:server`)
 import http from 'http'
 import browserSync from 'browser-sync'
 
-// get port from Express
+// get port from config
 const port = config.port
 
 // create an HTTP server
@@ -16,7 +16,7 @@ function bs() {
   if(config.env === 'development') {
     browserSync({
       ui: false,
-      files: ['client', 'admin', 'api', 'storage'],
+      files: ['ui', 'storage'],
       proxy: `${config.host}:${config.port}`,
       port: parseInt(config.port) + 1,
       online: false,
