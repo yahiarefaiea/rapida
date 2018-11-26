@@ -21,6 +21,7 @@ function bs() {
       port: parseInt(config.port) + 1,
       online: false,
       open: false,
+      notify: false,
       host: config.host
     })
   }
