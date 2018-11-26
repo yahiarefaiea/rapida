@@ -105,8 +105,7 @@ function bookUrl(req, book) {
 }
 
 // book strict function
-function bookStrict(req) {
-  //do slug here
-  // if(req.title) req.title = startCase(toLower(req.title))
+function bookStrict(body) {
+  if(body.title) body.slug = slug(body.title)
   return omit(body, ['_id', 'createdAt', 'updatedAt', '__v'])
 }

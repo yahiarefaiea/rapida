@@ -12,8 +12,6 @@ module.exports = function() {
     .use('/book', book())
 }
 
-
-
 // api router
 // import subdomain from 'express-subdomain'
 // import express from 'express'

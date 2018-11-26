@@ -11,7 +11,7 @@
     "eslint": "eslint *.js bin api --color",
     "eslint:watch": "chokidar --initial --silent \"*.js\" \"bin/**/*.js\" \"api/**/*.js\" -c \"npm run eslint\"",
     "test": "mocha --reporter progress bin/test.js \"api/**/*.test.js\" --color",
-    "test:watch": "npm run test -- --watch",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
