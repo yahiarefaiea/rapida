@@ -19,10 +19,8 @@ function bs() {
       files: ['ui', 'storage'],
       proxy: `${config.host}:${config.port}`,
       port: parseInt(config.port) + 1,
-      online: false,
       open: false,
-      notify: false,
-      host: config.host
+      notify: false
     })
   }
 }
