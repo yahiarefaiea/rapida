@@ -61,4 +61,4 @@ typings/
 .next
 
 # Rapid Environment
-public/
+storage/public/

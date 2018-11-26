@@ -9,7 +9,8 @@ import ui from './ui'
 const app = express()
 
 // start message
-console.log(chalk.cyan(`Running in ${config.env} mode`)) // eslint-disable-line no-console
+// eslint-disable-next-line no-console
+console.log(chalk.cyan(`Running in ${config.env} mode`))
 
 // set view engine
 app.set('views', '')
