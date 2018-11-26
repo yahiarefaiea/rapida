@@ -1,44 +1,33 @@
 import mongoose from 'mongoose'
+import startCase from 'lodash/startCase'
+import toLower from 'lodash/toLower'
 
 // export function
 module.exports = mongoose.model('Book', new mongoose.Schema({
   title: {
     type: String,
     maxlength: [48, 'title must be less than 48 characters'],
-    required: [true, 'title must be provided']
+    required: [true, 'title must be provided'],
+    unique: true,
+    set: function(value) {
+      return startCase(toLower(value))
+    }
   },
-  // author must be an `objectId`
-  // but for simplifying the environment
-  // we pasted out here like that
   author: {
-    name: {
-      first: {
-        type: String,
-        maxlength: [18, 'first name must be less than 18 characters'],
-        required: [true, 'first name must be provided']
-      },
-      last: {
-        type: String,
-        maxlength: [18, 'last name must be less than 18 characters'],
-        required: [true, 'last name must be provided']
-      }
-    },
-    email: {
-      type: String,
-      unique: true,
-      required: [true, 'email must be provided'],
-      validate: {
-        validator: function(email) {
-          const regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ // eslint-disable-line no-useless-escape
-          return regex.test(email)
-        },
-        message: 'this is not a valid email'
-      }
+    type: String,
+    maxlength: [48, 'author must be less than 48 characters'],
+    required: [true, 'author must be provided'],
+    set: function(value) {
+      return startCase(toLower(value))
     }
   },
   read: {
     type: Boolean,
     default: false
+  },
+  slug: {
+    type: String,
+    unique: true
   }
 }, {
   timestamps: true
