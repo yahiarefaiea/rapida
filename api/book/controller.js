@@ -1,6 +1,6 @@
 import errHandle from 'rapid-error-handler'
-import startCase from 'lodash/startCase'
-import toLower from 'lodash/toLower'
+import omit from 'lodash/omit'
+import slug from 'limax'
 import Book from './model'
 
 // export function
@@ -15,9 +15,8 @@ module.exports = {
         res.send({
           total: books.length,
           books: books.map(function(book) {
-            const response = bookResponse(book)
-            response.request = bookUrl(req, book)
-            return response
+            book.request = bookUrl(req, book)
+            return book
           })
         })
       })
@@ -28,15 +27,14 @@ module.exports = {
   post: function(req, res, next) {
     bookStrict(req.body)
     const book = new Book(req.body)
-    const response = bookResponse(book)
-    response.request = bookUrl(req, book)
+    book.request = bookUrl(req, book)
 
     book.save(function(err) {
       handler(err, next, function() {
         res.status(201).send({
           status: 201,
           message: 'Book has added',
-          book: response
+          book: book
         })
       })
     })
@@ -56,12 +54,11 @@ module.exports = {
 
   // get one item
   get: function(req, res) {
-    const response = bookResponse(req.book)
-    response.filterByRead = {
+    req.book.filterByRead = {
       type: 'GET',
-      url: `http://${req.headers.host}/book?read=${response.read}`
+      url: `http://${req.headers.host}/book?read=${req.book.read}`
     }
-    res.send({book: response})
+    res.send({book: req.book})
   },
 
   // update an item
@@ -74,7 +71,7 @@ module.exports = {
         res.send({
           status: 200,
           message: 'Book has updated',
-          book: bookResponse(req.book)
+          book: req.book
         })
       })
     })
@@ -99,24 +96,6 @@ function handler(err, next, callback) {
   else callback()
 }
 
-// book response function
-function bookResponse(book) {
-  return {
-    _id: book._id,
-    title: book.title,
-    author: {
-      name: {
-        first: book.author.name.first,
-        last: book.author.name.last
-      },
-      email: book.author.email
-    },
-    read: book.read,
-    createdAt: book.createdAt,
-    updatedAt: book.updatedAt
-  }
-}
-
 // book url function
 function bookUrl(req, book) {
   return {
@@ -127,15 +106,7 @@ function bookUrl(req, book) {
 
 // book strict function
 function bookStrict(req) {
-  if(req._id) delete req._id
-  if(req.title) req.title = startCase(toLower(req.title))
-  if(req.author) {
-    if(req.author.name) {
-      if(req.author.name.first) req.author.name.first = startCase(toLower(req.author.name.first))
-      if(req.author.name.last) req.author.name.last = startCase(toLower(req.author.name.last))
-    }
-    if(req.author.email) req.author.email = toLower(req.author.email)
-  }
-  if(req.createdAt) delete req.createdAt
-  if(req.updatedAt) delete req.updatedAt
+  //do slug here
+  // if(req.title) req.title = startCase(toLower(req.title))
+  return omit(body, ['_id', 'createdAt', 'updatedAt', '__v'])
 }
