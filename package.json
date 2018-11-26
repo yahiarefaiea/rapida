@@ -1,25 +1,19 @@
 {
-  "name": "rapid-environment",
+  "name": "rapid-api",
   "version": "0.0.1",
   "description": "Rapid JavaScript development environment",
   "main": "bin/server.js",
   "scripts": {
-    "start": "run-p application eslint:watch stylint:watch puglint:watch",
+    "start": "run-p application eslint:watch",
     "start:prod": "cross-env NODE_ENV=production npm run application:prod",
     "application": "nodemon bin/server.js --exec babel-node --color",
     "application:prod": "babel-node bin/server.js --color",
-    "eslint": "eslint *.js client admin api storage/index.js --color",
-    "eslint:watch": "chokidar --initial --silent \"*.js\" \"client/**/*.js\" \"admin/**/*.js\" \"api/**/*.js\" \"storage/index.js\" -c \"npm run eslint\"",
-    "stylint": "stylint client admin --color",
-    "stylint:watch": "chokidar --initial --silent \"client/**/*.styl\" \"admin/**/*.styl\" -c \"npm run stylint\"",
-    "puglint": "pug-lint client admin",
-    "puglint:watch": "chokidar --initial --silent \"client/**/*.pug\" \"admin/**/*.pug\" -c \"npm run puglint\"",
-    "share": "run-p application localtunnel",
-    "localtunnel": "lt --port 3000 --subdomain rapid"
+    "eslint": "eslint *.js bin api --color",
+    "eslint:watch": "chokidar --initial --silent \"*.js\" \"bin/**/*.js\" \"api/**/*.js\" -c \"npm run eslint\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nuotron/rapid-environment.git"
+    "url": "git+https://github.com/nuotron/rapid-api.git"
   },
   "keywords": [
     "mvc",
@@ -35,16 +29,15 @@
   "author": "Nuotron <hello@nuotron.co>",
   "license": "see license in license.md",
   "bugs": {
-    "url": "https://github.com/nuotron/rapid-environment/issues"
+    "url": "https://github.com/nuotron/rapid-api/issues"
   },
-  "homepage": "https://github.com/nuotron/rapid-environment#readme",
+  "homepage": "https://github.com/nuotron/rapid-api#readme",
   "dependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
     "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "body-parser": "^1.18.3",
-    "browser-sync": "^2.26.3",
     "chalk": "^2.4.1",
     "chokidar-cli": "^1.2.1",
     "compression": "^1.7.3",
@@ -53,22 +46,11 @@
     "debug": "^4.1.0",
     "eslint": "^5.8.0",
     "express": "^4.16.4",
-    "express-subdomain": "^1.0.5",
-    "kouto-swiss": "^1.1.0",
-    "localtunnel": "^1.9.1",
     "lodash": "^4.17.11",
     "mongoose": "^5.3.9",
     "morgan": "^1.9.1",
     "nodemon": "^1.18.6",
     "npm-run-all": "^4.1.3",
-    "pug": "^2.0.3",
-    "pug-lint": "^2.5.0",
-    "pug-lint-config-clock": "^2.0.0",
-    "rapid-error-handler": "0.0.1",
-    "serve-favicon": "^2.5.0",
-    "stylint": "^1.5.9",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2",
-    "webpack": "^4.25.0"
+    "rapid-error-handler": "0.0.1"
   }
 }
