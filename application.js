@@ -31,7 +31,13 @@ db.on('error', function() {
 
 // use middlewares
 app.use(compression())
-app.use(morgan('dev'))
+app.use(morgan(function(tokens, req, res) {
+  let method = tokens.method(req, res)
+  let url = req.headers.host + tokens.url(req, res)
+  let status = chalk.cyan(tokens['status'](req, res))
+  let responseTime = `${tokens['response-time'](req, res)} ms`
+  return `${method} ${url} ${status} ${responseTime}`
+}))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(cookieParser())
