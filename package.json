@@ -10,7 +10,7 @@
     "application:prod": "babel-node bin/server.js --color",
     "eslint": "esw **/*.js --color",
     "eslint:watch": "npm run eslint -- --watch",
-    "test": "mocha --reporter progress bin/test.js \"api/**/*.test.js\" --color",
+    "test": "mocha bin/test.js api/**/*.test.js --color",
     "test:watch": "npm run test -- --watch"
   },
   "repository": {
