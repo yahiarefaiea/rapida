@@ -1,7 +1,7 @@
 {
   "name": "rapid-api",
   "version": "0.0.1",
-  "description": "Rapid JavaScript development environment",
+  "description": "Rapid JavaScript development environment for building API",
   "main": "bin/server.js",
   "scripts": {
     "start": "run-p application eslint:watch test:watch",
