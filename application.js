@@ -8,7 +8,6 @@ import mongoose from 'mongoose'
 import chalk from 'chalk'
 import api from './api'
 
-// instance of express
 const app = express()
 
 // connect to the database
@@ -34,5 +33,12 @@ app.use(cookieParser())
 
 // project middlewares
 app.use('/', api())
+
+// error handler
+app.use(function(err, req, res, next) {
+  if(err && err.statusCode)
+    res.status(err.statusCode).send({status: err.statusCode, message: err.message})
+  else next(err)
+})
 
 module.exports = app
