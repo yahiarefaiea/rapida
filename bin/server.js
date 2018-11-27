@@ -19,9 +19,10 @@ chalk.magenta(`http://${config.host}:${config.port}`))
 // create an HTTP server
 const server = http.createServer(app)
 
-// browser sync configuration
-function bs() {
+// listen on provided port, on all network interfaces
+server.listen(port, function() {
   if(config.env === 'development') {
+    // browser sync configuration
     browserSync({
       ui: false,
       files: ['ui', 'storage'],
@@ -31,10 +32,7 @@ function bs() {
       notify: false
     })
   }
-}
-
-// listen on provided port, on all network interfaces
-server.listen(port, bs)
+})
 server.on('error', onError)
 server.on('listening', onListening)
 
