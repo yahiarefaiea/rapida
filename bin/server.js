@@ -27,7 +27,7 @@ server.listen(port, function() {
       ui: false,
       files: ['ui', 'storage'],
       proxy: `${config.host}:${config.port}`,
-      port: parseInt(config.port) + 1,
+      port: config.port + 1,
       open: false,
       notify: false
     })
