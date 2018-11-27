@@ -3,9 +3,17 @@ import app from '../application'
 import Debug from 'debug'
 const debug = Debug(`${config.project}:server`)
 import http from 'http'
+import chalk from 'chalk'
 
 // get port from config
 const port = config.port
+
+// start message
+// eslint-disable-next-line no-console
+console.log(chalk.cyan(`Running in ${config.env} mode`))
+// eslint-disable-next-line no-console
+console.log(chalk.cyan('Access URL is: ') +
+chalk.magenta(`http://${config.host}:${config.port}`))
 
 // create an HTTP server
 const server = http.createServer(app)

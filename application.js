@@ -11,10 +11,6 @@ import api from './api'
 // instance of express
 const app = express()
 
-// start message
-// eslint-disable-next-line no-console
-console.log(chalk.cyan(`Running in ${config.env} mode`))
-
 // connect to the database
 mongoose.connect(config.database(), {
   useCreateIndex: true,
