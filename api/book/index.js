@@ -1,9 +1,7 @@
 // book router
 import express from 'express'
-const router = express.Router()
-
-// router imports
 import controller from './controller'
+const router = express.Router()
 
 // export function
 module.exports = function() {
