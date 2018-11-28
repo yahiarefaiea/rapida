@@ -4,7 +4,6 @@ import toLower from 'lodash/toLower'
 
 // export function
 module.exports = mongoose.model('Book', new mongoose.Schema({
-
   // title
   title: {
     type: String,
