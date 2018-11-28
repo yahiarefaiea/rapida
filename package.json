@@ -15,7 +15,7 @@
     "stylint:watch": "chokidar --initial --silent \"ui/**/*.styl\" -c \"npm run stylint\"",
     "puglint": "pug-lint ui",
     "puglint:watch": "chokidar --initial --silent \"ui/**/*.pug\" -c \"npm run puglint\"",
-    "test": "mocha bin/test.js ui/**/*.test.js --color",
+    "test": "mocha --reporter progress bin/test.js ui/**/*.test.js --color",
     "test:watch": "npm run test -- --watch",
     "clean": "rimraf storage/public",
     "share": "run-p application localtunnel",
