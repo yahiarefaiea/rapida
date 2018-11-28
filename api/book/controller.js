@@ -27,10 +27,11 @@ module.exports = {
   post: function(req, res, next) {
     bookStrict(req.body)
     const book = new Book(req.body)
-    book.request = bookUrl(req, book)
 
     book.save(function(err) {
       handler(err, next, function() {
+        book.request = bookUrl(req, book)
+
         res.status(201).send({
           status: 201,
           message: 'Book has added',
