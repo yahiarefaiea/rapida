@@ -15,8 +15,9 @@ module.exports = {
         res.send({
           total: books.length,
           books: books.map(function(book) {
-            book.request = bookUrl(req, book)
-            return book
+            const response = bookResponse(book)
+            response.request = bookUrl(req, book)
+            return response
           })
         })
       })
@@ -27,15 +28,15 @@ module.exports = {
   post: function(req, res, next) {
     bookStrict(req.body)
     const book = new Book(req.body)
+    const response = bookResponse(book)
+    response.request = bookUrl(req, book)
 
     book.save(function(err) {
       handler(err, next, function() {
-        book.request = bookUrl(req, book)
-
         res.status(201).send({
           status: 201,
           message: 'Book has added',
-          book: book
+          book: response
         })
       })
     })
@@ -55,11 +56,12 @@ module.exports = {
 
   // get one item
   get: function(req, res) {
-    req.book.filterByRead = {
+    const response = bookResponse(req.book)
+    response.filterByRead = {
       type: 'GET',
-      url: `http://${req.headers.host}/book?read=${req.book.read}`
+      url: `http://${req.headers.host}/book?read=${response.read}`
     }
-    res.send({book: req.book})
+    res.send({book: response})
   },
 
   // update an item
@@ -72,7 +74,7 @@ module.exports = {
         res.send({
           status: 200,
           message: 'Book has updated',
-          book: req.book
+          book: bookResponse(req.book)
         })
       })
     })
@@ -95,6 +97,25 @@ module.exports = {
 function handler(err, next, callback) {
   if(err) next(new errHandle.BadRequest(err))
   else callback()
+}
+
+// book response function
+function bookResponse(book) {
+  return {
+    _id: book._id,
+    title: book.title,
+    author: {
+      name: {
+        first: book.author.name.first,
+        last: book.author.name.last
+      },
+      email: book.author.email
+    },
+    read: book.read,
+    slug: book.slug,
+    createdAt: book.createdAt,
+    updatedAt: book.updatedAt
+  }
 }
 
 // book url function
