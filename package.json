@@ -43,7 +43,7 @@
     "body-parser": "^1.18.3",
     "chai": "^4.2.0",
     "chalk": "^2.4.1",
-    "chokidar": "^2.0.4",
+    "chokidar-cli": "^1.2.1",
     "compression": "^1.7.3",
     "cookie-parser": "^1.4.3",
     "cross-env": "^5.2.0",
