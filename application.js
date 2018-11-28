@@ -17,7 +17,8 @@ app.use(favicon('storage/favicon.png'))
 app.use(morgan('dev'))
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
-  publicPath: webpackConfig.output.publicPath
+  publicPath: webpackConfig.output.publicPath,
+  stats: 'minimal'
 }))
 
 // project middlewares

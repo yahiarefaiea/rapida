@@ -3,14 +3,14 @@ import path from 'path'
 
 module.exports = {
   mode: config.env,
-  entry: [
-    './ui/index.js'
-  ],
+  devtool: 'inline-source-map',
+  entry: './ui/index.js',
   output: {
     path: path.resolve(__dirname, 'public'),
     publicPath: '/public/',
     filename: 'bundle.js'
   },
+  plugins: [],
   module: {
     rules: [
       {
