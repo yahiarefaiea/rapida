@@ -9,3 +9,5 @@ Run `npm i` then `npm start -s`
 Access URL will be: `localhost:3000/book`
 
 The API methods are: `GET`, `POST`, `PATCH`, `DELETE`
+
+**Note: you need to have `MongoDB` service up and running.
