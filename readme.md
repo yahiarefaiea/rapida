@@ -1,17 +1,20 @@
-# Clock Pug coding standard
+# ESLint Config Rapid
+
+Rapid JavaScript coding standard for ESLint
 
 ## Usage
 
 In your project folder:
 
 ```
-npm install --save-dev pug-lint
-npm install --save-dev pug-lint-config-clock
+npm i --save-dev eslint eslint-config-rapid
 ```
 
-Then create a `.pug-lintrc` in the project root.
+Then add this to your `package.json`:
 
 ```json
-{ "extends": "clock"
+"eslintConfig": {
+  "root": true,
+  "extends": "rapid"
 }
 ```

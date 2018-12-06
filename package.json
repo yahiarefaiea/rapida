@@ -3,14 +3,18 @@
   "version": "0.0.3",
   "description": "Rapid JavaScript coding standard for ESLint",
   "main": "index.js",
-  "author": "Nuotron <hello@nuotron.co>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuotron/eslint-config-rapid.git"
+  },
   "keywords": [
     "eslint",
     "eslintconfig"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/clocklimited/pug-lint-config-clock.git"
+  "author": "Nuotron <hello@nuotron.co>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nuotron/eslint-config-rapid/issues"
   },
-  "license": "ISC"
+  "homepage": "https://github.com/nuotron/eslint-config-rapid#readme"
 }
