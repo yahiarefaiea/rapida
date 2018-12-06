@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-rapid",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Rapid JavaScript coding standard for ESLint",
   "main": "index.js",
   "repository": {
