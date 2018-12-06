@@ -3,14 +3,18 @@
   "version": "0.0.5",
   "description": "Rapid Pug coding standard for Pug Lint",
   "main": "index.js",
-  "author": "Nuotron <hello@nuotron.co>",
-  "keywords": [
-    "puglint",
-    "puglintconfig"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nuotron/pug-lint-config-rapid.git"
   },
-  "license": "ISC"
+  "keywords": [
+    "puglint",
+    "puglintconfig"
+  ],
+  "author": "Nuotron <hello@nuotron.co>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nuotron/pug-lint-config-rapid/issues"
+  },
+  "homepage": "https://github.com/nuotron/pug-lint-config-rapid#readme"
 }

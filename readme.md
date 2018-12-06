@@ -1,17 +1,19 @@
-# Clock Pug coding standard
+# Pug Lint Config Rapid
+
+Rapid Pug coding standard for Pug Lint
 
 ## Usage
 
 In your project folder:
 
 ```
-npm install --save-dev pug-lint
-npm install --save-dev pug-lint-config-clock
+npm i --save-dev pug-lint pug-lint-config-rapid
 ```
 
-Then create a `.pug-lintrc` in the project root.
+Then add this to your `package.json`:
 
 ```json
-{ "extends": "clock"
+"pugLintConfig": {
+  "extends": "rapid"
 }
 ```
