@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-rapid",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Rapid JavaScript coding standard for ESLint",
   "main": "index.js",
   "author": "Nuotron <hello@nuotron.co>",
