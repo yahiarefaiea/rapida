@@ -12,12 +12,5 @@
     "type": "git",
     "url": "git+https://github.com/nuotron/pug-lint-config-rapid.git"
   },
-  "publishConfig": {
-    "registry": "http://registry.npmjs.org"
-  },
-  "license": "ISC",
-  "dependencies": {
-    "pug-lint": "^2.5.0",
-    "pug-lint-config-clock": "^2.0.0"
-  }
+  "license": "ISC"
 }
