@@ -5,18 +5,12 @@
   "main": "index.js",
   "author": "Nuotron <hello@nuotron.co>",
   "keywords": [
-    "puglint",
-    "puglintconfig"
+    "eslint",
+    "eslintconfig"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/clocklimited/pug-lint-config-clock.git"
   },
-  "publishConfig": {
-    "registry": "http://registry.npmjs.org"
-  },
-  "license": "ISC",
-  "peerDependencies": {
-    "eslint": "^5.8.0"
-  }
+  "license": "ISC"
 }
