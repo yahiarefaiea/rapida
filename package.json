@@ -7,8 +7,9 @@
     "type": "git",
     "url": "git+https://github.com/nuotron/rapid-error-handler.git"
   },
+  "keywords": [],
   "author": "Nuotron <hello@nuotron.co>",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/nuotron/rapid-error-handler/issues"
   },
