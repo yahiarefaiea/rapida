@@ -1,0 +1,23 @@
+{
+  "name": "pug-lint-config-rapid",
+  "version": "0.0.1",
+  "description": "Rapid Pug coding standard for Pug Lint",
+  "main": "index.js",
+  "author": "Nuotron <hello@nuotron.co>",
+  "keywords": [
+    "puglint",
+    "puglintconfig"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clocklimited/pug-lint-config-clock.git"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "license": "ISC",
+  "peerDependencies": {
+    "pug-lint": "^2.5.0",
+    "pug-lint-config-clock": "^2.0.0"
+  }
+}
