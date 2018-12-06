@@ -16,7 +16,7 @@
     "registry": "http://registry.npmjs.org"
   },
   "license": "ISC",
-  "peerDependencies": {
+  "dependencies": {
     "pug-lint": "^2.5.0",
     "pug-lint-config-clock": "^2.0.0"
   }
