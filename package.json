@@ -1,0 +1,22 @@
+{
+  "name": "eslint-config-rapid",
+  "version": "0.0.1",
+  "description": "Rapid JavaScript coding standard for ESLint",
+  "main": "index.js",
+  "author": "Nuotron <hello@nuotron.co>",
+  "keywords": [
+    "puglint",
+    "puglintconfig"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clocklimited/pug-lint-config-clock.git"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "license": "ISC",
+  "peerDependencies": {
+    "eslint": "^5.8.0"
+  }
+}
