@@ -6,16 +6,13 @@ import bodyParser from 'body-parser'
 import cookieParser from 'cookie-parser'
 import mongoose from 'mongoose'
 import chalk from 'chalk'
-import api from './api'
+import api from '../api'
 
 const app = express()
 
 // start message
-// eslint-disable-next-line no-console
-console.log(chalk.cyan(`Running in ${config.env} mode`))
-// eslint-disable-next-line no-console
-console.log(chalk.cyan('Access URL is: ') +
-chalk.magenta(`http://${config.host}:${config.port}`))
+/* eslint-disable no-console */
+console.log(chalk.cyan(`Running in \`${config.env}\` mode`))
 
 // connect to the database
 mongoose.connect(config.database(), {
@@ -24,10 +21,8 @@ mongoose.connect(config.database(), {
 })
 const db = mongoose.connection
 db.on('error', function() {
-  // eslint-disable-next-line no-console
   console.log(chalk.red(`Failed to connect to the \`${config.db.name}\` database`))
 }).once('open', function() {
-  // eslint-disable-next-line no-console
   console.log(chalk.cyan(`Successfully connected to the \`${config.db.name}\` database`))
 })
 
@@ -48,6 +43,7 @@ app.use(function(err, req, res, next) {
   else next(err)
 })
 
-app.listen(config.port, function () {
-  console.log(chalk.cyan(`Listening on ${config.port}`))
+app.listen(config.port, function() {
+  console.log(chalk.cyan('Access URL is: ') +
+  chalk.magenta(`http://${config.host}:${config.port}`))
 })
