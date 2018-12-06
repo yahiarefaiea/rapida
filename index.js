@@ -1,2 +1,1 @@
-const errHandle = require('./errors');
-module.exports = errHandle;
+module.exports = require('./errors');
