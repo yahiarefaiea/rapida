@@ -1,4 +1,4 @@
-import config from './bin/config'
+import config from './config'
 import express from 'express'
 import compression from 'compression'
 import morgan from 'morgan'
@@ -9,6 +9,13 @@ import chalk from 'chalk'
 import api from './api'
 
 const app = express()
+
+// start message
+// eslint-disable-next-line no-console
+console.log(chalk.cyan(`Running in ${config.env} mode`))
+// eslint-disable-next-line no-console
+console.log(chalk.cyan('Access URL is: ') +
+chalk.magenta(`http://${config.host}:${config.port}`))
 
 // connect to the database
 mongoose.connect(config.database(), {
@@ -41,4 +48,6 @@ app.use(function(err, req, res, next) {
   else next(err)
 })
 
-module.exports = app
+app.listen(config.port, function () {
+  console.log(chalk.cyan(`Listening on ${config.port}`))
+})
