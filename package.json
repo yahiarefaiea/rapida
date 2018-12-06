@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/clocklimited/pug-lint-config-clock.git"
+    "url": "git+https://github.com/nuotron/pug-lint-config-rapid.git"
   },
   "publishConfig": {
     "registry": "http://registry.npmjs.org"
