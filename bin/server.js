@@ -43,6 +43,7 @@ app.use(function(err, req, res, next) {
   else next(err)
 })
 
+// listen to port
 app.listen(config.port, function() {
   console.log(chalk.cyan('Access URL is: ') +
   chalk.magenta(`http://${config.host}:${config.port}`))
