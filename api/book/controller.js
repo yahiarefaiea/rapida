@@ -26,7 +26,7 @@ module.exports = {
 
   // post new item
   post: function(req, res, next) {
-    bookStrict(req.body)
+    req.body = bookStrict(req.body)
     let book = new Book(req.body)
     let response = bookResponse(book)
     response.request = bookUrl(req, book)
@@ -66,7 +66,7 @@ module.exports = {
 
   // update an item
   patch: function(req, res, next) {
-    bookStrict(req.body)
+    req.body = bookStrict(req.body)
     for(let key in req.body) req.book[key] = req.body[key]
 
     req.book.save(function(err) {
@@ -122,6 +122,7 @@ function bookUrl(req, book) {
 
 // book strict function
 function bookStrict(body) {
+  body = omit(body, 'slug')
   if(body.title) body.slug = slug(body.title)
   return omit(body, ['_id', 'createdAt', 'updatedAt', '__v'])
 }
