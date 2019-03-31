@@ -8,7 +8,8 @@ module.exports = {
   // get all items
   getAll: function(req, res, next) {
     let query = {}
-    if(req.query.read) query.read = req.query.read
+    if(req.query.search) query = {title: new RegExp(escapeRegex(req.query.search), 'gi')}
+    else if(req.query.read) query.read = req.query.read
 
     Book.find(query, function(err, books) {
       handler(err, next, function() {
@@ -125,4 +126,9 @@ function bookStrict(body) {
   body = omit(body, 'slug')
   if(body.title) body.slug = slug(body.title)
   return omit(body, ['_id', 'createdAt', 'updatedAt', '__v'])
+}
+
+// escape regex function
+function escapeRegex(text) {
+  return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')
 }
