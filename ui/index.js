@@ -4,5 +4,5 @@ const name = 'XXXX'
 console.log(`Hello from the ${name} :(`)
 
 
-import book from './book'
-book()
+import library from './library'
+library()

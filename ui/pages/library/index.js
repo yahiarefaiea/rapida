@@ -1,8 +1,8 @@
-function book() {
+function library() {
   const name = 'Client'
 
   // eslint-disable-next-line no-console
   console.log(`Hello from the ${name} :(`)
 }
 
-module.exports = book
+module.exports = library
