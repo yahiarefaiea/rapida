@@ -2,24 +2,21 @@
   "name": "rapid-ui",
   "version": "0.0.1",
   "description": "Rapid JavaScript development environment for building UI",
-  "main": "bin/server.js",
+  "private": true,
   "scripts": {
-    "prestart": "npm run clean",
-    "start": "run-p application eslint:watch stylint:watch puglint:watch test:watch",
-    "start:prod": "cross-env NODE_ENV=production npm run application:prod",
-    "application": "nodemon bin/server.js --exec babel-node --color",
-    "application:prod": "babel-node bin/server.js --color",
-    "eslint": "eslint **/*.js --color",
-    "eslint:watch": "chokidar --initial --silent \"*.js\" \"bin/**/*.js\" \"ui/**/*.js\" -c \"npm run eslint\"",
-    "stylint": "stylint ui --color",
-    "stylint:watch": "chokidar --initial --silent \"ui/**/*.styl\" -c \"npm run stylint\"",
-    "puglint": "pug-lint ui",
-    "puglint:watch": "chokidar --initial --silent \"ui/**/*.pug\" -c \"npm run puglint\"",
+    "xpreserve": "run-p eslint test",
+    "serve": "webpack-dev-server --config bin/webpack.config.dev.babel.js --color",
+    "xprebuild": "npm run clean",
+    "build": "cross-env NODE_ENV=production webpack --config bin/webpack.config.prod.babel.js --color",
+    "eslint": "eslint bin/**/*.js --color",
+    "replace!stylint": "stylint ui --color",
+    "replace!stylint:watch": "chokidar --initial --silent \"ui/**/*.styl\" -c \"npm run stylint\"",
     "test": "mocha --reporter progress bin/test.js ui/**/*.test.js --color",
     "test:watch": "chokidar --initial --silent \"ui/**/*.test.js\" -c \"npm run test\"",
-    "clean": "rimraf storage/public",
+    "clean": "rimraf dist",
     "share": "run-p application localtunnel",
-    "localtunnel": "lt --port 3000 --subdomain rapid-ui"
+    "localtunnel": "lt --port 3001 --subdomain rapid-ui",
+    "new!deploy": "npm run build && <some build script>"
   },
   "repository": {
     "type": "git",
@@ -29,7 +26,7 @@
     "ui",
     "starter-kit",
     "boilerplate",
-    "express",
+    "webpack",
     "rapid"
   ],
   "author": "Nuotron <hello@nuotron.co>",
@@ -46,50 +43,58 @@
     "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.4",
     "browser-sync": "^2.26.3",
+    "browser-sync-webpack-plugin": "^2.2.2",
     "chai": "^4.2.0",
     "chalk": "^2.4.1",
     "chokidar-cli": "^1.2.1",
+    "copy-webpack-plugin": "^5.0.3",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.1",
-    "debug": "^4.1.0",
     "eslint": "^5.8.0",
     "eslint-config-rapid": "^0.1.0",
-    "express": "^4.16.4",
+    "eslint-loader": "^2.1.2",
+    "extract-loader": "^3.1.0",
+    "file-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "jsdom": "^13.0.0",
     "kouto-swiss": "^1.1.0",
     "localtunnel": "^1.9.1",
     "lodash": "^4.17.11",
+    "mini-css-extract-plugin": "^0.5.0",
     "mocha": "^5.2.0",
-    "morgan": "^1.9.1",
-    "nodemon": "^1.18.6",
     "npm-run-all": "^4.1.3",
+    "postcss-loader": "^3.0.0",
     "pug": "^2.0.3",
+    "pug-html-loader": "^1.1.5",
     "pug-lint": "^2.5.0",
     "pug-lint-config-rapid": "^0.1.0",
+    "pug-lint-loader": "0.0.4",
     "rapid-error-handler": "0.0.1",
     "rimraf": "^2.6.2",
-    "serve-favicon": "^2.5.0",
     "style-loader": "^0.23.1",
+    "stylelint": "^10.0.1",
+    "stylelint-webpack-plugin": "^0.10.5",
     "stylint": "^1.5.9",
+    "stylint-loader": "^1.0.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
+    "uglifyjs-webpack-plugin": "^2.1.2",
     "webpack": "^4.25.0",
-    "webpack-dev-middleware": "^3.4.0"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-merge": "^4.1.4"
   },
   "babel": {
     "presets": [
       [
-        "@babel/env",
+        "@babel/preset-env",
         {
           "targets": "> 0.25%, not dead"
         }
       ]
     ]
   },
-  "eslintIgnore": [
-    "dist/"
-  ],
   "eslintConfig": {
     "root": true,
     "env": {

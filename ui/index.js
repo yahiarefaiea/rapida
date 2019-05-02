@@ -1,13 +1,14 @@
-import 'index.pug'
+import './index.pug'
+// import './index.styl'
 
-const name = 'XXXX'
+// import library from './library'
+// library()
 
-// eslint-disable-next-line no-console
-console.log(`Hello from the ${name} :(`)
-
-
-import library from './library'
-library()
+// import name from './name'
+//
+// let message = 'Hello, '
+// // eslint-disable-next-line no-console
+// console.log(`${message}${name.name}`)
 
 if(module.hot) module.hot.accept()
 

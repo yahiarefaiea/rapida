@@ -1,6 +1,8 @@
-doctype html
-html
-  head
-    title #{title}
-  body
-    #app
+extends components\templates\default
+
+block title
+  title Rapid UI
+
+block app
+  h3 test text from index.pug
+  include pages\library\index
