@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Rapid JavaScript development environment for building API",
   "main": "bin/server.js",
+  "private": true,
   "scripts": {
     "start": "run-p server eslint:watch test:watch",
     "start:prod": "cross-env NODE_ENV=production npm run server:prod",
