@@ -1,8 +1,10 @@
 import pkg from '../package.json'
+import config from './config'
 import path from 'path'
 import webpack from 'webpack'
 import merge from 'webpack-merge'
 import baseConfig from './webpack.config.base'
+import koutoSwiss from 'kouto-swiss'
 import BrowserSyncPlugin from 'browser-sync-webpack-plugin'
 
 module.exports = merge(baseConfig, {
@@ -16,7 +18,7 @@ module.exports = merge(baseConfig, {
     hot: true,
     clientLogLevel: 'none',
     compress: true,
-    port: config.port,
+    port: config.port - 1,
     inline: true,
     noInfo: true
   },
@@ -25,6 +27,17 @@ module.exports = merge(baseConfig, {
   module: {
     rules: [
 
+      //  stylusss
+      {
+        test: /\.styl$/,
+        use: ['style-loader', 'css-loader', {
+          loader: 'stylus-loader',
+          options: {
+            use: [koutoSwiss()]
+          }
+        }]
+      }
+
     ]
   },
 
@@ -32,15 +45,14 @@ module.exports = merge(baseConfig, {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new BrowserSyncPlugin({
-      host: config.host,
-      port: config.port + 1,
       ui: false,
+      host: config.host,
+      port: config.port,
       // and add other settings...
-      proxy: `${config.host}:${config.port}`,
+      proxy: `${config.host}:${config.port - 1}`,
       files: [{
         match: [
-          '**/*.pug',
-          '**/*.styl'
+          '**/*.pug'
         ],
         fn: function(event, file) {
           if(event === 'change') {

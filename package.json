@@ -70,6 +70,7 @@
     "pug-lint": "^2.5.0",
     "pug-lint-config-rapid": "^0.1.0",
     "pug-lint-loader": "0.0.4",
+    "puglint-stylish": "^1.0.1",
     "rapid-error-handler": "0.0.1",
     "rimraf": "^2.6.2",
     "style-loader": "^0.23.1",

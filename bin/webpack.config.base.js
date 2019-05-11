@@ -1,4 +1,4 @@
-import pkg from '../package.json'
+// import pkg from '../package.json'
 import config from './config'
 import path from 'path'
 import webpack from 'webpack'
@@ -42,7 +42,6 @@ module.exports = {
         test: /\.pug$/,
         use: ['html-loader', 'pug-html-loader']
       }
-
 
     ]
   },
