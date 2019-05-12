@@ -14,8 +14,7 @@ module.exports = {
     global: path.join(__dirname, '../ui/index.js')
   },
   output: {
-    filename: '[name].bundle.js',
-    // filename: '[name].bundle.[chunkhash].js',
+    filename: '[name].bundle.[chunkhash].js',
     path: path.join(__dirname, '../dist')
   },
 
@@ -31,8 +30,6 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env']
-            // or
-            // presets: ['@babel/env']
           }
         }
       },
