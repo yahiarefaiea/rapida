@@ -1,10 +1,8 @@
-import pkg from '../package.json'
 import config from './config'
 import path from 'path'
 import webpack from 'webpack'
 import merge from 'webpack-merge'
 import baseConfig from './webpack.config.base'
-import koutoSwiss from 'kouto-swiss'
 import BrowserSyncPlugin from 'browser-sync-webpack-plugin'
 
 module.exports = merge(baseConfig, {
@@ -12,7 +10,6 @@ module.exports = merge(baseConfig, {
   devtool: 'inline-source-map',
   watch: true,
 
-  //  dev
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     hot: true,
@@ -23,24 +20,6 @@ module.exports = merge(baseConfig, {
     noInfo: true
   },
 
-  //  module
-  module: {
-    rules: [
-
-      //  stylusss
-      {
-        test: /\.styl$/,
-        use: ['style-loader', 'css-loader', {
-          loader: 'stylus-loader',
-          options: {
-            use: [koutoSwiss()]
-          }
-        }]
-      }
-
-    ]
-  },
-
   //  plugins
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -48,7 +27,6 @@ module.exports = merge(baseConfig, {
       ui: false,
       host: config.host,
       port: config.port,
-      // and add other settings...
       proxy: `${config.host}:${config.port - 1}`,
       files: [{
         match: [

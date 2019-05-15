@@ -1,11 +1,12 @@
-// import pkg from '../package.json'
 import config from './config'
 import path from 'path'
-import webpack from 'webpack'
 import chalk from 'chalk'
+import koutoSwiss from 'kouto-swiss'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import CopyPlugin from 'copy-webpack-plugin'
 
+// eslint-disable-next-line no-console
 console.log(chalk.cyan(`Running in \`${config.env}\` mode`))
 
 module.exports = {
@@ -14,15 +15,12 @@ module.exports = {
     global: path.join(__dirname, '../ui/index.js')
   },
   output: {
-    filename: '[name].bundle.[chunkhash].js',
+    filename: config.devMode() ? '[name].bundle.js' : '[name].bundle.[hash].js',
     path: path.join(__dirname, '../dist')
   },
 
-  //  module
   module: {
     rules: [
-
-      //  babel
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -34,19 +32,36 @@ module.exports = {
         }
       },
 
-      //  render pug
       {
         test: /\.pug$/,
         use: ['html-loader', 'pug-html-loader']
-      }
+      },
 
+      {
+        test: /\.styl$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: config.devMode(),
+              reloadAll: true,
+            },
+          },
+          'css-loader?sourceMap',
+          {
+            loader: 'stylus-loader?sourceMap',
+            options: {
+              use: [koutoSwiss()]
+            }
+          }
+        ],
+      }
     ]
   },
 
-  //  plugins
   plugins: [
-    //  html
     new HtmlWebpackPlugin({
+      // check if all of these values are needed
       template: 'ui/index.pug',
       minify: {
         removeComments: true,
@@ -63,7 +78,10 @@ module.exports = {
       inject: true
     }),
 
-    //  copy files
+    new MiniCssExtractPlugin({
+      filename: config.devMode() ? '[name].bundle.css' : '[name].bundle.[hash].css'
+    }),
+
     new CopyPlugin([{ from: 'static/' }])
   ]
 }

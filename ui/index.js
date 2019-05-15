@@ -1,8 +1,10 @@
 import './index.pug'
 import './index.styl'
 
-// import library from './library'
-// library()
+import lodash from 'lodash'
+
+import library from './pages/library'
+library()
 
 // import name from './name'
 //

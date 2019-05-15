@@ -8,6 +8,15 @@ function library() {
 module.exports = library
 
 
+// export function square(x) {
+//   return x * x;
+// }
+//
+// export function cube(x) {
+//   return x * x * x;
+// }
+
+
 // const hello = function() {
 //   const message = 'Starter Kit'
 //   console.log(`Hello ${message}`)
