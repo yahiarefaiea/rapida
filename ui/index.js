@@ -12,9 +12,9 @@ library()
 // // eslint-disable-next-line no-console
 // console.log(`${message}${name.name}`)
 
-if(module.hot) module.hot.accept()
 
 if(module.hot) {
+  module.hot.accept()
   const hotEmitter = require('webpack/hot/emitter')
   const DEAD_CSS_TIMEOUT = 2000
 
