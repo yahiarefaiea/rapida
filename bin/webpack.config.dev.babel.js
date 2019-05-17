@@ -20,9 +20,12 @@ module.exports = merge(baseConfig, {
     noInfo: true
   },
 
-  //  plugins
+  // plugins
   plugins: [
+    // hot module replacement plugin
     new webpack.HotModuleReplacementPlugin(),
+
+    // browser sync plugin
     new BrowserSyncPlugin({
       ui: false,
       host: config.host,
