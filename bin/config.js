@@ -5,6 +5,9 @@ module.exports = Object.freeze({
   env: process.env.NODE_ENV || 'development',
   host: process.env.HOST || 'localhost',
   port: process.env.PORT || 3000,
+  devMode: function() {
+    if(this.env === 'development') return true
+  },
   db: {
     host: process.env.DB_HOST || 'localhost',
     port: process.env.DB_PORT || 27017,
