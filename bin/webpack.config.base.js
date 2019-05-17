@@ -19,8 +19,10 @@ module.exports = {
     path: path.join(__dirname, '../dist')
   },
 
+  // module
   module: {
     rules: [
+      // babel
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -32,11 +34,13 @@ module.exports = {
         }
       },
 
+      // pug
       {
         test: /\.pug$/,
         use: ['html-loader', 'pug-html-loader']
       },
 
+      // stylus
       {
         test: /\.styl$/,
         use: [
@@ -44,8 +48,8 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
             options: {
               hmr: config.devMode(),
-              reloadAll: true,
-            },
+              reloadAll: true
+            }
           },
           'css-loader?sourceMap',
           {
@@ -54,34 +58,26 @@ module.exports = {
               use: [koutoSwiss()]
             }
           }
-        ],
+        ]
       }
     ]
   },
 
+  // plugins
   plugins: [
+    // html webpack plugin
     new HtmlWebpackPlugin({
-      // check if all of these values are needed
-      template: 'ui/index.pug',
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeRedundantAttributes: true,
-        useShortDoctype: true,
-        removeEmptyAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-        keepClosingSlash: true,
-        minifyJS: true,
-        minifyCSS: true,
-        minifyURLs: true
-      },
-      inject: true
+      template: 'ui/index.pug'
     }),
 
+    // mini css extract plugin
     new MiniCssExtractPlugin({
       filename: config.devMode() ? '[name].bundle.css' : '[name].bundle.[hash].css'
     }),
 
-    new CopyPlugin([{ from: 'static/' }])
+    // copy plugin
+    new CopyPlugin([{
+      from: 'static/'
+    }])
   ]
 }
