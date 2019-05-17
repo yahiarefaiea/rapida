@@ -13,4 +13,5 @@ The API methods are: `GET`, `POST`, `PATCH`, `DELETE`
 **Note: you need to have `MongoDB` service up and running.**
 
 ## Todos:
-1. Improve search query in controller.
+1. Improve controller crud methods (Maybe move everything to model).
+2. Improve search query in controller.
