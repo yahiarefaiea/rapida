@@ -1,7 +1,7 @@
 {
   "name": "rapid-api",
   "version": "0.1.0",
-  "description": "Rapid JavaScript development environment for building RESTful API.",
+  "description": "Rapid JavaScript development environment for building RESTful API",
   "main": "bin/server.js",
   "private": true,
   "scripts": {
