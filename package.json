@@ -1,7 +1,7 @@
 {
   "name": "rapid-ui",
   "version": "0.0.1",
-  "description": "Rapid JavaScript development environment for building UI.",
+  "description": "Rapid JavaScript development environment for building UI",
   "private": true,
   "scripts": {
     "serve": "run-p test:watch lint:watch webpack:dev",
