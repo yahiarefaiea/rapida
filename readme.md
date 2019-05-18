@@ -15,6 +15,7 @@ or `npm run build -s` to build the app for production.
 4. Improve caching (hash, chunk hash, or content hash?).
 5. Add @storybook/html ("storybook": "start-storybook -p 6006").
 6. Add Flow config ("flow": "flow check").
+7. Integrate browsersync with localtunnel.
 
 ## Issues:
 1. Static files are not updated when modified.
