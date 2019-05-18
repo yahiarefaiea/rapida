@@ -70,7 +70,6 @@
     "pug-lint-config-rapid": "^0.1.0",
     "puglint-stylish": "^1.0.1",
     "rimraf": "^2.6.3",
-    "style-loader": "^0.23.1",
     "stylint": "^1.5.9",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
