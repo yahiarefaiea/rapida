@@ -4,11 +4,9 @@ Rapid JavaScript development environment for building UI.
 
 ## Getting Started
 
-Run `npm i`
-
-Then `npm run serve -s` to serve the app for development.
-
-Or `npm run build -s` to build the app for production.
+Run `npm i`,
+then `npm run serve -s` to serve the app for development,
+or `npm run build -s` to build the app for production.
 
 ## Todos:
 1. Add a deploy script.
