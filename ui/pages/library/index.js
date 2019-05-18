@@ -1,5 +1,5 @@
 function library() {
-  const name = 'Client'
+  let name = 'Client'
 
   // eslint-disable-next-line no-console
   console.log(`Hello from the ${name} :(`)
@@ -18,14 +18,14 @@ module.exports = library
 
 
 // const hello = function() {
-//   const message = 'Starter Kit'
+//   let message = 'Starter Kit'
 //   console.log(`Hello ${message}`)
 // }
 //
 // export default hello
 //
 // // function book() {
-// //   const name = 'Client'
+// //   let name = 'Client'
 // //
 // //   // eslint-disable-next-line no-console
 // //   console.log(`Hello from the ${name} :(`)
@@ -34,7 +34,7 @@ module.exports = library
 // // module.exports = book
 //
 // // const hello = () => {
-// //     const message = 'Starter Kit'
+// //     let message = 'Starter Kit'
 // //     console.log(`Hello ${message}`)
 // // }
 // //
