@@ -1,17 +1,8 @@
 import './index.pug'
 import './index.styl'
 
-import lodash from 'lodash'
-
-import library from './pages/library'
-library()
-
-// import name from './name'
-//
-// let message = 'Hello, '
-// // eslint-disable-next-line no-console
-// console.log(`${message}${name.name}`)
-
+// eslint-disable-next-line no-console
+console.log('Rapid UI')
 
 if(module.hot) {
   module.hot.accept()
