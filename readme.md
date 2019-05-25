@@ -16,6 +16,8 @@ or `npm run build -s` to build the app for production.
 5. Add @storybook/html ("storybook": "start-storybook -p 6006").
 6. Add Flow config ("flow": "flow check").
 7. Integrate browsersync with localtunnel.
+8. add testing stuff and test config like reporter into the bin folder instead of scripts.
+9. Use `const timestamp = new Date() // timestamp or timestamps?` in the `webpack.config.prod.js`.
 
 ## Issues:
 1. Static files are not updated when modified.
