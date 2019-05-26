@@ -13,7 +13,7 @@ module.exports = merge(baseConfig, {
       banner: `${pkg.name} v${pkg.version}\n` +
               `${pkg.description}\n` +
               `Project produced by: ${pkg.author}\n` +
-              `Last update on: ${new Date().getUTCFullYear()}.` +
+              `Latest update on: ${new Date().getUTCFullYear()}.` +
               `${new Date().getUTCMonth() + 1}.${new Date().getUTCDate()}\n` +
               `Released under the ${pkg.license} license.`
     })
