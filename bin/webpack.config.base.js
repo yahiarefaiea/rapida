@@ -13,7 +13,7 @@ console.log(chalk.cyan(`Running in \`${config.env}\` mode`))
 module.exports = {
   mode: config.env,
   entry: {
-    global: path.join(__dirname, '../ui/index.js')
+    main: path.join(__dirname, '../ui/index.js')
   },
   output: {
     filename: config.devMode() ? '[name].bundle.js' : '[name].bundle.[contenthash].js',
