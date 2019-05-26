@@ -1,5 +1,6 @@
 import './index.pug'
 import './index.styl'
+import lodash from 'lodash'
 
 // eslint-disable-next-line no-console
 console.log('Rapid UI')
