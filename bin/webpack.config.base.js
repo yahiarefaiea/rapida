@@ -1,5 +1,6 @@
 import config from './config'
 import path from 'path'
+import webpack from 'webpack'
 import chalk from 'chalk'
 import koutoSwiss from 'kouto-swiss'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
@@ -15,9 +16,44 @@ module.exports = {
     global: path.join(__dirname, '../ui/index.js')
   },
   output: {
-    filename: config.devMode() ? '[name].bundle.js' : '[name].bundle.[hash].js',
+    filename: config.devMode() ? '[name].bundle.js' : '[name].bundle.[contenthash].js',
     path: path.join(__dirname, '../dist')
   },
+
+  // optimization
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
+        }
+      }
+    }
+  },
+
+  // plugins
+  plugins: [
+    // html webpack plugin
+    new HtmlWebpackPlugin({
+      template: 'ui/index.pug'
+    }),
+
+    // mini css extract plugin
+    new MiniCssExtractPlugin({
+      filename: config.devMode() ? '[name].bundle.css' : '[name].bundle.[contenthash].css'
+    }),
+
+    // copy plugin
+    new CopyPlugin([{
+      from: 'static/'
+    }]),
+
+    // HashedModuleIdsPlugin
+    new webpack.HashedModuleIdsPlugin()
+  ],
 
   // module
   module: {
@@ -61,23 +97,5 @@ module.exports = {
         ]
       }
     ]
-  },
-
-  // plugins
-  plugins: [
-    // html webpack plugin
-    new HtmlWebpackPlugin({
-      template: 'ui/index.pug'
-    }),
-
-    // mini css extract plugin
-    new MiniCssExtractPlugin({
-      filename: config.devMode() ? '[name].bundle.css' : '[name].bundle.[hash].css'
-    }),
-
-    // copy plugin
-    new CopyPlugin([{
-      from: 'static/'
-    }])
-  ]
+  }
 }
