@@ -1,5 +1,3 @@
-
-
 import pkg from '../package.json'
 
 module.exports = Object.freeze({
