@@ -10,6 +10,7 @@ export default merge(baseConfig, {
   devtool: 'inline-source-map',
   watch: true,
 
+  // dev server
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     hot: true,
