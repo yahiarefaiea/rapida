@@ -12,6 +12,7 @@ module.exports = function() {
     // router middlewares
     // .use('/feature', feature())
 
+    // todo: replace with real api
     .get('/', function(req, res) {
       res.send({'rapid': 'api'})
     })
