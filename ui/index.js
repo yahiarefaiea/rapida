@@ -2,6 +2,7 @@ import './index.pug'
 import './index.styl'
 import lodash from 'lodash'
 
+// todo: replace with real app
 // eslint-disable-next-line no-console
 console.log('Rapid UI')
 
