@@ -118,7 +118,6 @@
   "stylintrc": {
     "blocks": false,
     "brackets": "never",
-    "colons": "always",
     "colors": "always",
     "commaSpace": "always",
     "commentSpace": "always",
