@@ -6,6 +6,7 @@ import lodash from 'lodash'
 // eslint-disable-next-line no-console
 console.log('Rapid UI')
 
+// enable hot module replacement plugin
 if(module.hot) {
   module.hot.accept()
   const hotEmitter = require('webpack/hot/emitter')
