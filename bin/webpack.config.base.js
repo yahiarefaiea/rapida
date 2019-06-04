@@ -10,7 +10,7 @@ import CopyPlugin from 'copy-webpack-plugin'
 // eslint-disable-next-line no-console
 console.log(chalk.cyan(`Running in \`${config.env}\` mode`))
 
-module.exports = {
+export default {
   mode: config.env,
   entry: {
     main: path.join(__dirname, '../ui/index.js')

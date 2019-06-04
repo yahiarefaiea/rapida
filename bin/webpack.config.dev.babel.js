@@ -5,7 +5,7 @@ import merge from 'webpack-merge'
 import baseConfig from './webpack.config.base'
 import BrowserSyncPlugin from 'browser-sync-webpack-plugin'
 
-module.exports = merge(baseConfig, {
+export default merge(baseConfig, {
   stats: 'minimal',
   devtool: 'inline-source-map',
   watch: true,

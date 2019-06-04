@@ -5,7 +5,7 @@ import baseConfig from './webpack.config.base'
 const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
-module.exports = merge(baseConfig, {
+export default merge(baseConfig, {
   // optimization
   optimization: {
     minimizer: [
