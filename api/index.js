@@ -7,7 +7,7 @@ const router = express.Router()
 // import feature from './feature'
 
 // export function
-module.exports = function() {
+export default function() {
   return router
     // router middlewares
     // .use('/feature', feature())
