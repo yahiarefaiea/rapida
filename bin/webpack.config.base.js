@@ -51,7 +51,7 @@ export default {
       from: 'static/'
     }]),
 
-    // HashedModuleIdsPlugin
+    // hashed module ids plugin
     new webpack.HashedModuleIdsPlugin()
   ],
 

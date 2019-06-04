@@ -2,17 +2,17 @@ import pkg from '../package.json'
 import webpack from 'webpack'
 import merge from 'webpack-merge'
 import baseConfig from './webpack.config.base'
-const TerserJSPlugin = require('terser-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+import TerserJSPlugin from 'terser-webpack-plugin'
+import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin'
 
 export default merge(baseConfig, {
   // optimization
   optimization: {
     minimizer: [
-      // TerserJSPlugin
+      // terser js plugin
       new TerserJSPlugin({}),
 
-      // OptimizeCSSAssetsPlugin
+      // optimize css assets plugin
       new OptimizeCSSAssetsPlugin({})
     ]
   },
