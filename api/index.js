@@ -1,12 +1,9 @@
-// api router
 import express from 'express'
 import errHandle from 'rapid-error-handler'
 const router = express.Router()
 
-// router imports
 // import feature from './feature'
 
-// export function
 export default function() {
   return router
     // router middlewares
