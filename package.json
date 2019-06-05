@@ -11,7 +11,7 @@
     "lint": "run-p eslint puglint stylint",
     "lint:watch": "run-p eslint:watch puglint:watch stylint:watch",
     "eslint": "eslint **/*.js --color",
-    "eslint:watch": "chokidar --initial --silent \"./**/*.js\" -c \"npm run eslint\"",
+    "eslint:watch": "chokidar --initial --silent \"bin/**/*.js\" \"ui/**/*.js\" -c \"npm run eslint\"",
     "puglint": "pug-lint --reporter node_modules/puglint-stylish ui --color",
     "puglint:watch": "chokidar --initial --silent \"ui/**/*.pug\" -c \"npm run puglint\"",
     "stylint": "stylint ui --color",
