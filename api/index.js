@@ -10,7 +10,7 @@ export default function() {
     // .use('/feature', feature())
 
     // todo: replace with real api
-    .get('/', function(req, res) {
+    .get('/feature', function(req, res) {
       res.send({'rapid': 'api'})
     })
 
