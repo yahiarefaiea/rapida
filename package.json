@@ -6,8 +6,8 @@
   "scripts": {
     "start": "run-p test:watch lint:watch server",
     "server": "nodemon bin/server.js --exec babel-node --color",
-    "start:prod": "cross-env NODE_ENV=production run-p test lint server:prod",
-    "server:prod": "babel-node bin/server.js --color",
+    "start:prod": "run-p test lint server:prod",
+    "server:prod": "cross-env NODE_ENV=production babel-node bin/server.js --color",
     "lint": "eslint **/*.js --color",
     "lint:watch": "chokidar --initial --silent \"bin/**/*.js\" \"api/**/*.js\" -c \"npm run lint\"",
     "test": "mocha --reporter progress bin/test.js api/**/*.test.js --color",
