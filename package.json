@@ -20,9 +20,7 @@
     "url": "git+https://github.com/nuotron/rapid-api.git"
   },
   "keywords": [
-    "mvc",
     "feature-based",
-    "web-framework",
     "restful-api",
     "starter-kit",
     "boilerplate",
