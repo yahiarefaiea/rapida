@@ -12,13 +12,13 @@ export default merge(baseConfig, {
 
   // dev server
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    hot: true,
     clientLogLevel: 'none',
     compress: true,
-    port: config.port - 1,
+    contentBase: path.join(__dirname, 'dist'),
+    hot: true,
     inline: true,
-    noInfo: true
+    noInfo: true,
+    port: config.port - 1
   },
 
   // plugins
