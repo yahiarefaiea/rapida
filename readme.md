@@ -6,7 +6,8 @@ Rapid JavaScript development environment for building RESTful API.
 
 ## Getting Started
 
-Run `npm i`, then `npm start -s`.
+Run `npm i` to install all the dependencies,
+then `npm start -s` to start the server.
 
 Access URL will be: `localhost:3000/feature`.
 
