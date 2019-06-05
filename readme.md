@@ -10,6 +10,8 @@ Run `npm i` to install all the dependencies,
 then `npm run serve -s` to serve the app for development,
 or `npm run build -s` to build the app for production.
 
+**Note: Browser will open instantly when serving the app for development**
+
 ## Todos:
 1. Use webpack treeshaking.
 2. Add configuration options file for webpack.
