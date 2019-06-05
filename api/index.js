@@ -9,7 +9,6 @@ export default function() {
     // router middlewares
     // .use('/feature', feature())
 
-    // todo: replace with real api
     .get('/feature', function(req, res) {
       res.send({'rapid': 'api'})
     })
