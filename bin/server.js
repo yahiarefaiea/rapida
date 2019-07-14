@@ -4,7 +4,6 @@ import mongoose from 'mongoose'
 import compression from 'compression'
 import morgan from 'morgan'
 import bodyParser from 'body-parser'
-import cookieParser from 'cookie-parser'
 import cors from 'cors'
 import chalk from 'chalk'
 import api from '../api'
@@ -32,7 +31,6 @@ app.use(compression())
 app.use(morgan('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
-app.use(cookieParser())
 app.use(cors())
 
 // project middlewares
