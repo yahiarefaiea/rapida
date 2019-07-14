@@ -20,7 +20,7 @@
     "test:watch": "chokidar --initial --silent \"ui/**/*.test.js\" -c \"npm run test\"",
     "clean": "rimraf dist",
     "share": "run-p serve localtunnel",
-    "localtunnel": "lt --port 3000"
+    "localtunnel": "lt --port 8080"
   },
   "repository": {
     "type": "git",
