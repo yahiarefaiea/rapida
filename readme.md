@@ -14,7 +14,6 @@ Then add this to your `package.json`:
 
 ```json
 "eslintConfig": {
-  "root": true,
   "extends": "rapid"
 }
 ```
