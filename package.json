@@ -3,15 +3,6 @@
   "version": "0.1.0",
   "description": "Error handling made easier",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nuotron/rapid-error-handler.git"
-  },
-  "keywords": [],
   "author": "Nuotron <hello@nuotron.co>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nuotron/rapid-error-handler/issues"
-  },
-  "homepage": "https://github.com/nuotron/rapid-error-handler#readme"
+  "license": "ISC"
 }
