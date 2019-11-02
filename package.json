@@ -3,6 +3,6 @@
   "version": "0.1.0",
   "description": "Rapid JavaScript coding standard for ESLint",
   "main": "index.js",
-  "author": "Nuotron <hello@nuotron.co>",
+  "author": "Nuotron <hi@nuotron.co>",
   "license": "ISC"
 }
