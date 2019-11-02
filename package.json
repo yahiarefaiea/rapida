@@ -1,6 +1,6 @@
 {
   "name": "pug-lint-config-rapid",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Rapid Pug coding standard for Pug Lint",
   "main": "index.js",
   "author": "Nuotron <hi@nuotron.co>",
