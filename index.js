@@ -1,1 +1,1 @@
-module.exports = require('./errors');
+module.exports = require('./src/responses');

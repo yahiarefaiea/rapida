@@ -1,42 +1,42 @@
 export default Object.freeze({
-  found: {
+  Found: {
     status: 200,
     message: 'Resource(s) found'
   },
-  created: {
+  Created: {
     status: 201,
     message: 'Resource created'
   },
-  updated: {
+  Updated: {
     status: 200,
     message: 'Resource updated'
   },
-  deleted: {
+  Deleted: {
     status: 200,
     message: 'Resource deleted'
   },
-  notFound: {
+  NotFound: {
     status: 404,
     message: 'Resource not found'
   },
-  badRequest: {
+  BadRequest: {
     status: 400,
     message: 'Bad Request'
   },
-  forbidden: {
+  Forbidden: {
     status: 403,
     message: 'Action forbidden'
   },
-  unauthorized: {
+  Unauthorized: {
     status: 401,
     message: 'Unauthorized access'
   },
-  internalServerError: {
+  InternalServerError: {
     status: 500,
     message: 'Internal server error'
   },
-  noContent: {
+  NoContent: {
     status: 204,
-    message: 'No content'
+    message: null
   }
 })
