@@ -34,9 +34,5 @@ module.exports = Object.freeze({
   InternalServerError: {
     status: 500,
     message: 'Internal server error'
-  },
-  NoContent: {
-    status: 204,
-    message: null
   }
 })

@@ -65,10 +65,5 @@ module.exports = {
     constructor(message = defaults.InternalServerError.message) {
       super(message, defaults.InternalServerError.status)
     }
-  },
-  NoContent: class NoContent extends Bad {
-    constructor() {
-      super(defaults.NoContent.message, defaults.NoContent.status)
-    }
   }
 }
