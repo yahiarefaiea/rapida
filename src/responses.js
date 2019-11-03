@@ -1,4 +1,4 @@
-import defaults from './defaults'
+var defaults = require('./defaults')
 
 class Good {
   constructor(data = null, message, status) {
@@ -17,7 +17,7 @@ class Bad extends Error {
   }
 }
 
-export default {
+module.exports = {
   defaults: defaults,
   Found: class Found extends Good {
     constructor(data, message = defaults.Found.message) {

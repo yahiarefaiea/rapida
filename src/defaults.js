@@ -1,4 +1,4 @@
-export default Object.freeze({
+module.exports = Object.freeze({
   Found: {
     status: 200,
     message: 'Resource(s) found'
