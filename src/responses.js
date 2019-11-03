@@ -2,7 +2,7 @@ var defaults = require('./defaults')
 
 class Good {
   constructor(data = null, message, status) {
-    this.data = data
+    if(data) this.data = data
     this.message = message
     this.status = status
 
@@ -19,6 +19,8 @@ class Bad extends Error {
 
 module.exports = {
   defaults: defaults,
+  Good: Good,
+  Bad: Bad,
   Found: class Found extends Good {
     constructor(data, message = defaults.Found.message) {
       super(data, message, defaults.Found.status)
