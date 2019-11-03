@@ -6,7 +6,7 @@
   "author": "Nuotron <hi@nuotron.co>",
   "license": "ISC",
   "scripts": {
-    "lint": "eslint **/*.js --color"
+    "lint": "eslint src/*.js --color"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
