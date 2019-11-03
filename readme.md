@@ -1,7 +1,19 @@
-# Rapid Error Handler
+# Rapid Response
 
-Error handling made easier.
+Rapid response helper for RESTful API.
 
-Code inspired and customized to fit our workflow from
-[APIErrors](https://gitlab.com/ammarlakis/APIErrors.git)
-by [Ammar Lakis](https://gitlab.com/ammarlakis).
+## Usage
+
+In your project folder, find and install `rapid-response`
+
+Import `rapid-response` to your project:
+
+```
+import Response from 'rapid-response'
+```
+
+Then add response wherever you want:
+
+```
+next(new Response.NotFound())
+```
