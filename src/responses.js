@@ -1,4 +1,4 @@
-var defaults = require('./defaults')
+var defaults = require('./defaults') // eslint-disable-line no-var
 
 class Good {
   constructor(data = null, message, status) {
@@ -68,7 +68,7 @@ module.exports = {
   },
   NoContent: class NoContent extends Bad {
     constructor() {
-      super(message = defaults.NoContent.message, defaults.NoContent.status)
+      super(defaults.NoContent.message, defaults.NoContent.status)
     }
   }
 }
