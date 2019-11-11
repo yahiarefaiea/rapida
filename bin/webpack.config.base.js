@@ -6,6 +6,7 @@ import koutoSwiss from 'kouto-swiss'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import CopyPlugin from 'copy-webpack-plugin'
+import ImageminPlugin from 'imagemin-webpack-plugin'
 
 // eslint-disable-next-line no-console
 console.log(chalk.cyan(`Running in \`${config.env}\` mode`))
@@ -50,6 +51,12 @@ export default {
     new CopyPlugin([{
       from: 'static/'
     }]),
+
+    // imagemin plugin
+    new ImageminPlugin({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      disable: config.devMode()
+    }),
 
     // hashed module ids plugin
     new webpack.HashedModuleIdsPlugin()
