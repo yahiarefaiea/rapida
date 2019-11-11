@@ -1,4 +1,3 @@
-import './index.pug'
 import './index.styl'
 import lodash from 'lodash'
 
