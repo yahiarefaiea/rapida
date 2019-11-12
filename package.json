@@ -3,10 +3,12 @@
   "version": "0.1.1",
   "description": "Rapid JavaScript development environment for building RESTful API",
   "main": "bin/server.js",
+  "engines": {
+    "node": "10.x"
+  },
   "scripts": {
     "start": "run-p test:watch lint:watch server",
     "server": "nodemon bin/server.js --exec babel-node --color",
-    "start:prod": "run-p test lint server:prod",
     "server:prod": "cross-env NODE_ENV=production babel-node bin/server.js --color",
     "lint": "eslint **/*.js --color",
     "lint:watch": "chokidar --initial --silent \"bin/**/*.js\" \"api/**/*.js\" -c \"npm run lint\"",
