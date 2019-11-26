@@ -1,6 +1,13 @@
 var axios = require('axios')
 var camelCase = require('lodash/camelCase')
 
+// response interceptor
+axios.interceptors.response.use(function(response) {
+  return response.data
+}, function(error) {
+  return Promise.reject(error.response.data)
+})
+
 class Api {
   constructor(data) {
     this.url = data.url
