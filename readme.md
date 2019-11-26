@@ -45,6 +45,6 @@ For example:
 
 ```javascript
 api.endpoints.resource.getAll()
-.then(response => console.log(response.data))
+.then(data => console.log(data))
 .catch(error => console.log(error))
 ```
