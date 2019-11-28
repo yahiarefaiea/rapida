@@ -2,16 +2,12 @@ import express from 'express'
 import errHandle from 'rapid-error-handler'
 const router = express.Router()
 
-// import feature from './feature'
+import book from './book'
 
 export default function() {
   return router
     // router middlewares
-    // .use('/feature', feature())
-
-    .get('/feature', function(req, res) {
-      res.send({'rapid': 'api'})
-    })
+    .use('/book', book())
 
     // error handler
     .use(function(req, res, next) {
