@@ -4,5 +4,6 @@
   "description": "Rapid JavaScript coding standard for ESLint",
   "main": "index.js",
   "author": "Nuotron <hi@nuotron.co>",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": "https://github.com/nuotron/eslint-config-rapid"
 }
