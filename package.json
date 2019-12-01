@@ -5,6 +5,7 @@
   "main": "index.js",
   "author": "Nuotron <hi@nuotron.co>",
   "license": "ISC",
+  "repository": "https://github.com/nuotron/rapid-response",
   "scripts": {
     "lint": "eslint src/**/*.js --color"
   },
