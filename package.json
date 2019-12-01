@@ -1,5 +1,5 @@
 {
-  "name": "rapid-rest-calls",
+  "name": "@rapid/rest-calls",
   "version": "0.1.0",
   "description": "Rapid REST calls helper for building UI",
   "main": "index.js",
