@@ -1,5 +1,5 @@
 {
-  "name": "rapid-api",
+  "name": "@rapid/api",
   "version": "0.1.1",
   "description": "Rapid JavaScript development environment for building RESTful API",
   "main": "bin/server.js",
