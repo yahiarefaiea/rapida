@@ -1,5 +1,5 @@
 {
-  "name": "rapid-ui",
+  "name": "@rapid/ui",
   "version": "0.1.0",
   "description": "Rapid JavaScript development environment for building UI",
   "scripts": {
