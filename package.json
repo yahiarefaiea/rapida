@@ -1,0 +1,9 @@
+{
+  "name": "eslint-config-rapid",
+  "version": "0.1.2",
+  "description": "Rapid JavaScript coding standard for ESLint",
+  "main": "index.js",
+  "author": "Nuotron <hi@nuotron.co>",
+  "license": "ISC",
+  "repository": "https://github.com/nuotron/eslint-config-rapid"
+}
