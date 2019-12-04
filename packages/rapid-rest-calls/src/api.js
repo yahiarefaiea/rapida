@@ -5,7 +5,8 @@ var camelCase = require('lodash/camelCase')
 axios.interceptors.response.use(function(response) {
   return response.data
 }, function(error) {
-  return Promise.reject(error.response.data)
+  if(error.response) return Promise.reject(error.response.data)
+  else return Promise.reject(error)
 })
 
 class Api {
