@@ -5,7 +5,7 @@
   "main": "index.js",
   "author": "Nuotron <hi@nuotron.co>",
   "license": "ISC",
-  "repository": "https://github.com/nuotron/rapid-rest-calls",
+  "repository": "https://github.com/nuotron/rapid-rest",
   "scripts": {
     "lint": "eslint src/**/*.js --color"
   },
