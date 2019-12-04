@@ -1,0 +1,76 @@
+@import 'kouto-swiss'
+
+//  settings
+baseline= 28px
+color= {
+  nuotron: #f35635,
+  background: #fff
+}
+nuotron= {
+  size: baseline*3,
+  stroke: 18px,
+  dot: 24px,
+  duration: 1.2s,
+  twist: 4,
+  rotation: 45deg
+}
+
+//  base
+*, *:before, *:after
+  box-sizing: border-box
+html, body
+  margin: 0
+  width: 100%
+  height: 100%
+body
+  position: relative
+  background-color: color.background
+
+//  nuotron
+#nuotron
+  top: 50%
+  left: 50%
+  margin-top: -(nuotron.size*.5)
+  margin-left: -(nuotron.size*.5)
+  width: nuotron.size
+  height: nuotron.size
+  transform: rotate(nuotron.rotation)
+  &, & *, & *:before
+    position: absolute
+    display: block
+  .ellipse, .dot
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+
+  //  ellipse
+  .ellipse
+    border: nuotron.stroke solid color.nuotron
+    border-radius: 50%
+
+  //  dot
+  .dot
+    animation: dotRotate nuotron.duration*nuotron.twist linear infinite
+    @keyframes dotRotate
+      100%
+        transform: rotate(360deg)
+    &:before
+      top: -(nuotron.dot + nuotron.stroke)
+      left: 50%
+      margin-left: -(nuotron.dot*.5)
+      width: nuotron.dot
+      height: nuotron.dot
+      border-radius: 50%
+      background-color: color.nuotron
+      content: ''
+      animation: dotEffect nuotron.duration ease-in-out infinite
+      @keyframes dotEffect
+        50%
+          top: nuotron.size + nuotron.stroke
+        0%, 50%, 100%
+          transform: scale(1)
+        25%
+          transform: scale(.5)
+        75%
+          transform: scale(1.5)
