@@ -33,12 +33,12 @@ class Api {
       return axios.get(resourceURL, {params}, config)
     }
 
-    endpoints.get = function(id, config = {}) {
-      return axios.get(`${resourceURL}/${id}`, config)
-    }
-
     endpoints.post = function(payload, config = {}) {
       return axios.post(resourceURL, payload, config)
+    }
+
+    endpoints.get = function(id, config = {}) {
+      return axios.get(`${resourceURL}/${id}`, config)
     }
 
     endpoints.patch = function(id, payload, config = {}) {

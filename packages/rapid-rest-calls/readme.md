@@ -24,9 +24,9 @@ And then you can use it in your app by calling the next methods:
 ```javascript
 api.endpoints.resource.getAll(params = {}, config = {})
 
-api.endpoints.resource.get(id, config = {})
-
 api.endpoints.resource.post(payload, config = {})
+
+api.endpoints.resource.get(id, config = {})
 
 api.endpoints.resource.patch(id, payload, config = {})
 
