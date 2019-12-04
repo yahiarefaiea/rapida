@@ -35,7 +35,7 @@
     "eslint-config-rapid": "^0.1.0",
     "express": "^4.17.0",
     "limax": "^1.7.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "mocha": "^6.1.4",
     "mongoose": "^5.5.9",
     "morgan": "^1.9.1",
