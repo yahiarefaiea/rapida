@@ -2,7 +2,7 @@
   "name": "@rapid/rest-calls",
   "version": "0.1.0",
   "description": "Rapid REST calls helper for building UI",
-  "main": "index.js",
+  "main": "src/api.js",
   "author": "Nuotron <hi@nuotron.co>",
   "license": "ISC",
   "repository": "https://github.com/nuotron/rapid-rest-calls",
