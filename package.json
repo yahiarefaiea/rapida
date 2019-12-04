@@ -1,0 +1,36 @@
+{
+  "name": "@rapid/rest",
+  "version": "0.1.0",
+  "description": "Rapid REST calls helper for building API",
+  "main": "index.js",
+  "author": "Nuotron <hi@nuotron.co>",
+  "license": "ISC",
+  "repository": "https://github.com/nuotron/rapid-rest",
+  "scripts": {
+    "lint": "eslint src/**/*.js --color"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-rapid": "git+https://YahiaRefaiea@bitbucket.org/nuotron/eslint-config-rapid.git"
+  },
+  "dependencies": {
+    "lodash": "4.17.15"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "browser": true,
+      "es6": true,
+      "node": true,
+      "mocha": true
+    },
+    "extends": "rapid",
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    }
+  }
+}
