@@ -3,6 +3,10 @@
   "version": "0.1.1",
   "description": "Rapid JavaScript development environment for building RESTful API",
   "main": "bin/server.js",
+  "author": "Nuotron <hi@nuotron.co>",
+  "license": "ISC",
+  "repository": "https://github.com/nuotron/rapid-api",
+  "private": true,
   "engines": {
     "node": "10.x"
   },
@@ -15,24 +19,6 @@
     "test": "mocha --reporter progress bin/test.js api/**/*.test.js --color",
     "test:watch": "chokidar --initial --silent \"api/**/*.test.js\" -c \"npm run test\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nuotron/rapid-api.git"
-  },
-  "keywords": [
-    "feature-based",
-    "restful-api",
-    "starter-kit",
-    "boilerplate",
-    "express",
-    "rapid"
-  ],
-  "author": "Nuotron <hello@nuotron.co>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nuotron/rapid-api/issues"
-  },
-  "homepage": "https://github.com/nuotron/rapid-api#readme",
   "dependencies": {
     "@babel/core": "^7.4.4",
     "@babel/node": "^7.2.2",
