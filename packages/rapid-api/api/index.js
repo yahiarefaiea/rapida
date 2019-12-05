@@ -1,5 +1,5 @@
 import express from 'express'
-import errHandle from 'rapid-error-handler'
+import response from 'rapid-response'
 const router = express.Router()
 
 import book from './book'
@@ -11,6 +11,6 @@ export default function() {
 
     // error handler
     .use(function(req, res, next) {
-      next(new errHandle.Forbidden())
+      next(new response.Forbidden())
     })
 }

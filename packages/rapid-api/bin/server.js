@@ -6,6 +6,7 @@ import morgan from 'morgan'
 import bodyParser from 'body-parser'
 import cors from 'cors'
 import chalk from 'chalk'
+import response from 'rapid-response'
 import api from '../api'
 
 const app = express()
@@ -38,8 +39,8 @@ app.use('/', api())
 
 // error handler
 app.use(function(err, req, res, next) {
-  if(err && err.statusCode)
-    res.status(err.statusCode).send({status: err.statusCode, message: err.message})
+  if(err && err.status)
+    res.status(err.status).send(new response.Good(null, err.message, err.status))
   else next(err)
 })
 

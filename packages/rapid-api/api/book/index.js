@@ -7,7 +7,6 @@ export default function() {
     .get(controller.getAll)
     .post(controller.post)
 
-  router.use('/:id', controller.find)
   router.route('/:id')
     .get(controller.get)
     .patch(controller.patch)

@@ -1,117 +1,32 @@
-import errHandle from 'rapid-error-handler'
-import Book from './model'
+import pick from 'lodash/pick'
+import AbstractController from './abst'
+import Model from './model'
 
-class Ctrl {
-  // get all items
+class Controller extends AbstractController {
+  constructor(model) {
+    super(model)
+  }
+
   getAll(req, res, next) {
-    let query = {}
-    if(req.query.read) query.read = req.query.read
-
-    Book.find(query, function(err, books) {
-      Ctrl.handler(err, next, function() {
-        res.send({
-          total: books.length,
-          books: books.map(function(book) {
-            let response = Ctrl.bookResponse(book)
-            response.request = Ctrl.bookUrl(req, book)
-            return response
-          })
-        })
-      })
-    })
+    req.query = pick(req.query, 'read')
+    super.getAll(req, res, next)
   }
 
-  // post new item
   post(req, res, next) {
-    let book = new Book(req.body)
-    let response = Ctrl.bookResponse(book)
-    response.request = Ctrl.bookUrl(req, book)
-
-    book.save(function(err) {
-      Ctrl.handler(err, next, function() {
-        res.status(201).send({
-          status: 201,
-          message: 'Book has added',
-          book: response
-        })
-      })
-    })
+    super.post(req, res, next)
   }
 
-  // find one item
-  find(req, res, next) {
-    Book.findById(req.params.id, function(err, book) {
-      Ctrl.handler(err, next, function() {
-        if(book) {
-          req.book = book
-          next()
-        } else next(new errHandle.NotFound('Book not found'))
-      })
-    })
-  }
+  // get(req, res, next) {
+  //
+  // }
 
-  // get one item
-  get(req, res) {
-    let response = Ctrl.bookResponse(req.book)
-    response.filterByRead = {
-      type: 'GET',
-      url: `http://${req.headers.host}/book?read=${response.read}`
-    }
-    res.send({book: response})
-  }
-
-  // patch an item
   patch(req, res, next) {
-    for(let key in req.body) req.book[key] = req.body[key]
-
-    req.book.save(function(err) {
-      Ctrl.handler(err, next, function() {
-        res.send({
-          status: 200,
-          message: 'Book has updated',
-          book: Ctrl.bookResponse(req.book)
-        })
-      })
-    })
+    super.patch(req, res, next)
   }
 
-  // delete an item
-  delete(req, res, next) {
-    req.book.remove(function(err) {
-      Ctrl.handler(err, next, function() {
-        res.send({
-          status: 200,
-          message: 'Book has removed'
-        })
-      })
-    })
-  }
-
-  // handler
-  static handler(err, next, callback) {
-    if(err) next(new errHandle.BadRequest(err))
-    else callback()
-  }
-
-  // book response
-  static bookResponse(book) {
-    return {
-      _id: book._id,
-      title: book.title,
-      author: book.author,
-      read: book.read,
-      createdAt: book.createdAt,
-      updatedAt: book.updatedAt
-    }
-  }
-
-  // book url
-  static bookUrl(req, book) {
-    return {
-      type: 'GET',
-      url: `http://${req.headers.host}/book/${book._id}`
-    }
-  }
+  // delete(req, res, next) {
+  //
+  // }
 }
 
-export default new Ctrl
+export default new Controller(Model)
