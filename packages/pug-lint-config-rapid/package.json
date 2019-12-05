@@ -2,7 +2,6 @@
   "name": "pug-lint-config-rapid",
   "version": "0.1.2",
   "description": "Rapid Pug coding standard for Pug Lint",
-  "main": "index.js",
   "author": "Nuotron <hi@nuotron.co>",
   "license": "ISC",
   "repository": "https://github.com/nuotron/pug-lint-config-rapid"

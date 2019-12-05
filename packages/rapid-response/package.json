@@ -2,7 +2,6 @@
   "name": "@rapid/response",
   "version": "0.1.1",
   "description": "Rapid response helper for RESTful API",
-  "main": "src/responses.js",
   "author": "Nuotron <hi@nuotron.co>",
   "license": "ISC",
   "repository": "https://github.com/nuotron/rapid-response",
