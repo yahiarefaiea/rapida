@@ -5,5 +5,11 @@
   "main": "src/responses.js",
   "author": "Nuotron <hi@nuotron.co>",
   "license": "ISC",
-  "repository": "https://github.com/nuotron/rapid-response"
+  "repository": "https://github.com/nuotron/rapid-response",
+  "scripts": {
+    "start": "node demo/index.js"
+  },
+  "devDependencies": {
+    "express": "4.17.1"
+  }
 }
