@@ -7,7 +7,7 @@
   "repository": "https://github.com/nuotron/rapid-ui",
   "private": true,
   "scripts": {
-    "serve": "run-p test:watch lint:watch webpack:dev",
+    "serve": "run-p test:watch lint:watch webpack:dev serve-data",
     "webpack:dev": "webpack-dev-server --config bin/webpack.config.dev.babel.js --color",
     "prebuild": "npm run clean",
     "build": "run-p test lint webpack:prod",
@@ -22,10 +22,14 @@
     "stylint:watch": "chokidar --initial --silent \"ui/**/*.styl\" -c \"npm run stylint\"",
     "test": "mocha --reporter progress bin/test.js ui/**/*.test.js --color",
     "test:watch": "chokidar --initial --silent \"ui/**/*.test.js\" -c \"npm run test\"",
-    "clean": "rimraf dist"
+    "generate-data": "babel-node bin/generateData.js",
+    "preserve-data": "npm run generate-data",
+    "serve-data": "json-server --watch data/db.json --port 8081",
+    "clean": "rimraf dist data"
   },
   "dependencies": {
     "@babel/core": "7.7.4",
+    "@babel/node": "7.7.4",
     "@babel/preset-env": "7.7.4",
     "@babel/register": "7.7.4",
     "babel-loader": "8.0.6",
@@ -43,6 +47,8 @@
     "html-webpack-plugin": "3.2.0",
     "imagemin-webpack-plugin": "2.4.2",
     "jsdom": "15.2.1",
+    "json-schema-faker": "0.5.0-rc23",
+    "json-server": "0.15.1",
     "kouto-swiss": "1.1.0",
     "lodash": "4.17.15",
     "mini-css-extract-plugin": "0.8.0",
