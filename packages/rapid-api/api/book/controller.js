@@ -6,8 +6,7 @@ class Ctrl {
   // get all items
   getAll(req, res, next) {
     let query = {}
-    if(req.query.search) query = {title: new RegExp(Ctrl.escapeRegex(req.query.search), 'gi')}
-    else if(req.query.read) query.read = req.query.read
+    if(req.query.read) query.read = req.query.read
 
     Book.find(query, function(err, books) {
       Ctrl.handler(err, next, function() {
@@ -120,11 +119,6 @@ class Ctrl {
   // book strict
   static bookStrict(body) {
     return omit(body, ['_id', 'createdAt', 'updatedAt', '__v'])
-  }
-
-  // escape regex
-  static escapeRegex(text) {
-    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')
   }
 }
 
