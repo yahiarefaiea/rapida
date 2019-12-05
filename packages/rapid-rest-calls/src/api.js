@@ -10,15 +10,15 @@ axios.interceptors.response.use(function(response) {
 })
 
 class Api {
-  constructor(data) {
-    this.url = data.url
+  constructor(url) {
+    this.url = url
     this.endpoints = {}
   }
 
   // create and store a single entity's endpoints
   createEntity(entity) {
-    let name = camelCase(entity.name)
-    this.endpoints[name] = this.createEndpoints(entity)
+    entity = camelCase(entity)
+    this.endpoints[entity] = this.createEndpoints(entity)
   }
 
   createEntities(entities) {
@@ -27,7 +27,7 @@ class Api {
 
   // create the basic endpoints handlers for REST operations
   createEndpoints(entity) {
-    const resourceURL = `${this.url}/${entity.name}`
+    const resourceURL = `${this.url}/${entity}`
     let endpoints = {}
 
     endpoints.getAll = function(params = {}, config = {}) {
