@@ -1,5 +1,10 @@
 import './index.styl'
 import lodash from 'lodash'
+import api from './api'
+
+api.book.getAll()
+.then(data => console.log(data))
+.catch(error => console.log(error))
 
 // eslint-disable-next-line no-console
 console.log('Rapid UI')
