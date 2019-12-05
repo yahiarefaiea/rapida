@@ -1,5 +1,5 @@
 import jsf from 'json-schema-faker'
-import schema from './dataSchema'
+import schema from './mockSchema'
 import fs from 'fs'
 import chalk from 'chalk'
 const json = JSON.stringify(jsf(schema))

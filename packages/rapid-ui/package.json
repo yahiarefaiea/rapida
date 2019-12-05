@@ -7,7 +7,7 @@
   "repository": "https://github.com/nuotron/rapid-ui",
   "private": true,
   "scripts": {
-    "serve": "run-p test:watch lint:watch webpack:dev serve-data",
+    "serve": "run-p test:watch lint:watch webpack:dev serve-mock",
     "webpack:dev": "webpack-dev-server --config bin/webpack.config.dev.babel.js --color",
     "prebuild": "npm run clean",
     "build": "run-p test lint webpack:prod",
@@ -22,9 +22,9 @@
     "stylint:watch": "chokidar --initial --silent \"ui/**/*.styl\" -c \"npm run stylint\"",
     "test": "mocha --reporter progress bin/test.js ui/**/*.test.js --color",
     "test:watch": "chokidar --initial --silent \"ui/**/*.test.js\" -c \"npm run test\"",
-    "generate-data": "babel-node bin/generateData.js",
-    "preserve-data": "npm run generate-data",
-    "serve-data": "json-server --watch data/db.json --port 8081",
+    "generate-mock": "babel-node bin/generateMock.js",
+    "preserve-mock": "npm run generate-mock",
+    "serve-mock": "json-server --watch data/db.json --port 8081",
     "clean": "rimraf dist data"
   },
   "dependencies": {
