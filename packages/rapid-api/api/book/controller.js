@@ -1,5 +1,4 @@
 import errHandle from 'rapid-error-handler'
-import omit from 'lodash/omit'
 import Book from './model'
 
 class Ctrl {
@@ -24,7 +23,6 @@ class Ctrl {
 
   // post new item
   post(req, res, next) {
-    req.body = Ctrl.bookStrict(req.body)
     let book = new Book(req.body)
     let response = Ctrl.bookResponse(book)
     response.request = Ctrl.bookUrl(req, book)
@@ -64,7 +62,6 @@ class Ctrl {
 
   // patch an item
   patch(req, res, next) {
-    req.body = Ctrl.bookStrict(req.body)
     for(let key in req.body) req.book[key] = req.body[key]
 
     req.book.save(function(err) {
@@ -114,11 +111,6 @@ class Ctrl {
       type: 'GET',
       url: `http://${req.headers.host}/book/${book._id}`
     }
-  }
-
-  // book strict
-  static bookStrict(body) {
-    return omit(body, ['_id', 'createdAt', 'updatedAt', '__v'])
   }
 }
 
