@@ -3,6 +3,6 @@
   "version": "0.1.2",
   "description": "Rapid Pug coding standard for Pug Lint",
   "author": "Nuotron <hi@nuotron.co>",
-  "license": "ISC",
+  "license": "MIT",
   "repository": "https://github.com/nuotron/rapid/tree/master/packages/pug-lint-config-rapid"
 }
