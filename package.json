@@ -1,0 +1,12 @@
+{
+  "name": "rapid",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "lint": "eslint **/*.js --color"
+  },
+  "devDependencies": {
+    "eslint": "6.7.2",
+    "eslint-config-rapid": "0.1.0"
+  }
+}
