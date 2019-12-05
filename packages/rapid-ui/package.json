@@ -4,7 +4,7 @@
   "description": "Rapid JavaScript development environment for building UI",
   "author": "Nuotron <hi@nuotron.co>",
   "license": "ISC",
-  "repository": "https://github.com/nuotron/rapid-ui",
+  "repository": "https://github.com/nuotron/rapid/tree/master/packages/rapid-ui",
   "private": true,
   "scripts": {
     "serve": "run-p test:watch lint:watch webpack:dev serve-mock",

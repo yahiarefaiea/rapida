@@ -4,5 +4,5 @@
   "description": "Rapid Pug coding standard for Pug Lint",
   "author": "Nuotron <hi@nuotron.co>",
   "license": "ISC",
-  "repository": "https://github.com/nuotron/pug-lint-config-rapid"
+  "repository": "https://github.com/nuotron/rapid/tree/master/packages/pug-lint-config-rapid"
 }

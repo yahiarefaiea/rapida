@@ -4,7 +4,7 @@
   "description": "Rapid response helper for RESTful API",
   "author": "Nuotron <hi@nuotron.co>",
   "license": "ISC",
-  "repository": "https://github.com/nuotron/rapid-response",
+  "repository": "https://github.com/nuotron/rapid/tree/master/packages/rapid-response",
   "scripts": {
     "start": "node demo/index.js"
   },

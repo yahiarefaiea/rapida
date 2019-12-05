@@ -4,7 +4,7 @@
   "description": "Rapid JavaScript development environment for building RESTful API",
   "author": "Nuotron <hi@nuotron.co>",
   "license": "ISC",
-  "repository": "https://github.com/nuotron/rapid-api",
+  "repository": "https://github.com/nuotron/rapid/tree/master/packages/rapid-api",
   "private": true,
   "engines": {
     "node": "10.x"
