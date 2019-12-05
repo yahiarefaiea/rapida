@@ -1,6 +1,5 @@
 import errHandle from 'rapid-error-handler'
 import omit from 'lodash/omit'
-import slug from 'limax'
 import Book from './model'
 
 class Ctrl {
@@ -105,7 +104,6 @@ class Ctrl {
       title: book.title,
       author: book.author,
       read: book.read,
-      slug: book.slug,
       createdAt: book.createdAt,
       updatedAt: book.updatedAt
     }
@@ -121,8 +119,6 @@ class Ctrl {
 
   // book strict
   static bookStrict(body) {
-    body = omit(body, 'slug')
-    if(body.title) body.slug = slug(body.title)
     return omit(body, ['_id', 'createdAt', 'updatedAt', '__v'])
   }
 
