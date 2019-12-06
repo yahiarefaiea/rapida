@@ -1,15 +1,15 @@
-# Rapid Response
+# Rapida Response
 
 Rapid response helper for RESTful API.
 
 ## Usage
 
-In your project folder, find and install `rapid-response`
+In your project folder, find and install `rapida-response`
 
-Import `rapid-response` to your project:
+Import `rapida-response` to your project:
 
 ```javascript
-import response from 'rapid-response'
+import response from 'rapida-response'
 ```
 
 Then add response wherever you want:

@@ -1,15 +1,15 @@
-# Rapid REST Calls
+# Rapida REST Calls
 
 Rapid REST calls helper for building UI.
 
 ## Usage
 
-In your project folder, find and install `rapid-rest-calls`
+In your project folder, find and install `rapida-rest-calls`
 
-Import `rapid-rest-calls` to your project:
+Import `rapida-rest-calls` to your project:
 
 ```javascript
-import Api from 'rapid-rest-calls'
+import Api from 'rapida-rest-calls'
 ```
 
 Then create an new instance of the `Api`, and use it to create a new entity:

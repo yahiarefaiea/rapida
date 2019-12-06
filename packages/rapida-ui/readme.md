@@ -1,8 +1,8 @@
-# Rapid UI
+# Rapida UI
 
 Rapid JavaScript development environment for building UI.
 
-**Note:** To see a complete demo, please clone [this repo](https://github.com/nuotron/rapid-ui-demo).
+**Note:** To see a complete demo, please clone [this repo](https://github.com/nuotron/rapida-ui-demo).
 
 ## Getting Started
 

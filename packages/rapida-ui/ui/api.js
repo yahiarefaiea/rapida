@@ -1,5 +1,5 @@
 import config from '../bin/config'
-import Api from 'rapid-rest-calls'
+import Api from 'rapida-rest-calls'
 
 const api = new Api(config.baseUrl())
 api.createEntity('book')

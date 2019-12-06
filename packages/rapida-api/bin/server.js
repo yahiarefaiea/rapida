@@ -6,7 +6,7 @@ import morgan from 'morgan'
 import bodyParser from 'body-parser'
 import cors from 'cors'
 import chalk from 'chalk'
-import response from 'rapid-response'
+import response from 'rapida-response'
 import api from '../api'
 
 const app = express()

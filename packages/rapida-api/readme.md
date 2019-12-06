@@ -1,4 +1,4 @@
-# Rapid API
+# Rapida API
 
 Rapid JavaScript development environment for building RESTful API.
 

@@ -7,7 +7,7 @@ api.book.getAll()
 .catch(error => console.log(error))
 
 // eslint-disable-next-line no-console
-console.log('Rapid UI')
+console.log('Rapida UI')
 
 // enable hot module replacement plugin
 if(module.hot) {

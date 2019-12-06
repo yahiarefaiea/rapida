@@ -3,7 +3,7 @@ var mongoose = require('mongoose')
 var AbstractController = require('../src/abstract')
 
 var app = express()
-mongoose.connect('mongodb://localhost:27017/rapid-rest')
+mongoose.connect('mongodb://localhost:27017/rapida-rest')
 var Model = mongoose.model('Book', new mongoose.Schema({title: String, author: String}))
 var controller = new AbstractController(Model)
 

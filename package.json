@@ -1,5 +1,5 @@
 {
-  "name": "rapid",
+  "name": "rapida",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
   },
   "devDependencies": {
     "eslint": "6.7.2",
-    "eslint-config-rapid": "0.1.0"
+    "eslint-config-rapida": "0.1.0"
   },
   "eslintConfig": {
     "root": true,
@@ -17,7 +17,7 @@
       "node": true,
       "mocha": true
     },
-    "extends": "rapid",
+    "extends": "rapida",
     "parserOptions": {
       "ecmaVersion": 6,
       "sourceType": "module",

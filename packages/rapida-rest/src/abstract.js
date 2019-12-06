@@ -1,6 +1,6 @@
 import toLower from 'lodash/toLower'
 import omit from 'lodash/omit'
-import response from 'rapid-response'
+import response from 'rapida-response'
 
 export default class Abstract {
   constructor(model) {
