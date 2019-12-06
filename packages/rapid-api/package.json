@@ -1,6 +1,6 @@
 {
   "name": "@rapid/api",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Rapid JavaScript development environment for building RESTful API",
   "author": "Nuotron <hi@nuotron.co>",
   "license": "MIT",
