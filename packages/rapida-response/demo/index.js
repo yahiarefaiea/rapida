@@ -1,6 +1,6 @@
-var express = require('express')
-var response = require('../src/responses')
-var app = express()
+const express = require('express')
+const response = require('../src/responses')
+const app = express()
 
 app.get('/book', function(req, res, next) {
   res.send(new response.Found({title: 'Book Title', author: 'Book Author'}, 'Book found'))

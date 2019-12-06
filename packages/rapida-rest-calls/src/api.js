@@ -1,5 +1,5 @@
-var axios = require('axios')
-var camelCase = require('lodash/camelCase')
+const axios = require('axios')
+const camelCase = require('lodash/camelCase')
 
 // response interceptor
 axios.interceptors.response.use(function(response) {

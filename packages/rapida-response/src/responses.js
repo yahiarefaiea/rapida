@@ -1,4 +1,4 @@
-var defaults = require('./defaults') // eslint-disable-line no-var
+const defaults = require('./defaults')
 
 class Good {
   constructor(data = null, message, status) {
