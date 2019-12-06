@@ -9,11 +9,10 @@ app.get('/book', function(req, res, next) {
   res.send({data: {title: 'Book Title', author: 'Book Author'}, message: 'Book found'})
 })
 
+/* eslint-disable no-console */
 app.get('/test', function(req, res, next) {
   api.endpoints.book.getAll()
-    // eslint-disable-next-line no-console
     .then(data => res.send(console.log(data)))
-    // eslint-disable-next-line no-console
     .catch(error => res.send(console.log(error)))
 })
 
