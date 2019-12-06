@@ -12,5 +12,9 @@
   "eslintConfig": {
     "root": true,
     "extends": "rapida"
-  }
+  },
+  "eslintIgnore": [
+    "packages/*/node_modules",
+    "packages/*/dist"
+  ]
 }

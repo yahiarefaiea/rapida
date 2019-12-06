@@ -2,3 +2,6 @@
 /packages/*/node_modules
 package-lock.json
 /packages/*/package-lock.json
+/packages/*/*.env
+/packages/*/dist
+/packages/*/data
