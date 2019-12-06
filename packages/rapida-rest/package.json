@@ -1,5 +1,5 @@
 {
-  "name": "@rapid/rest",
+  "name": "@rapida/rest",
   "version": "1.0.0",
   "description": "Rapid REST calls helper for building API",
   "author": "Nuotron <hi@nuotron.co>",
