@@ -1,5 +1,5 @@
 import express from 'express'
-import response from 'rapida-response'
+import response from '@rapida/response'
 const router = express.Router()
 
 import book from './book'

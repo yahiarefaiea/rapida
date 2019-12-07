@@ -24,6 +24,8 @@
     "@babel/node": "7.7.4",
     "@babel/preset-env": "7.7.4",
     "@babel/register": "7.7.4",
+    "@rapida/response": "1.0.0",
+    "@rapida/rest": "1.0.0",
     "body-parser": "1.19.0",
     "chai": "4.2.0",
     "chalk": "3.0.0",
@@ -32,15 +34,14 @@
     "cors": "2.8.5",
     "cross-env": "6.0.3",
     "eslint": "6.7.2",
-    "eslint-config-rapida": "0.1.0",
+    "eslint-config-rapida": "1.0.0",
     "express": "4.17.1",
     "lodash": "4.17.15",
     "mocha": "6.2.2",
     "mongoose": "5.7.13",
     "morgan": "1.9.1",
     "nodemon": "2.0.1",
-    "npm-run-all": "4.1.5",
-    "rapida-error-handler": "0.1.0"
+    "npm-run-all": "4.1.5"
   },
   "babel": {
     "presets": [

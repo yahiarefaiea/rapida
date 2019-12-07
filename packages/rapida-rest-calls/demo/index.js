@@ -1,4 +1,5 @@
 const express = require('express')
+const response = require('@rapida/response')
 const Api = require('../src/api')
 const app = express()
 
@@ -6,7 +7,7 @@ const api = new Api('http://localhost:3000')
 api.createEntity('book')
 
 app.get('/book', function(req, res, next) {
-  res.send({data: {title: 'Book Title', author: 'Book Author'}, message: 'Book found'})
+  res.send(new response.Found({title: 'Book Title', author: 'Book Author'}, 'Book found'))
 })
 
 /* eslint-disable no-console */

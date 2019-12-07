@@ -1,5 +1,5 @@
 import pick from 'lodash/pick'
-import AbstractController from './abst'
+import AbstractController from '@rapida/rest'
 import Model from './model'
 
 class Controller extends AbstractController {
