@@ -1,6 +1,7 @@
 # Rapida Response
 
 Rapid response helper for RESTful API.
+part of [Rapida Framework]
 
 ## Usage
 
@@ -17,3 +18,6 @@ Then add response wherever you want:
 ```javascript
 next(new response.NotFound())
 ```
+## Example
+
+Check out a working demo  here [DEMO_LINK]

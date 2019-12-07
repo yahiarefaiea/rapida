@@ -1,6 +1,7 @@
 # Rapida REST Calls
 
-Rapid REST calls helper for building UI.
+Rapid REST calls helper for building cool UI without writing much poilerplate.
+part of [Rapida Framework]  
 
 ## Usage
 
