@@ -1,6 +1,6 @@
-import toLower from 'lodash/toLower'
-import omit from 'lodash/omit'
-import response from '@rapida/response'
+const toLower = require('lodash/toLower')
+const omit = require('lodash/omit')
+const response = require('@rapida/response')
 
 export default class Abstract {
   constructor(model) {
