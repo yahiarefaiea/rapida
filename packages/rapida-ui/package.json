@@ -5,6 +5,7 @@
   "author": "Nuotron <hi@nuotron.co>",
   "license": "MIT",
   "repository": "https://github.com/nuotron/rapida/tree/master/packages/rapida-ui",
+  "homepage": "https://github.com/nuotron/rapida",
   "private": true,
   "scripts": {
     "serve": "run-p test:watch lint:watch webpack:dev serve-mock",

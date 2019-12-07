@@ -5,6 +5,7 @@
   "author": "Nuotron <hi@nuotron.co>",
   "license": "MIT",
   "repository": "https://github.com/nuotron/rapida/tree/master/packages/rapida-response",
+  "homepage": "https://github.com/nuotron/rapida",
   "scripts": {
     "start": "node demo/index.js"
   },

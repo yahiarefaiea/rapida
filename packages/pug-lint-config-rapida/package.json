@@ -4,5 +4,6 @@
   "description": "Rapid Pug coding standard for Pug Lint",
   "author": "Nuotron <hi@nuotron.co>",
   "license": "MIT",
-  "repository": "https://github.com/nuotron/rapida/tree/master/packages/pug-lint-config-rapida"
+  "repository": "https://github.com/nuotron/rapida/tree/master/packages/pug-lint-config-rapida",
+  "homepage": "https://github.com/nuotron/rapida"
 }

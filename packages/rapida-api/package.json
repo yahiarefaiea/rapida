@@ -5,6 +5,7 @@
   "author": "Nuotron <hi@nuotron.co>",
   "license": "MIT",
   "repository": "https://github.com/nuotron/rapida/tree/master/packages/rapida-api",
+  "homepage": "https://github.com/nuotron/rapida",
   "private": true,
   "engines": {
     "node": "10.x"
