@@ -18,9 +18,9 @@ class Bad extends Error {
 }
 
 module.exports = {
-  defaults: defaults,
-  Good: Good,
-  Bad: Bad,
+  defaults,
+  Good,
+  Bad,
   Found: class Found extends Good {
     constructor(data, message = defaults.Found.message) {
       super(data, message, defaults.Found.status)
