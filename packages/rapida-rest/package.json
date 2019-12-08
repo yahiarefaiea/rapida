@@ -11,7 +11,7 @@
     "start": "node demo/index.js"
   },
   "dependencies": {
-    "@rapida/response": "1.0.0",
+    "@rapida/response": "1.0.2",
     "lodash": "4.17.15"
   },
   "devDependencies": {
