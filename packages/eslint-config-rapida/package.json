@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-rapida",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rapid JavaScript coding standard for ESLint",
   "author": "Nuotron <hi@nuotron.co>",
   "license": "MIT",
