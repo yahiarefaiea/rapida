@@ -1,6 +1,6 @@
 {
   "name": "@rapida/response",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rapid response helper for RESTful API",
   "author": "Nuotron <hi@nuotron.co>",
   "license": "MIT",
