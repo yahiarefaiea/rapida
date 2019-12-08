@@ -3,7 +3,11 @@ const mongoose = require('mongoose')
 const AbstractController = require('../src/abstract')
 
 const app = express()
-mongoose.connect('mongodb://localhost:27017/rapida-rest')
+const database = 'mongodb://localhost:27017/rapida-rest'
+mongoose.connect(database, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
 
 const Model = mongoose.model('Book', new mongoose.Schema({title: String, author: String}))
 const controller = new AbstractController(Model)
