@@ -1,6 +1,6 @@
 {
   "name": "pug-lint-config-rapida",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rapid Pug coding standard for Pug Lint",
   "author": "Nuotron <hi@nuotron.co>",
   "license": "MIT",
