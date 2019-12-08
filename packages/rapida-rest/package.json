@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Rapid REST calls helper for building API",
   "author": "Nuotron <hi@nuotron.co>",
+  "main": "src/abstract.js",
   "license": "MIT",
   "repository": "https://github.com/nuotron/rapida/tree/master/packages/rapida-rest",
   "homepage": "https://github.com/nuotron/rapida",

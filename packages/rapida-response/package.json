@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "Rapid response helper for RESTful API",
   "author": "Nuotron <hi@nuotron.co>",
+  "main": "src/responses.js",
   "license": "MIT",
   "repository": "https://github.com/nuotron/rapida/tree/master/packages/rapida-response",
   "homepage": "https://github.com/nuotron/rapida",
