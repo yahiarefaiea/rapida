@@ -30,14 +30,25 @@ rapida is now at $VERSION
 
 ## Compatibility
 
+This framework is compatible with Node.js version [VERSION_Number]
+There're some issues (if any) when using this framework with Node.js version [VERSION_NUMBER]
+
 ## Getting Help
 
- To report a specific problem or feature request, open a new issue on Github. For questions, suggestions, or anything else, email us here
-
-## Thanks
+ To report a specific problem or feature request, open a new issue on Github. For questions, suggestions, or anything else, email us here [EMAIL_LINK]
 
 ## Author
 
+[AUTHOR_NAME]
+
+## Thanks
+
+A huge thanks to [Person] who contributed [Something] to this framework
+
 ## License
 
+MIT License
+
 ## Disclaimer
+
+Insert any concerns or additional notes about the usage of this package
