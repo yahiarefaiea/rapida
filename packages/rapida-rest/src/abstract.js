@@ -1,8 +1,7 @@
-const toLower = require('lodash/toLower')
 const omit = require('lodash/omit')
 const response = require('@rapida/response')
 
-export default class Abstract {
+module.exports = class Abstract {
   constructor(model) {
     Abstract.model = model
   }
