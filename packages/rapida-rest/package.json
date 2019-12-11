@@ -1,6 +1,6 @@
 {
   "name": "@rapida/rest",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rapid REST calls helper for building API",
   "author": "Nuotron <hi@nuotron.co>",
   "main": "src/abstract.js",
