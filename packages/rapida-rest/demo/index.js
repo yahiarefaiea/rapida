@@ -17,5 +17,6 @@ const Model = mongoose.model('Book', new mongoose.Schema({title: String, author:
 const controller = new AbstractController(Model)
 
 app.get('/book', controller.getAll)
+app.post('/book', controller.post)
 
 app.listen(3000)
