@@ -29,19 +29,19 @@ module.exports = class Abstract {
   }
 
   patch(req, res, next) {
-    req.body = Abstract.purgeBody(req.body)
-    for(let key in req.body) req.resource[key] = req.body[key]
     Abstract.findById(req, res, next, function(resource) {
-      req.resource.save(function(err) {
+      req.body = Abstract.purgeBody(req.body)
+      for(let key in req.body) resource[key] = req.body[key]
+      resource.save(function(err) {
         if(err) next(new response.BadRequest(err))
-        else res.send(new response.Updated(req.resource))
+        else res.send(new response.Updated(resource))
       })
     })
   }
 
   delete(req, res, next) {
     Abstract.findById(req, res, next, function(resource) {
-      req.resource.remove(function(err) {
+      resource.remove(function(err) {
         if(err) next(new response.BadRequest(err))
         else res.send(new response.Deleted())
       })
