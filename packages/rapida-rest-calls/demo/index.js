@@ -1,7 +1,10 @@
 const express = require('express')
+const morgan = require('morgan')
 const response = require('@rapida/response')
 const Api = require('../src/api')
+
 const app = express()
+app.use(morgan('dev'))
 
 const api = new Api('http://localhost:3000')
 api.createEntity('book')
