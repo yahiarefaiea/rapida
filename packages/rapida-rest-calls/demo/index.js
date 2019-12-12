@@ -10,7 +10,6 @@ app.get('/book', function(req, res) {
   res.send(new response.Found({title: 'Book Title', author: 'Book Author'}))
 })
 
-/* eslint-disable no-console */
 app.get('/test', function(req, res) {
   api.endpoints.book.getAll()
     .then(data => res.send(data))
