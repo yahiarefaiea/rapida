@@ -9,7 +9,7 @@ axios.interceptors.response.use(function(response) {
   else return Promise.reject(error)
 })
 
-class Api {
+module.exports = class Api {
   constructor(url) {
     this.url = url
     this.endpoints = {}
@@ -53,5 +53,3 @@ class Api {
     return endpoints
   }
 }
-
-module.exports = Api
