@@ -7,7 +7,7 @@ const api = new Api('http://localhost:3000')
 api.createEntity('book')
 
 app.get('/book', function(req, res) {
-  res.send(new response.Found({title: 'Book Title', author: 'Book Author'}, 'Book found'))
+  res.send(new response.Found({title: 'Book Title', author: 'Book Author'}))
 })
 
 /* eslint-disable no-console */
