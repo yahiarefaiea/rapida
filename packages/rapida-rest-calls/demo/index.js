@@ -13,8 +13,8 @@ app.get('/book', function(req, res) {
 /* eslint-disable no-console */
 app.get('/test', function(req, res) {
   api.endpoints.book.getAll()
-    .then(data => res.send(console.log(data)))
-    .catch(error => res.send(console.log(error)))
+    .then(data => res.send(data))
+    .catch(error => res.send(error))
 })
 
 app.listen(3000)
