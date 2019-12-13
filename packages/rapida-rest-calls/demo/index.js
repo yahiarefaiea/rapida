@@ -13,10 +13,9 @@ app.get('/book', function(req, res) {
   res.send(new response.Found({title: 'Book Title', author: 'Book Author'}))
 })
 
-app.get('/test', function(req, res) {
-  api.endpoints.book.getAll()
-    .then(data => res.send(data))
-    .catch(error => res.send(error))
-})
+/* eslint-disable no-console */
+api.endpoints.book.getAll()
+  .then(data => console.log(data))
+  .catch(error => console.log(error))
 
 app.listen(3000)
