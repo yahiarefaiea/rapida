@@ -12,7 +12,7 @@ export default merge(baseConfig, {
 
   // dev server
   devServer: {
-    clientLogLevel: 'none',
+    clientLogLevel: 'silent',
     compress: true,
     contentBase: path.join(__dirname, 'dist'),
     hot: true,
