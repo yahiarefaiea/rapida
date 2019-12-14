@@ -93,54 +93,5 @@
   ],
   "pugLintConfig": {
     "extends": "rapida"
-  },
-  "stylintrc": {
-    "blocks": false,
-    "brackets": "never",
-    "colors": "always",
-    "commaSpace": "always",
-    "commentSpace": "always",
-    "cssLiteral": "never",
-    "customProperties": [],
-    "depthLimit": false,
-    "duplicates": true,
-    "efficient": "always",
-    "exclude": [],
-    "extendPref": "@extend",
-    "globalDupe": true,
-    "groupOutputByFile": true,
-    "indentPref": 2,
-    "leadingZero": "never",
-    "maxErrors": false,
-    "maxWarnings": false,
-    "mixed": true,
-    "mixins": [],
-    "namingConvention": "camelCase",
-    "namingConventionStrict": true,
-    "none": "always",
-    "noImportant": true,
-    "parenSpace": "never",
-    "placeholders": "never",
-    "prefixVarsWithDollar": "never",
-    "quotePref": "single",
-    "reporterOptions": {
-      "columns": [
-        "lineData",
-        "severity",
-        "description",
-        "rule"
-      ],
-      "columnSplitter": "  ",
-      "showHeaders": false,
-      "truncate": true
-    },
-    "semicolons": "never",
-    "sortOrder": "grouped",
-    "stackedProperties": "never",
-    "trailingWhitespace": "never",
-    "universal": false,
-    "valid": true,
-    "zeroUnits": "never",
-    "zIndexNormalize": false
   }
 }
