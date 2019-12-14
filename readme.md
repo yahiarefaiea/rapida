@@ -12,15 +12,15 @@ this library contains several modules, so you can pick and choose what suits you
 
 ## Libraries
 
-[rapida-api] (https://github.com/nuotron/rapida/tree/master/packages/rapida-api)
+[rapida-api](https://github.com/nuotron/rapida/tree/master/packages/rapida-api)
 
-[rapida-response] (https://github.com/nuotron/rapida/tree/master/packages/rapida-response)
+[rapida-response](https://github.com/nuotron/rapida/tree/master/packages/rapida-response)
 
-[rapidae-rest-calls] (https://github.com/nuotron/rapida/tree/master/packages/rapida-rest-calls)
+[rapidae-rest-calls](https://github.com/nuotron/rapida/tree/master/packages/rapida-rest-calls)
 
-[rapida-rest] (https://github.com/nuotron/rapida/tree/master/packages/rapida-rest)
+[rapida-rest](https://github.com/nuotron/rapida/tree/master/packages/rapida-rest)
 
-[rapida-ui] (https://github.com/nuotron/rapida/tree/master/packages/rapida-rest)
+[rapida-ui](https://github.com/nuotron/rapida/tree/master/packages/rapida-rest)
 
 ## Download
 
@@ -41,7 +41,7 @@ There're some issues (if any) when using this framework with Node.js version [VE
 
 ## Author
 
-[Yahia Refaiea] (https://github.com/YahiaRefaiea)
+[Yahia Refaiea](https://github.com/YahiaRefaiea)
 
 ## Thanks
 
@@ -49,7 +49,7 @@ A huge thanks to [Person] who contributed [Something] to this framework
 
 ## License
 
-[MIT License] (https://github.com/github/choosealicense.com/blob/gh-pages/LICENSE.md)
+[MIT License](https://github.com/github/choosealicense.com/blob/gh-pages/LICENSE.md)
 
 ## Disclaimer
 
