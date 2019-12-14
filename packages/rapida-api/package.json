@@ -57,19 +57,6 @@
   },
   "eslintConfig": {
     "root": true,
-    "env": {
-      "browser": true,
-      "es6": true,
-      "node": true,
-      "mocha": true
-    },
-    "extends": "rapida",
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    }
+    "extends": "rapida"
   }
 }
