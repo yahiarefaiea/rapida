@@ -1,7 +1,8 @@
+import kebabCase from 'lodash/kebabCase'
 import pkg from '../package.json'
 
 export default Object.freeze({
-  project: pkg.name,
+  project: kebabCase(pkg.name),
   env: process.env.NODE_ENV || 'development',
   host: process.env.HOST || 'localhost',
   port: process.env.PORT || 3000,
@@ -11,7 +12,7 @@ export default Object.freeze({
   db: {
     host: process.env.DB_HOST || 'localhost',
     port: process.env.DB_PORT || 27017,
-    name: process.env.DB_NAME || pkg.name
+    name: process.env.DB_NAME || kebabCase(pkg.name)
   },
   database: function() {
     return `mongodb://${this.db.host}:${this.db.port}/${this.db.name}`
