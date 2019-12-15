@@ -12,21 +12,23 @@ this library contains several modules, so you can pick and choose what suits you
 
 ## Libraries
 
-rapida-api
+[rapida-api](https://github.com/nuotron/rapida/tree/master/packages/rapida-api)
 
-rapida-response
+[rapida-response](https://github.com/nuotron/rapida/tree/master/packages/rapida-response)
 
-rapidae-rest-calls
+[rapidae-rest-calls](https://github.com/nuotron/rapida/tree/master/packages/rapida-rest-calls)
 
-rapida-rest
+[rapida-rest](https://github.com/nuotron/rapida/tree/master/packages/rapida-rest)
 
-rapida-ui
+[rapida-ui](https://github.com/nuotron/rapida/tree/master/packages/rapida-rest)
 
 ## Download
 
+
+
 ## Status
 
-rapida is now at $VERSION
+rapida is now at $VERSION 
 
 ## Compatibility
 
@@ -35,11 +37,11 @@ There're some issues (if any) when using this framework with Node.js version [VE
 
 ## Getting Help
 
- To report a specific problem or feature request, open a new issue on Github. For questions, suggestions, or anything else, email us here [EMAIL_LINK]
+ To report a specific problem or feature request, open a new issue on Github. For questions, suggestions, or anything else, email us [here] ()
 
 ## Author
 
-[AUTHOR_NAME]
+[Yahia Refaiea](https://github.com/YahiaRefaiea)
 
 ## Thanks
 
@@ -47,7 +49,7 @@ A huge thanks to [Person] who contributed [Something] to this framework
 
 ## License
 
-MIT License
+[MIT License](https://github.com/github/choosealicense.com/blob/gh-pages/LICENSE.md)
 
 ## Disclaimer
 
