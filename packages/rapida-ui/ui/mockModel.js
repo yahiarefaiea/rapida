@@ -1,34 +1,34 @@
 export default {
   type: 'object',
   properties: {
-    users: {
+    book: {
       type: 'array',
-      minItems: 3,
-      maxItems: 5,
+      minItems: 5,
+      maxItems: 10,
       items: {
         type: 'object',
         properties: {
-          id: {
-            type: 'number',
+          _id: {
+            type: 'integer',
             unique: true,
             minimum: 1
           },
-          firstName: {
+          title: {
             type: 'string',
-            faker: 'name.firstName'
+            faker: 'lorem.words'
           },
-          lastName: {
+          author: {
             type: 'string',
-            faker: 'name.lastName'
+            faker: 'name.findName'
           },
-          email: {
-            type: 'string',
-            faker: 'internet.email'
+          read: {
+            type: 'boolean',
+            faker: 'random.boolean'
           }
         },
-        required: ['id', 'firstName', 'lastName', 'email']
+        required: ['_id', 'title', 'author', 'read']
       }
     }
   },
-  required: ['users']
+  required: ['book']
 }
