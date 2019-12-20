@@ -25,7 +25,7 @@
     "test:watch": "chokidar --initial --silent \"ui/**/*.test.js\" -c \"npm run test\"",
     "generate-mock": "babel-node bin/generateMock.js --color",
     "preserve-mock": "npm run generate-mock",
-    "serve-mock": "json-server --watch data/db.json --port 8081",
+    "serve-mock": "json-server --watch data/db.json --port 8081 --color",
     "clean": "rimraf dist data"
   },
   "dependencies": {
