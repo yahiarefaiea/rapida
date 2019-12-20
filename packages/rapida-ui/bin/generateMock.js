@@ -1,8 +1,8 @@
 import jsf from 'json-schema-faker'
-import schema from './mockSchema'
+import model from '../ui/mockModel'
 import fse from 'fs-extra'
 import chalk from 'chalk'
-const json = JSON.stringify(jsf.generate(schema))
+const json = JSON.stringify(jsf.generate(model))
 
 /* eslint-disable no-console */
 fse.outputFile('./data/db.json', json, function(err) {
