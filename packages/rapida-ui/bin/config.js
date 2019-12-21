@@ -17,5 +17,23 @@ export default Object.freeze({
   baseUrl: function() {
     const url = this.isMock() ? this.mockApi : this.realApi
     return url
+  },
+
+  sitemap: {
+    base: 'https://mysite.com',
+    paths: [ 'foo', 'bar' ],
+    options: {
+      lastMod: true
+    }
+  },
+
+  robotstxt: {
+    policy: [
+      {
+        userAgent: '*',
+        allow: '/'
+      }
+    ],
+    sitemap: 'http://example.com/sitemap.xml'
   }
 })

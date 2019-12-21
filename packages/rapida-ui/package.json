@@ -64,6 +64,8 @@
     "pug-lint-config-rapida": "1.0.1",
     "puglint-stylish": "1.0.2",
     "rimraf": "3.0.0",
+    "robotstxt-webpack-plugin": "7.0.0",
+    "sitemap-webpack-plugin": "0.6.0",
     "stylint": "2.0.0",
     "stylus": "0.54.7",
     "stylus-loader": "3.0.2",

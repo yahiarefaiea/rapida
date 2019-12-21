@@ -1,9 +1,12 @@
 import pkg from '../package.json'
+import config from './config'
 import webpack from 'webpack'
 import merge from 'webpack-merge'
 import baseConfig from './webpack.config.base'
 import TerserJSPlugin from 'terser-webpack-plugin'
 import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin'
+import SitemapPlugin from 'sitemap-webpack-plugin'
+import RobotstxtPlugin from 'robotstxt-webpack-plugin'
 
 export default merge(baseConfig, {
   // optimization
@@ -29,6 +32,10 @@ export default merge(baseConfig, {
               `Released under the ${pkg.license} license.\n` +
               'hash: [hash], chunkhash: [chunkhash]\n' +
               'file with contenthash: [file]'
-    })
+    }),
+
+    new SitemapPlugin(config.sitemap.base, config.sitemap.paths, config.sitemap.options),
+
+    new RobotstxtPlugin(config.robotstxt)
   ]
 })
