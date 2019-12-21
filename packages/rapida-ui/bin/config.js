@@ -21,6 +21,9 @@ export default Object.freeze({
     return url
   },
 
+  background: '#fff',
+  themeColor: '#f35635',
+
   meta: {
     viewport: 'width=device-width, initial-scale=1',
     description: pkg.description,

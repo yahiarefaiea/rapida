@@ -5,6 +5,7 @@ import chalk from 'chalk'
 import koutoSwiss from 'kouto-swiss'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import FaviconsWebpackPlugin from 'favicons-webpack-plugin'
 import CopyPlugin from 'copy-webpack-plugin'
 import ImageminPlugin from 'imagemin-webpack-plugin'
 
@@ -46,6 +47,15 @@ export default {
     // mini css extract plugin
     new MiniCssExtractPlugin({
       filename: config.devMode() ? '[name].bundle.css' : '[name].bundle.[contenthash].css'
+    }),
+
+    new FaviconsWebpackPlugin({
+      logo: './static/images/logo.svg',
+      prefix: 'favicons',
+      favicons: {
+        background: config.background,
+        theme_color: config.themeColor
+      }
     }),
 
     // copy plugin
