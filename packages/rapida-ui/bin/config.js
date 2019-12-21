@@ -3,12 +3,14 @@ import pkg from '../package.json'
 
 export default Object.freeze({
   project: kebabCase(pkg.name),
+  title: kebabCase(pkg.name),
   env: process.env.NODE_ENV || 'development',
   host: process.env.HOST || 'localhost',
   port: process.env.PORT || 8080,
   devMode: function() {
     if(this.env === 'development') return true
   },
+
   realApi: 'http://localhost:3000',
   mockApi: 'http://localhost:8081',
   isMock: function() {
@@ -17,6 +19,13 @@ export default Object.freeze({
   baseUrl: function() {
     const url = this.isMock() ? this.mockApi : this.realApi
     return url
+  },
+
+  meta: {
+    viewport: 'width=device-width, initial-scale=1',
+    description: pkg.description,
+    author: pkg.author,
+    url: pkg.homepage
   },
 
   sitemap: {

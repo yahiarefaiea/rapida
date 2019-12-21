@@ -39,7 +39,8 @@ export default {
   plugins: [
     // html webpack plugin
     new HtmlWebpackPlugin({
-      template: 'ui/index.pug'
+      template: 'ui/index.pug',
+      meta: config.meta
     }),
 
     // mini css extract plugin
@@ -80,7 +81,14 @@ export default {
       // pug
       {
         test: /\.pug$/,
-        use: ['html-loader', 'pug-html-loader']
+        use: ['html-loader', {
+          loader: 'pug-html-loader',
+          options: {
+            data: {
+              title: config.title
+            }
+          }
+        }]
       },
 
       // stylus
