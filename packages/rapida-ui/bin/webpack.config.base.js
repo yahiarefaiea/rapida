@@ -95,7 +95,9 @@ export default {
           loader: 'pug-html-loader',
           options: {
             data: {
-              title: config.title
+              title: config.title,
+              lang: config.lang,
+              dir: config.dir
             }
           }
         }]

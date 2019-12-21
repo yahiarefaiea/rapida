@@ -21,6 +21,8 @@ export default Object.freeze({
     return url
   },
 
+  lang: 'en',
+  dir: 'ltr',
   background: '#fff',
   themeColor: '#f35635',
 
