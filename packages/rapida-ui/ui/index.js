@@ -1,4 +1,4 @@
-import './index.styl'
+import './styles/index.styl'
 import lodash from 'lodash'
 import api from './api'
 
