@@ -7,7 +7,7 @@
   "cssLiteral": "never",
   "customProperties": [],
   "depthLimit": false,
-  "duplicates": true,
+  "duplicates": false,
   "efficient": "always",
   "exclude": [],
   "extendPref": "@extend",
