@@ -9,12 +9,5 @@ export default Object.freeze({
   devMode: function() {
     if(this.env === 'development') return true
   },
-  db: {
-    host: process.env.DB_HOST || 'localhost',
-    port: process.env.DB_PORT || 27017,
-    name: process.env.DB_NAME || kebabCase(pkg.name)
-  },
-  database: function() {
-    return `mongodb://${this.db.host}:${this.db.port}/${this.db.name}`
-  }
+  database: process.env.MONGODB_URI || `mongodb://localhost:27017/${kebabCase(pkg.name)}`
 })

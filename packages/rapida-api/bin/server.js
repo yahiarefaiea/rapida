@@ -16,7 +16,7 @@ const app = express()
 console.log(chalk.cyan(`Running in \`${config.env}\` mode`))
 
 // connect to the database
-mongoose.connect(config.database(), {
+mongoose.connect(config.database, {
   useCreateIndex: true,
   useNewUrlParser: true,
   useUnifiedTopology: true
