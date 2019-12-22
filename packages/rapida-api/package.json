@@ -2,7 +2,7 @@
   "name": "@rapida/api",
   "version": "1.0.0",
   "description": "Rapid JavaScript development environment for building RESTful API",
-  "author": "Nuotron <hi@nuotron.co>",
+  "author": "Nuotron <hi@nuotron.co> (http://nuotron.co)",
   "license": "MIT",
   "repository": "https://github.com/nuotron/rapida/tree/master/packages/rapida-api",
   "homepage": "https://github.com/nuotron/rapida",

@@ -2,7 +2,7 @@
   "name": "eslint-config-rapida",
   "version": "1.0.1",
   "description": "Rapid JavaScript coding standard for ESLint",
-  "author": "Nuotron <hi@nuotron.co>",
+  "author": "Nuotron <hi@nuotron.co> (http://nuotron.co)",
   "main": "index.js",
   "license": "MIT",
   "repository": "https://github.com/nuotron/rapida/tree/master/packages/eslint-config-rapida",

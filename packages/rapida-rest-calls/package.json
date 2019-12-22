@@ -2,7 +2,7 @@
   "name": "@rapida/rest-calls",
   "version": "1.0.1",
   "description": "Rapid REST calls helper for building UI",
-  "author": "Nuotron <hi@nuotron.co>",
+  "author": "Nuotron <hi@nuotron.co> (http://nuotron.co)",
   "main": "src/api.js",
   "license": "MIT",
   "repository": "https://github.com/nuotron/rapida/tree/master/packages/rapida-rest-calls",
