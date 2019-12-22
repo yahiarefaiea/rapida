@@ -54,7 +54,7 @@ export default {
       prefix: 'favicons',
       favicons: {
         background: config.background,
-        theme_color: config.themeColor
+        theme_color: config.themeColor // eslint-disable-line camelcase
       }
     }),
 

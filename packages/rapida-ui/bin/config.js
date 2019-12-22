@@ -35,7 +35,7 @@ export default Object.freeze({
 
   sitemap: {
     base: 'https://mysite.com',
-    paths: [ 'foo', 'bar' ],
+    paths: ['foo', 'bar'],
     options: {
       lastMod: true
     }
