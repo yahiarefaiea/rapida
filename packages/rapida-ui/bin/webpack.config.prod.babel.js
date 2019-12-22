@@ -24,12 +24,15 @@ export default merge(baseConfig, {
   plugins: [
     // banner plugin
     new webpack.BannerPlugin({
-      banner: `${pkg.name} v${pkg.version}\n` +
-              `${pkg.description}\n` +
-              `Project produced by: ${pkg.author}\n` +
+      banner: `${config.project} v${pkg.version}\n` +
+              `${config.meta.description}\n` +
+              `Project produced by: ${config.meta.author}\n` +
+              `${config.meta.url}\n` +
+              '\n' +
               `Latest update on: ${new Date().getUTCFullYear()}.` +
               `${new Date().getUTCMonth() + 1}.${new Date().getUTCDate()}\n` +
               `Released under the ${pkg.license} license.\n` +
+              '\n' +
               'hash: [hash], chunkhash: [chunkhash]\n' +
               'file with contenthash: [file]'
     }),

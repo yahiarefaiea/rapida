@@ -29,7 +29,7 @@ export default Object.freeze({
   meta: {
     viewport: 'width=device-width, initial-scale=1',
     description: pkg.description,
-    author: pkg.author,
+    author: pkg.author.name,
     url: pkg.homepage
   },
 
