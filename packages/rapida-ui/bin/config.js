@@ -11,12 +11,19 @@ export default Object.freeze({
     if(this.env === 'development') return true
   },
 
+  devUrl: `http://${this.host}:${this.port}`,
+  prodUrl: `${kebabCase(pkg.name)}.surge.sh`,
+  baseUrl: function() {
+    const url = this.devMode() ? this.devUrl : this.prodUrl
+    return url
+  },
+
+  mockApi: `http://${this.host}:${this.port + 1}`,
   realApi: 'http://localhost:3000',
-  mockApi: 'http://localhost:8081',
   isMock: function() {
     return location.search.includes('useMockApi')
   },
-  baseUrl: function() {
+  apiUrl: function() {
     const url = this.isMock() ? this.mockApi : this.realApi
     return url
   },
@@ -30,13 +37,14 @@ export default Object.freeze({
     viewport: 'width=device-width, initial-scale=1',
     description: pkg.description,
     author: pkg.author.name,
-    url: pkg.homepage
+    url: this.baseUrl()
   },
 
   sitemap: {
-    base: 'https://mysite.com',
+    base: this.baseUrl(),
     paths: ['foo', 'bar'],
     options: {
+      fileName: 'sitemap.xml',
       lastMod: true
     }
   },
@@ -48,6 +56,6 @@ export default Object.freeze({
         allow: '/'
       }
     ],
-    sitemap: 'http://example.com/sitemap.xml'
+    sitemap: `${this.baseUrl()}/${this.sitemap.options.fileName}`
   }
 })
