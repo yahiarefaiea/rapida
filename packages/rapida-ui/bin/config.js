@@ -11,20 +11,14 @@ export default Object.freeze({
     if(this.env === 'development') return true
   },
 
-  devUrl: `http://${this.host}:${this.port}`,
-  prodUrl: `${kebabCase(pkg.name)}.surge.sh`,
-  baseUrl: function() {
-    const url = this.devMode() ? this.devUrl : this.prodUrl
-    return url
-  },
-
-  mockApi: `http://${this.host}:${this.port + 1}`,
-  realApi: 'http://localhost:3000',
-  isMock: function() {
-    return location.search.includes('useMockApi')
-  },
   apiUrl: function() {
-    const url = this.isMock() ? this.mockApi : this.realApi
+    const devApi = `http://${this.host}:${this.port + 1}`
+    const prodApi = 'http://localhost:3000'
+    function isMock() {
+      return location.search.includes('useMockApi')
+    }
+
+    const url = isMock() ? devApi : prodApi
     return url
   },
 
@@ -37,14 +31,13 @@ export default Object.freeze({
     viewport: 'width=device-width, initial-scale=1',
     description: pkg.description,
     author: pkg.author.name,
-    url: this.baseUrl()
+    url: pkg.homepage
   },
 
   sitemap: {
-    base: this.baseUrl(),
+    base: pkg.homepage,
     paths: ['foo', 'bar'],
     options: {
-      fileName: 'sitemap.xml',
       lastMod: true
     }
   },
@@ -56,6 +49,6 @@ export default Object.freeze({
         allow: '/'
       }
     ],
-    sitemap: `${this.baseUrl()}/${this.sitemap.options.fileName}`
+    sitemap: `${pkg.homepage}/sitemap.xml`
   }
 })
