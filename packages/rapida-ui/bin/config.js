@@ -13,7 +13,7 @@ export default Object.freeze({
 
   baseUrl: function() {
     const devUrl = `http://${this.host}:${this.port}`
-    const prodUrl = `${kebabCase(pkg.name)}.surge.sh`
+    const prodUrl = `http://${kebabCase(pkg.name)}.surge.sh`
 
     const url = this.devMode() ? devUrl : prodUrl
     return url
