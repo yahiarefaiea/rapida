@@ -11,6 +11,14 @@ export default Object.freeze({
     if(this.env === 'development') return true
   },
 
+  baseUrl: function() {
+    const devUrl = `http://${this.host}:${this.port}`
+    const prodUrl = `${kebabCase(pkg.name)}.surge.sh`
+
+    const url = this.devMode() ? devUrl : prodUrl
+    return url
+  },
+
   apiUrl: function() {
     const devApi = `http://${this.host}:${this.port + 1}`
     const prodApi = 'http://localhost:3000'
@@ -27,28 +35,35 @@ export default Object.freeze({
   background: '#fff',
   themeColor: '#f35635',
 
-  meta: {
-    viewport: 'width=device-width, initial-scale=1',
-    description: pkg.description,
-    author: pkg.author.name,
-    url: pkg.homepage
-  },
-
-  sitemap: {
-    base: pkg.homepage,
-    paths: ['foo', 'bar'],
-    options: {
-      lastMod: true
+  meta: function() {
+    return {
+      viewport: 'width=device-width, initial-scale=1',
+      description: pkg.description,
+      author: pkg.author.name,
+      url: this.baseUrl()
     }
   },
 
-  robotstxt: {
-    policy: [
-      {
-        userAgent: '*',
-        allow: '/'
+  sitemap: function() {
+    return {
+      base: this.baseUrl(),
+      paths: ['foo', 'bar'],
+      options: {
+        fileName: 'sitemap.xml',
+        lastMod: true
       }
-    ],
-    sitemap: `${pkg.homepage}/sitemap.xml`
+    }
+  },
+
+  robotstxt: function() {
+    return {
+      policy: [
+        {
+          userAgent: '*',
+          allow: '/'
+        }
+      ],
+      sitemap: `${this.baseUrl()}/${this.sitemap().options.fileName}`
+    }
   }
 })

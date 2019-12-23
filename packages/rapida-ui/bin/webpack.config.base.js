@@ -41,7 +41,7 @@ export default {
     // html webpack plugin
     new HtmlWebpackPlugin({
       template: 'ui/index.pug',
-      meta: config.meta
+      meta: config.meta()
     }),
 
     // mini css extract plugin

@@ -37,8 +37,8 @@ export default merge(baseConfig, {
               'file with contenthash: [file]'
     }),
 
-    new SitemapPlugin(config.sitemap.base, config.sitemap.paths, config.sitemap.options),
+    new SitemapPlugin(config.sitemap().base, config.sitemap().paths, config.sitemap().options),
 
-    new RobotstxtPlugin(config.robotstxt)
+    new RobotstxtPlugin(config.robotstxt())
   ]
 })
