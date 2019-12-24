@@ -28,7 +28,7 @@ this library contains several modules, so you can pick and choose what suits you
 
 ## Status
 
-rapida is now at $VERSION 
+rapida is now at $VERSION
 
 ## Compatibility
 
@@ -46,6 +46,23 @@ There're some issues (if any) when using this framework with Node.js version [VE
 ## Thanks
 
 A huge thanks to [Person] who contributed [Something] to this framework
+
+## contributors
+LIST OF ALL contributors.
+
+## Contribution
+
+Feel free to push your code if you agree with publishing under the MIT license.
+
+
+## Contributing
+
+1. Fork it (https://github.com/schneidmaster/sitemap-webpack-plugin/fork)
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
+
 
 ## License
 
