@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Rapid JavaScript development environment for building UI",
   "author": {
-    "name" : "Nuotron",
-    "email" : "hi@nuotron.co",
-    "url" : "http://nuotron.co"
+    "name": "Nuotron",
+    "email": "hi@nuotron.co",
+    "url": "http://nuotron.co"
   },
   "license": "MIT",
   "repository": "https://github.com/nuotron/rapida/tree/master/packages/rapida-ui",
