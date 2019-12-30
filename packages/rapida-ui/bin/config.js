@@ -4,6 +4,11 @@ import pkg from '../package.json'
 export default Object.freeze({
   project: kebabCase(pkg.name),
   title: kebabCase(pkg.name),
+  lang: 'en',
+  dir: 'ltr',
+  background: '#fff',
+  themeColor: '#f35635',
+
   env: process.env.NODE_ENV || 'development',
   host: process.env.HOST || 'localhost',
   port: process.env.PORT || 8080,
@@ -29,11 +34,6 @@ export default Object.freeze({
     const url = isMock() ? devApi : prodApi
     return url
   },
-
-  lang: 'en',
-  dir: 'ltr',
-  background: '#fff',
-  themeColor: '#f35635',
 
   meta: function() {
     return {
