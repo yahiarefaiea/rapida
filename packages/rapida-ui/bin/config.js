@@ -25,13 +25,13 @@ export default Object.freeze({
   },
 
   apiUrl: function() {
-    const devApi = `http://${this.host}:${this.port + 1}`
-    const prodApi = 'http://localhost:3000'
+    const devUrl = `http://${this.host}:${this.port + 1}`
+    const prodUrl = 'http://localhost:3000'
     function isMock() {
       return location.search.includes('useMockApi')
     }
 
-    const url = isMock() ? devApi : prodApi
+    const url = isMock() ? devUrl : prodUrl
     return url
   },
 
