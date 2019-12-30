@@ -25,9 +25,9 @@ export default merge(baseConfig, {
     // banner plugin
     new webpack.BannerPlugin({
       banner: `${config.project} v${pkg.version}\n` +
-              `${config.meta.description}\n` +
-              `Project produced by: ${config.meta.author}\n` +
-              `${config.meta.url}\n` +
+              `${config.meta().description}\n` +
+              `Project produced by: ${config.meta().author}\n` +
+              `${config.meta().url}\n` +
               '\n' +
               `Latest update on: ${new Date().getUTCFullYear()}.` +
               `${new Date().getUTCMonth() + 1}.${new Date().getUTCDate()}\n` +
