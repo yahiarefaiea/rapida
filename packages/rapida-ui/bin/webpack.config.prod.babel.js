@@ -3,6 +3,7 @@ import config from './config'
 import webpack from 'webpack'
 import merge from 'webpack-merge'
 import baseConfig from './webpack.config.base'
+import moment from 'moment'
 import TerserJSPlugin from 'terser-webpack-plugin'
 import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin'
 import SitemapPlugin from 'sitemap-webpack-plugin'
@@ -29,8 +30,7 @@ export default merge(baseConfig, {
               `Project produced by: ${config.meta().author}\n` +
               `${config.meta().url}\n` +
               '\n' +
-              `Latest update on: ${new Date().getUTCFullYear()}.` +
-              `${new Date().getUTCMonth() + 1}.${new Date().getUTCDate()}\n` +
+              `Latest update on: ${moment().format('YYYY.MM.DD')}\n` +
               `Released under the ${pkg.license} license.\n` +
               '\n' +
               'hash: [hash], chunkhash: [chunkhash]\n' +
