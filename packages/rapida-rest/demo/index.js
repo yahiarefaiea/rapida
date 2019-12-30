@@ -7,6 +7,7 @@ const app = express()
 const database = 'mongodb://localhost:27017/rapida-rest'
 mongoose.connect(database, {
   useNewUrlParser: true,
+  useCreateIndex: true,
   useUnifiedTopology: true
 })
 
