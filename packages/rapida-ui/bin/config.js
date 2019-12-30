@@ -10,8 +10,8 @@ export default Object.freeze({
   themeColor: '#f35635',
 
   env: process.env.NODE_ENV || 'development',
-  host: process.env.HOST || 'localhost',
-  port: process.env.PORT || 8080,
+  host: 'localhost',
+  port: 8080,
   devMode: function() {
     if(this.env === 'development') return true
   },
