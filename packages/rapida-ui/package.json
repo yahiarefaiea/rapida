@@ -12,18 +12,18 @@
   "homepage": "https://github.com/nuotron/rapida",
   "private": true,
   "scripts": {
-    "serve": "run-p lint test serve-mock webpack:dev",
+    "serve": "run-p watch serve-mock server",
     "server": "webpack-dev-server --config bin/webpack.config.dev.babel.js --color",
     "prebuild": "npm run clean",
     "build": "cross-env NODE_ENV=production webpack --config bin/webpack.config.prod.babel.js --color",
-    "lint": "run-p eslint puglint stylint",
-    "eslint": "esw **/*.js --watch --color",
-    "puglint": "pug-lint --reporter node_modules/puglint-stylish ui --watch --color",
-    "stylint": "stylint ui --watch --color",
-    "test": "mocha --reporter progress bin/test.js ui/**/*.test.js --watch --color",
+    "eslint": "eslint **/*.js --color",
+    "puglint": "pug-lint --reporter node_modules/puglint-stylish ui --color",
+    "stylint": "stylint ui --color",
+    "test": "mocha bin/test.js ui/**/*.test.js --color",
     "generate-mock": "babel-node bin/generateMock.js --color",
     "preserve-mock": "npm run generate-mock",
     "serve-mock": "json-server --watch data/db.json --port 8081 --color",
+    "watch": "npm-watch",
     "clean": "rimraf dist data"
   },
   "dependencies": {
@@ -57,6 +57,7 @@
     "mocha": "6.2.2",
     "moment": "2.24.0",
     "npm-run-all": "4.1.5",
+    "npm-watch": "0.6.0",
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "pug": "2.0.4",
     "pug-html-loader": "1.1.5",
@@ -74,6 +75,26 @@
     "webpack-cli": "3.3.10",
     "webpack-dev-server": "3.9.0",
     "webpack-merge": "4.2.2"
+  },
+  "watch": {
+    "test": {
+      "patterns": "ui/**/*.test.js",
+      "extensions": "js",
+      "ignore": "node_modules/"
+    },
+    "eslint": {
+      "patterns": "**/*.js",
+      "extensions": "js",
+      "ignore": "node_modules/"
+    },
+    "puglint": {
+      "patterns": "ui",
+      "extensions": "pug"
+    },
+    "stylint": {
+      "patterns": "ui",
+      "extensions": "styl"
+    }
   },
   "babel": {
     "presets": [
