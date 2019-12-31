@@ -11,13 +11,11 @@
     "node": "10.15.3"
   },
   "scripts": {
-    "start": "run-p lint:watch test:watch server",
+    "start": "run-p lint test server",
     "server": "nodemon bin/server.js --exec babel-node --color",
     "server:prod": "cross-env NODE_ENV=production babel-node bin/server.js --color",
-    "lint": "eslint **/*.js --color",
-    "lint:watch": "chokidar --initial --silent \"bin/**/*.js\" \"api/**/*.js\" -c \"npm run lint\"",
-    "test": "mocha --reporter progress bin/test.js api/**/*.test.js --color",
-    "test:watch": "chokidar --initial --silent \"api/**/*.test.js\" -c \"npm run test\""
+    "lint": "esw **/*.js --watch --color",
+    "test": "mocha --reporter progress bin/test.js api/**/*.test.js --watch --color"
   },
   "dependencies": {
     "@babel/core": "7.7.4",
@@ -35,6 +33,7 @@
     "cross-env": "6.0.3",
     "eslint": "6.7.2",
     "eslint-config-rapida": "1.0.1",
+    "eslint-watch": "6.0.1",
     "express": "4.17.1",
     "lodash": "4.17.15",
     "mocha": "6.2.2",
