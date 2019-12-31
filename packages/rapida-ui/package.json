@@ -12,7 +12,7 @@
   "homepage": "https://github.com/nuotron/rapida",
   "private": true,
   "scripts": {
-    "serve": "run-p watch serve-mock server",
+    "serve": "run-p watch server",
     "server": "webpack-dev-server --config bin/webpack.config.dev.babel.js --color",
     "prebuild": "npm run clean",
     "build": "cross-env NODE_ENV=production webpack --config bin/webpack.config.prod.babel.js --color",
@@ -22,7 +22,7 @@
     "stylint": "stylint ui --color",
     "generate-mock": "babel-node bin/generateMock.js --color",
     "preserve-mock": "npm run generate-mock",
-    "serve-mock": "json-server --watch data/db.json --port 8081 --color",
+    "serve-mock": "json-server data/db.json --port 8081 --color",
     "watch": "npm-watch",
     "clean": "rimraf dist data"
   },
@@ -92,6 +92,10 @@
     "stylint": {
       "patterns": "ui",
       "extensions": "styl"
+    },
+    "serve-mock": {
+      "patterns": "ui/mockModel.js",
+      "extensions": "js"
     }
   },
   "babel": {
