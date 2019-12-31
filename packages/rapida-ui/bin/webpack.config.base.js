@@ -51,7 +51,7 @@ export default {
 
     new FaviconsWebpackPlugin({
       logo: './static/images/logo.svg',
-      prefix: 'favicons',
+      prefix: 'icons',
       favicons: {
         background: config.background,
         theme_color: config.themeColor // eslint-disable-line camelcase
