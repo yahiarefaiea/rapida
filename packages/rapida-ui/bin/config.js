@@ -3,7 +3,7 @@ import pkg from '../package.json'
 
 export default Object.freeze({
   project: kebabCase(pkg.name),
-  title: kebabCase(pkg.name),
+  title: pkg.name,
   lang: 'en',
   dir: 'ltr',
   background: '#fff',
@@ -18,7 +18,7 @@ export default Object.freeze({
 
   baseUrl: function() {
     const devUrl = `http://${this.host}:${this.port}`
-    const prodUrl = `http://${kebabCase(pkg.name)}.surge.sh`
+    const prodUrl = `http://${this.project}.surge.sh`
 
     const url = this.devMode() ? devUrl : prodUrl
     return url
