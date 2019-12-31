@@ -14,8 +14,8 @@
     "start": "run-p watch server",
     "server": "nodemon bin/server.js --exec babel-node --color",
     "server:prod": "cross-env NODE_ENV=production babel-node bin/server.js --color",
-    "lint": "eslint **/*.js --color",
     "test": "mocha bin/test.js api/**/*.test.js --color",
+    "lint": "eslint **/*.js --color",
     "watch": "npm-watch"
   },
   "dependencies": {
