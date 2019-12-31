@@ -11,8 +11,9 @@ import api from '../api'
 
 const app = express()
 
-// start message
 /* eslint-disable no-console */
+
+// start message
 console.log(chalk.cyan(`Running in \`${config.env}\` mode`))
 
 // connect to the database
