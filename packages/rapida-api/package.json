@@ -11,7 +11,7 @@
     "node": "10.15.3"
   },
   "scripts": {
-    "start": "run-p test:watch lint:watch server",
+    "start": "run-p lint:watch test:watch server",
     "server": "nodemon bin/server.js --exec babel-node --color",
     "server:prod": "cross-env NODE_ENV=production babel-node bin/server.js --color",
     "lint": "eslint **/*.js --color",
