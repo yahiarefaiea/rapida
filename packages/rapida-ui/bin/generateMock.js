@@ -1,7 +1,7 @@
 import jsf from 'json-schema-faker'
-import model from '../ui/mockModel'
 import fse from 'fs-extra'
 import chalk from 'chalk'
+import model from '../ui/mockModel'
 const json = JSON.stringify(jsf.generate(model))
 
 /* eslint-disable no-console */
