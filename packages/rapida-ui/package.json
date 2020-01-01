@@ -77,13 +77,11 @@
   "watch": {
     "test": {
       "patterns": "ui/**/*.test.js",
-      "extensions": "js",
-      "ignore": "node_modules/"
+      "extensions": "js"
     },
     "eslint": {
       "patterns": "**/*.js",
-      "extensions": "js",
-      "ignore": "node_modules/"
+      "extensions": "js"
     },
     "puglint": {
       "patterns": "ui",

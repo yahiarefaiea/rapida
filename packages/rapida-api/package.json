@@ -45,13 +45,11 @@
   "watch": {
     "test": {
       "patterns": "api/**/*.test.js",
-      "extensions": "js",
-      "ignore": "node_modules/"
+      "extensions": "js"
     },
     "lint": {
       "patterns": "**/*.js",
-      "extensions": "js",
-      "ignore": "node_modules/"
+      "extensions": "js"
     }
   },
   "babel": {
