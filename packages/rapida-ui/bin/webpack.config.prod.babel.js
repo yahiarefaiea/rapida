@@ -30,9 +30,10 @@ export default merge(baseConfig, {
               `Project produced by: ${config.meta().author}\n` +
               `${config.meta().url}\n` +
               '\n' +
-              `Latest update on: ${moment().format('YYYY.MM.DD')}\n` +
-              `Released under the ${pkg.license} license.\n` +
+              `Copyright (c) ${moment().format('YYYY')} ${config.meta().author}\n` +
+              `Released under the ${pkg.license} license\n` +
               '\n' +
+              `Latest update on: ${moment().format('YYYY.MM.DD')}\n` +
               'hash: [hash], chunkhash: [chunkhash]\n' +
               'file with contenthash: [file]'
     }),
