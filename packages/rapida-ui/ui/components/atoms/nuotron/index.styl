@@ -12,13 +12,13 @@ nuotron.safeArea= nuotron.size + nuotron.stroke*2 + nuotron.dot*2 + baseline
 #nuotron
   top: 50%
   {align.main}: 50%
+  size: nuotron.size
   margin-top: -(nuotron.size*.5)
   margin-{align.main}: -(nuotron.size*.5)
-  size: nuotron.size
   transform: rotate(nuotron.rotation)
   &, & *, & *:before
-    position: absolute
     display: block
+    position: absolute
   .ellipse, .dot
     top: 0
     {align.main}: 0
@@ -37,12 +37,12 @@ nuotron.safeArea= nuotron.size + nuotron.stroke*2 + nuotron.dot*2 + baseline
       100%
         transform: rotate(360deg)
     &:before
+      content: ''
       top: -(nuotron.dot + nuotron.stroke)
       {align.main}: 50%
-      margin-{align.main}: -(nuotron.dot*.5)
       size: nuotron.dot 'circle'
+      margin-{align.main}: -(nuotron.dot*.5)
       background-color: color.primary
-      content: ''
       animation: dotEffect nuotron.duration ease-in-out infinite
       @keyframes dotEffect
         50%
