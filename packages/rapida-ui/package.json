@@ -103,7 +103,7 @@
         "@babel/preset-env",
         {
           "targets": {
-            "node": "10.15.3"
+            "node": "12.14.0"
           }
         }
       ]

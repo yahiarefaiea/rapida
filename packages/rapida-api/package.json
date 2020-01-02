@@ -8,7 +8,7 @@
   "homepage": "https://github.com/nuotron/rapida",
   "private": true,
   "engines": {
-    "node": "10.15.3"
+    "node": "12.14.0"
   },
   "scripts": {
     "start": "run-p watch server",
@@ -58,7 +58,7 @@
         "@babel/preset-env",
         {
           "targets": {
-            "node": "10.15.3"
+            "node": "12.14.0"
           }
         }
       ]
