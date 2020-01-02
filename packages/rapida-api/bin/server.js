@@ -22,8 +22,7 @@ mongoose.connect(config.database(), {
   useCreateIndex: true,
   useUnifiedTopology: true
 })
-const db = mongoose.connection
-db.on('error', function() {
+mongoose.connection.on('error', function() {
   console.log(chalk.red(`Failed to connect to the \`${config.project}\` database`))
 }).once('open', function() {
   console.log(chalk.cyan(`Successfully connected to the \`${config.project}\` database`))
