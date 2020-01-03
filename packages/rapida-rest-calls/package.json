@@ -1,7 +1,7 @@
 {
   "name": "@rapida/rest-calls",
   "version": "1.0.1",
-  "description": "Rapid REST calls helper for building UI",
+  "description": "An abstraction helper for http calls that returns api endpoints for each entity you create in a consistent way",
   "author": "Nuotron <hi@nuotron.co> (http://nuotron.co)",
   "main": "src/api.js",
   "license": "MIT",

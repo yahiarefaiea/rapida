@@ -1,7 +1,7 @@
 {
   "name": "@rapida/rest",
   "version": "1.0.2",
-  "description": "Rapid REST calls helper for building API",
+  "description": "An abstraction helper for REST API that creates an abstract controller that communicate with the database in a consistent way",
   "author": "Nuotron <hi@nuotron.co> (http://nuotron.co)",
   "main": "src/abstract.js",
   "license": "MIT",

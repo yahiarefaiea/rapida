@@ -1,7 +1,7 @@
 {
   "name": "@rapida/response",
   "version": "1.0.2",
-  "description": "Rapid response helper for RESTful API",
+  "description": "An abstraction helper that returns a consistent responses all around your RESTful API",
   "author": "Nuotron <hi@nuotron.co> (http://nuotron.co)",
   "main": "src/responses.js",
   "license": "MIT",
