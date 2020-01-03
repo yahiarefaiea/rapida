@@ -1,6 +1,6 @@
 # Rapida response
 
-An abstraction helper that returns a constant responses all around your RESTful API.
+An abstraction helper that returns a consistent responses all around your RESTful API.
 
 This package is part of [Rapida](https://github.com/nuotron/rapida).
 
@@ -61,28 +61,28 @@ When sending a response, you are expecting to receive a JSON object that looks l
 }
 ```
 
-And you are expecting an error that looks like this:
+And if there is an error, then it will looks like this:
 ```javascript
 { status: 404 }
 ```
 
-You can expand the error by [setting a global error handler](#setting-a-global-error-handler-for-express).
+**Note**: You can expand the error by [setting a global error handler](#setting-a-global-error-handler-for-express).
 
 ## Advanced Usage
 ### The `Good` method
 If you need to create a new custom response, you can use the `Good` method:
 ```javascript
-new response.Good({'my': 'data'}, 'custom response message', 1234)
+new response.Good({'my': 'data'}, 'Custom response message', 1234)
 ```
 
 ### The `Bad` method
 If you need to create a new custom error, you can use the `Bad` method:
 ```javascript
-new response.Bad('custom error message', 1234)
+new response.Bad('Custom error message', 1234)
 ```
 
 ### The `response.defaults` object
-Also, you might need to access the `response.defaults` object. When working with Express you might need it when using the `status()`:
+Also, you might need to access the `response.defaults` object. When working with Express you might need it when setting a `res.status()`:
 ```javascript
 res.status(response.defaults.Created.status).send(new response.Created(resource, response.defaults.Created.message))
 ```
@@ -115,9 +115,9 @@ const express = require('express')
 const response = require('@rapida/response')
 const router = express.Router()
 
-const book = require('./book')
+const book = require('./path/to/book')
 
-export default function() {
+module.exports = function() {
   return router
     .use('/book', book())
 
@@ -135,9 +135,6 @@ npm start -s
 ```
 
 You can find the demo inside `demo/index.js`.
-
-## What happens behind the scene?
-We use [axios](https://github.com/axios/axios) behind the scene to excite the http calls which's a promise based HTTP client.
 
 ## License
 Copyright (c) 2020 Nuotron.

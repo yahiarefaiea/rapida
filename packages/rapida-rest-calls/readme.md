@@ -1,6 +1,6 @@
 # Rapida REST Calls
 
-An abstraction helper for http calls that returns an api endpoints for each entity you create in a consistent way.
+An abstraction helper for http calls that returns api endpoints for each entity you create in a consistent way.
 
 This package is part of [Rapida](https://github.com/nuotron/rapida).
 
@@ -26,9 +26,9 @@ api.createEntity('book')
 api.createEntities(['book', 'author'])
 ```
 
-And then you can use it in your app by calling on of the following methods:
+And then you can use it in your app. Let's do a `getAll` method:
 ```javascript
-api.endpoints.book.getAll(params, config)
+api.endpoints.book.getAll()
 ```
 
 To handle the response and catch the errors, you can chain the `then` and the `catch` keywords after calling the method:
@@ -58,7 +58,7 @@ api.endpoints.book.delete(id, config)
 ```
 
 ## Advanced Usage
-You can create an abstract file and use it all around your project by creating a file called `api.js` that contains the following:
+You can create an abstract api and use it all around your project by creating a file called `api.js` that contains the following:
 ```javascript
 // api.js
 const Api = require('@rapida/rest-calls')
@@ -69,14 +69,12 @@ api.createEntities(['book', 'author'])
 module.exports = api.endpoints
 ```
 
-And with this, you will have a shorter and more self descriptive constant to use anywhere in your project:
+And with this, you will have a shorter and more self-descriptive constant to use anywhere in your project:
 ```javascript
 // anywhere.js
 const api = require('./path/to/api')
 
 api.book.getAll()
-  .then(data => console.log(data))
-  .catch(error => console.log(error))
 ```
 
 ## Demo
