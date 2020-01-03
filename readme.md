@@ -10,64 +10,43 @@ that's why we created `Rapida`  a Js library that helps eliminating boilerplate 
 
 this library contains several modules, so you can pick and choose what suits you based on your project.
 
-## Libraries
+## The main 2 packages are:
 
-[rapida-api](https://github.com/nuotron/rapida/tree/master/packages/rapida-api)
+## and the other packages (helpers) are:
 
-[rapida-response](https://github.com/nuotron/rapida/tree/master/packages/rapida-response)
+## Packages
++ [rapida-api](https://github.com/nuotron/rapida/tree/master/packages/rapida-api)
++ [rapida-response](https://github.com/nuotron/rapida/tree/master/packages/rapida-response)
++ [rapidae-rest-calls](https://github.com/nuotron/rapida/tree/master/packages/rapida-rest-calls)
++ [rapida-rest](https://github.com/nuotron/rapida/tree/master/packages/rapida-rest)
++ [rapida-ui](https://github.com/nuotron/rapida/tree/master/packages/rapida-rest)
 
-[rapidae-rest-calls](https://github.com/nuotron/rapida/tree/master/packages/rapida-rest-calls)
-
-[rapida-rest](https://github.com/nuotron/rapida/tree/master/packages/rapida-rest)
-
-[rapida-ui](https://github.com/nuotron/rapida/tree/master/packages/rapida-rest)
-
-## Download
-
-
-
-## Status
-
-rapida is now at $VERSION
-
-## Compatibility
-
-This framework is compatible with Node.js version [VERSION_Number]
-There're some issues (if any) when using this framework with Node.js version [VERSION_NUMBER]
-
-## Getting Help
-
- To report a specific problem or feature request, open a new issue on Github. For questions, suggestions, or anything else, email us [here] ()
+## TODOs
++ Write tests for all packages
++ Use yeoman scaffolding tool
++ Create @rapida/cli
 
 ## Author
-
-[Yahia Refaiea](https://github.com/YahiaRefaiea)
-
-## Thanks
-
-A huge thanks to [Person] who contributed [Something] to this framework
+**Yahia Refaiea**
++ [github/YahiaRefaiea](https://github.com/YahiaRefaiea)
++ [twitter/YahiaRefaiea](https://twitter.com/YahiaRefaiea)
 
 ## contributors
-LIST OF ALL contributors.
-
-## Contribution
-
-Feel free to push your code if you agree with publishing under the MIT license.
-
++ [Yahia Refaiea](https://github.com/YahiaRefaiea)
++ [Roduan Kareem Aldeen](https://github.com/RoduanKareemAldeen)
++ [Waleed Alrashed](https://github.com/WaleedAlrashed)
++ [Seif Kowatli](https://github.com/seifkowatli)
 
 ## Contributing
-
-1. Fork it (https://github.com/schneidmaster/sitemap-webpack-plugin/fork)
+1. Fork this repository (https://github.com/schneidmaster/sitemap-webpack-plugin/fork)
 2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
+3. Commit your changes (`git commit -am 'add a new feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
 
+## Issues
+To report a specific problem or feature request, open a new issue on Github. For questions, suggestions, or anything else, email us [here] ()
 
 ## License
-
-[MIT License](https://github.com/github/choosealicense.com/blob/gh-pages/LICENSE.md)
-
-## Disclaimer
-
-Insert any concerns or additional notes about the usage of this package
+Copyright (c) 2020 Nuotron.
+Released under the [MIT license](https://github.com/github/choosealicense.com/blob/gh-pages/LICENSE.md).
