@@ -1,5 +1,4 @@
 # ESLint Config Rapida
-
 An extensible shared [ESLint](https://github.com/eslint/eslint) configuration to lint JavaScript code.
 
 This package is part of [Rapida](https://github.com/nuotron/rapida).

@@ -1,5 +1,4 @@
 # ESLint Config Rapida
-
 An extensible shared [Stylint](https://github.com/SimenB/stylint) configuration to lint Stylus code.
 
 This package is part of [Rapida](https://github.com/nuotron/rapida).
