@@ -1,7 +1,7 @@
 {
   "name": "stylint-config-rapida",
   "version": "1.0.0",
-  "description": "Rapid JavaScript coding standard for ESLint",
+  "description": "An extensible shared Stylint configuration to lint Stylus code",
   "author": "Nuotron <hi@nuotron.co> (http://nuotron.co)",
   "main": ".stylintrc",
   "license": "MIT",
