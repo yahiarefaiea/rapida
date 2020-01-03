@@ -1,23 +1,144 @@
-# Rapida Response
+# Rapida response
 
-Rapid response helper for RESTful API.
-part of [Rapida Framework]
+An abstraction helper that returns a constant responses all around your RESTful API.
+
+This package is part of [Rapida](https://github.com/nuotron/rapida).
 
 ## Usage
-
-In your project folder, find and install `rapida-response`
-
-Import `rapida-response` to your project:
-
-```javascript
-import response from 'rapida-response'
+In your project folder, install `@rapida/response` by running:
+```
+npm i @rapida/response --save
 ```
 
-Then add response wherever you want:
-
+Import `@rapida/response` to your project:
 ```javascript
-next(new response.NotFound())
+const response = require('@rapida/response')
 ```
-## Example
 
-Check out a working demo  here [DEMO_LINK]
+Then create an new instance of the `response`, and send it to the client. You can do that with Express by:
+```javascript
+res.send(new response.NotFound())
+```
+
+## Methods
+The available methods are:
+```javascript
+// data is required, default message: 'Resource(s) found', status: 200
+new response.Found(data, message)
+
+// data is required, default message: 'Resource created', status: 201
+new response.Created(data, message)
+
+// data is required, default message: 'Resource updated', status: 200
+new response.Updated(data, message)
+
+// default message: 'Resource deleted', status: 200
+new response.Deleted(message)
+
+// default message: 'Resource not found', status: 404
+new response.NotFound(message)
+
+// default message: 'Bad Request', status: 400
+new response.BadRequest(message)
+
+// default message: 'Action forbidden', status: 403
+new response.Forbidden(message)
+
+// default message: 'Unauthorized access', status: 401
+new response.Unauthorized(message)
+
+// default message: 'Internal server error', status: 500
+new response.InternalServerError(message)
+```
+
+## The response object
+When sending a response, you are expecting to receive a JSON object that looks like this:
+```javascript
+{
+  data: { title: 'Book Title', author: 'Book Author' },
+  message: 'Resource(s) found',
+  status: 200
+}
+```
+
+And you are expecting an error that looks like this:
+```javascript
+{ status: 404 }
+```
+
+You can expand the error by [setting a global error handler](#setting-a-global-error-handler-for-express).
+
+## Advanced Usage
+### The `Good` method
+If you need to create a new custom response, you can use the `Good` method:
+```javascript
+new response.Good({'my': 'data'}, 'custom response message', 1234)
+```
+
+### The `Bad` method
+If you need to create a new custom error, you can use the `Bad` method:
+```javascript
+new response.Bad('custom error message', 1234)
+```
+
+### The `response.defaults` object
+Also, you might need to access the `response.defaults` object. When working with Express you might need it when using the `status()`:
+```javascript
+res.status(response.defaults.Created.status).send(new response.Created(resource, response.defaults.Created.message))
+```
+
+### Setting a global error handler for Express
+Express provides a great way to handle errors using the [next middleware](https://expressjs.com/en/guide/using-middleware.html).
+```javascript
+// server.js
+const express = require('express')
+const response = require('@rapida/response')
+const api = require('./path/to/api')
+
+const app = express()
+
+app.use('/', api())
+
+// error handler
+app.use(function(err, req, res, next) {
+  if(err && err.status)
+    res.status(err.status).send(new response.Good(null, err.message, err.status))
+  else next(err)
+})
+
+app.listen(3000)
+```
+
+Now anywhere in your project, you can create a response and pass it to the next middleware:
+```javascript
+const express = require('express')
+const response = require('@rapida/response')
+const router = express.Router()
+
+const book = require('./book')
+
+export default function() {
+  return router
+    .use('/book', book())
+
+    // error handler
+    .use(function(req, res, next) {
+      next(new response.Forbidden())
+    })
+}
+```
+
+## Demo
+To run a working demo, run the following command:
+```
+npm start -s
+```
+
+You can find the demo inside `demo/index.js`.
+
+## What happens behind the scene?
+We use [axios](https://github.com/axios/axios) behind the scene to excite the http calls which's a promise based HTTP client.
+
+## License
+Copyright (c) 2020 Nuotron.
+Released under the [MIT license](https://github.com/github/choosealicense.com/blob/gh-pages/LICENSE.md).
