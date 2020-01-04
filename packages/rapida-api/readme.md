@@ -1,5 +1,6 @@
-# Rapida API
-A starter-kit that creates an environment to help you focus on building a RESTful API.
+![Rapida Logo](https://user-images.githubusercontent.com/13030990/71755098-db251e80-2e91-11ea-8ce9-25349e6c087f.png)
+
+**Rapida API** - A starter-kit that creates an environment to help you focus on building a RESTful API.
 
 This package is part of [Rapida](https://github.com/nuotron/rapida).
 

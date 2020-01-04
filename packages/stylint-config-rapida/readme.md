@@ -1,5 +1,6 @@
-# Stylint Config Rapida
-An extensible shared [Stylint](https://github.com/SimenB/stylint) configuration to lint Stylus code.
+![Rapida Logo](https://user-images.githubusercontent.com/13030990/71755098-db251e80-2e91-11ea-8ce9-25349e6c087f.png)
+
+**Stylint Config Rapida** - An extensible shared [Stylint](https://github.com/SimenB/stylint) configuration to lint Stylus code.
 
 This package is part of [Rapida](https://github.com/nuotron/rapida).
 

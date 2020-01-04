@@ -1,5 +1,6 @@
-# Pug Lint Config Rapida
-An extensible shared [PugLint](https://github.com/pugjs/pug-lint) configuration to lint Pug code.
+![Rapida Logo](https://user-images.githubusercontent.com/13030990/71755098-db251e80-2e91-11ea-8ce9-25349e6c087f.png)
+
+**Pug Lint Config Rapida** - An extensible shared [PugLint](https://github.com/pugjs/pug-lint) configuration to lint Pug code.
 
 This package is part of [Rapida](https://github.com/nuotron/rapida).
 
