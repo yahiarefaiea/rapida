@@ -41,7 +41,7 @@ npm start -s
 The available npm scripts are:
 
 ### start
-The main script is `start` which will fire the [server script](#server). It also [watch](#watch) for files changes and run the necessary script for them:
+The main script is `start` which will fire the [server script](#server). It also [watch](#watch) for files changes and run the necessary scripts for them:
 ```
 npm start -s
 ```

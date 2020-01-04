@@ -39,13 +39,13 @@ npm run serve -s
 The available npm scripts are:
 
 ### serve
-The main script is `serve` which will fire the [server script](#server). It also [watch](#watch) for files changes and run the necessary script for them:
+The main script is `serve` which will fire the [server script](#server). It also [watch](#watch) for files changes and run the necessary scripts for them:
 ```
 npm run serve -s
 ```
 
 ### server
-The `server` script fire the [webpack-dev-server](https://github.com/webpack/webpack-dev-server) configured in the `bin/webpack.config.dev.babel.js`. Check the [webpack.config.dev.babel.js](webpack-config-dev-babel-js):
+The `server` script fire the [webpack-dev-server](https://github.com/webpack/webpack-dev-server) configured in the `bin/webpack.config.dev.babel.js`. Check the [webpack.config.dev.babel.js](webpack-config-dev-babel-js) for more details:
 ```
 npm run server -s
 ```
@@ -114,7 +114,7 @@ The `generate-mock` script will generate a mock data into `data/db.json`. This d
 npm run generate-mock -s
 ```
 
-The `generate-mock` script uses the [JSON Schema Faker](https://github.com/json-schema-faker/json-schema-faker). You can configure the model you want to generate by updating the `ui/mockModel.js`. And the generate script is located under the `bin/generateMock.js`.
+The `generate-mock` script uses the [JSON Schema Faker](https://github.com/json-schema-faker/json-schema-faker). You can configure the model you want to generate by updating the `ui/mockModel.js`. The JavaScript file that generates the mock is located under the `bin/generateMock.js`.
 
 ### serve-mock
 The `serve-mock` script fire the [json-server](https://github.com/typicode/json-server) which it looks for the [generated mock data](#generate-mock) and serve them on port 8081:
@@ -151,7 +151,7 @@ It's where the base configurations are set for both the `development` and `produ
 
 In the `webpack.config.base.js`, we specify the entry point which's `./ui/index.js`, and the output will be bundled in the `./dist`. The file name for the output will be `[name].bundle.extension` for the development, and `[name].bundle.[contenthash].extension` for the production which will help us with [caching](https://webpack.js.org/guides/caching).
 
-By default, we split the `.js` bundles to `main`, `runtime`, and `vendors` which will also help us with caching and page load.
+We also split the `.js` bundles to `main`, `runtime`, and `vendors` which will also help us with caching and page load.
 
 #### Plugins
 We're using:
@@ -165,7 +165,7 @@ new MiniCssExtractPlugin()
 // Generates Favicons for all browsers
 new FaviconsWebpackPlugin()
 
-// Copys the `static/` directory to the `./dist`
+// Copy the `static/` directory to the `./dist`
 new CopyPlugin()
 
 // Minify the images
@@ -182,8 +182,7 @@ We're using:
 It's where the `development` configurations are set (merged with the `webpack.config.base.js`). It provides live reloading and [hot module replacement](https://webpack.js.org/guides/hot-module-replacement) on files changes. Also [BrowserSync](https://github.com/BrowserSync/browser-sync) is configured to reload all the files `webpack-dev-server` can't handle (Like `.pug` files) which gives you a great development experience.
 
 ### webpack.config.prod.babel.js
-It's where the `production` configurations are set (merged with the `webpack.config.base.js`).
-It minify your JavaScript and CSS assets, generate a `sitemap.xml` and `robots.txt`, and add a banner for the generated bundles.
+It's where the `production` configurations are set (merged with the `webpack.config.base.js`). It minify your JavaScript and CSS assets, generate a `sitemap.xml` and `robots.txt`, and add a banner for the generated bundles.
 
 ## The UI directory
 The `ui/` directory is structured based on the [Atomic Design Methodology](http://atomicdesign.bradfrost.com/chapter-2) (atoms, molecules, organisms, templates, and pages) which it makes it more organized and easy to maintain even with larger projects. The `ui/index.js` is the place where you load all of your components. And each component is contained within a dedicated directory that has its name. Check [this demo](https://github.com/nuotron/rapida/tree/master/packages/rapida-ui/ui).
