@@ -1,5 +1,4 @@
 # Rapida response
-
 An abstraction helper that returns a consistent responses all around your RESTful API.
 
 This package is part of [Rapida](https://github.com/nuotron/rapida).

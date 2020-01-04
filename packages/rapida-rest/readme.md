@@ -1,5 +1,4 @@
 # Rapida REST
-
 An abstraction helper for REST API that creates an abstract controller that communicate with the database in a consistent way.
 
 This package is part of [Rapida](https://github.com/nuotron/rapida).
