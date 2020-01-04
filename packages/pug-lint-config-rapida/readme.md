@@ -5,7 +5,7 @@
 This package is part of [Rapida](https://github.com/nuotron/rapida).
 
 ## Usage
-In your project folder, install `pug-lint-config-rapida` by running:
+In your project directory, install `pug-lint-config-rapida` by running:
 ```
 npm i pug-lint pug-lint-config-rapida --save-dev
 ```

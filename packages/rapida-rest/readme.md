@@ -5,7 +5,7 @@
 This package is part of [Rapida](https://github.com/nuotron/rapida).
 
 ## Usage
-In your project folder, install `express`, `mongoose`, and `@rapida/rest` by running:
+In your project directory, install `express`, `mongoose`, and `@rapida/rest` by running:
 ```
 npm i express mongoose @rapida/rest --save
 ```

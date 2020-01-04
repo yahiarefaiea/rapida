@@ -5,7 +5,7 @@
 This package is part of [Rapida](https://github.com/nuotron/rapida).
 
 ## Usage
-In your project folder, install `@rapida/response` by running:
+In your project directory, install `@rapida/response` by running:
 ```
 npm i @rapida/response --save
 ```

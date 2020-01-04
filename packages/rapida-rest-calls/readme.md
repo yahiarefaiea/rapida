@@ -5,7 +5,7 @@
 This package is part of [Rapida](https://github.com/nuotron/rapida).
 
 ## Usage
-In your project folder, install `@rapida/rest-calls` by running:
+In your project directory, install `@rapida/rest-calls` by running:
 ```
 npm i @rapida/rest-calls --save
 ```

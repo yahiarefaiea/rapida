@@ -5,7 +5,7 @@
 This package is part of [Rapida](https://github.com/nuotron/rapida).
 
 ## Usage
-In your project folder, install `eslint-config-rapida` by running:
+In your project directory, install `eslint-config-rapida` by running:
 ```
 npm i eslint eslint-config-rapida --save-dev
 ```

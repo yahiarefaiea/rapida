@@ -5,7 +5,7 @@
 This package is part of [Rapida](https://github.com/nuotron/rapida).
 
 ## Usage
-In your project folder, install `stylint-config-rapida` by running:
+In your project directory, install `stylint-config-rapida` by running:
 ```
 npm i stylint stylint-config-rapida --save-dev
 ```
