@@ -61,7 +61,7 @@ npm run server:prod
 ```
 
 ### test
-To run your tests, run the `test` script. We use `mocha` as our testing framework:
+To run your tests, run the `test` script. We use [mocha](https://mochajs.org) as our testing framework:
 ```
 npm test -s
 ```
@@ -69,7 +69,7 @@ npm test -s
 You need to add your test files inside the `api/` directory, also your files should end with a `.test.js`. You can see a demo from [here](the-api-folder).
 
 ### lint
-To lint your `.js` files, run the `lint` script. We use `eslint` as our linter and it looks for all the `.js` files inside your project.
+To lint your `.js` files, run the `lint` script. We use [eslint](https://github.com/eslint/eslint) as our linter and it looks for all the `.js` files inside your project.
 ```
 npm run lint -s
 ```
@@ -88,7 +88,7 @@ The `watch` script will watch for all your `.test.js` and `.js` files and run th
 npm run watch -s
 ```
 
-The `watch` scripts uses the [npm-watch](https://github.com/M-Zuber/npm-watch). You can configure it by updating the `watch` object in the `package.json`.
+The `watch` script uses the [npm-watch](https://github.com/M-Zuber/npm-watch). You can configure it by updating the `watch` object in the `package.json`.
 
 ## Configuring your project
 The main file that runs everything is the `bin/server.js`. It uses [Express](https://github.com/expressjs/express) and [Mongoose](https://github.com/Automattic/mongoose) at its core. The `bin/server.js` is just the starting point, and in the end, it points to the `api/` folder which contains the logic for your project.
