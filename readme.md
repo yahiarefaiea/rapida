@@ -1,8 +1,10 @@
 ![Rapida Logo](https://user-images.githubusercontent.com/13030990/71755098-db251e80-2e91-11ea-8ce9-25349e6c087f.png)
+
 Rapid JavaScript development environment for building RESTful API.
 
-## Description
+# Add author + Goal of creating this project
 
+## Description
 Developing a complete Javascript project can be burdensome, even though `nodejs` provides a good boilerplate code to begin with.
 but this boilerplate code needs to be written every single time,we want to build  a new project which contradicts with the 1st role in programming "Do Not repeat yourself".
 that's why we created `Rapida`  a Js library that helps eliminating boilerplate code and helps you focus on developing your logic code as much as possible rather than spending time maintaining boilerplate code.
