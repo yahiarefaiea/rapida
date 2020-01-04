@@ -83,7 +83,7 @@ The eslint is configured inside the `package.json` which it extends our [eslint-
 ```
 
 ### watch
-The `watch` script will watch for all your `.js` and `.test.js` files and run the required script when necessary:
+The `watch` script will watch for all your `.test.js` and `.js` files and run the `test` and `lint` scripts when necessary:
 ```
 npm run watch -s
 ```
