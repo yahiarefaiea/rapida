@@ -96,7 +96,7 @@ The main file that runs everything is the `bin/server.js`. It uses [Express](htt
 You can configure the project by updating the `bin/config.js` object used all around the project. You can view what it contains from [here](https://github.com/nuotron/rapida/blob/master/packages/rapida-api/bin/config.js).
 
 ## The API directory
-The API directory has a feature-based structure which it makes it more organized and easy to maintain even with larger projects. The `api/index.js` is the place where you load all of the features you have for your API. And each feature is contained within a dedicated directory that has its name. Check [this demo](https://github.com/nuotron/rapida/tree/master/packages/rapida-api/api/book).
+The `api/` directory has a feature-based structure which it makes it more organized and easy to maintain even with larger projects. The `api/index.js` is the place where you load all of the features you have for your API. And each feature is contained within a dedicated directory that has its name. Check [this demo](https://github.com/nuotron/rapida/tree/master/packages/rapida-api/api/book).
 
 ## License
 Copyright (c) 2020 Nuotron.
