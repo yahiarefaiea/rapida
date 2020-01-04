@@ -52,7 +52,7 @@ The `server` script fire the `bin/server.js` using [nodemon](https://github.com/
 npm run server -s
 ```
 
-The access URL for the demo will be `localhost:3000/book`. But you can change the `host` and `port` by [Configuring your project](#configuring-your-project). You can see a demo from [here](the-api-folder).
+The access URL for the demo will be `localhost:3000/book`. But you can change the `host` and `port` by [Configuring your project](#configuring-your-project). You can see a demo from [here](the-api-directory).
 
 ### server:prod
 For production, the `server:prod` will be your script when deploying your project. The [Procfile](https://devcenter.heroku.com/articles/procfile) in the root of the project tells Heroku to run this script by default:
@@ -66,7 +66,7 @@ To run your tests, run the `test` script. We use [mocha](https://mochajs.org) as
 npm test -s
 ```
 
-You need to add your test files inside the `api/` directory, also your files should end with a `.test.js`. You can see a demo from [here](the-api-folder).
+You need to add your test files inside the `api/` directory, also your files should end with a `.test.js`. You can see a demo from [here](the-api-directory).
 
 ### lint
 To lint your `.js` files, run the `lint` script. We use [eslint](https://github.com/eslint/eslint) as our linter and it looks for all the `.js` files inside your project.
@@ -91,12 +91,12 @@ npm run watch -s
 The `watch` script uses the [npm-watch](https://github.com/M-Zuber/npm-watch). You can configure it by updating the `watch` object in the `package.json`.
 
 ## Configuring your project
-The main file that runs everything is the `bin/server.js`. It uses [Express](https://github.com/expressjs/express) and [Mongoose](https://github.com/Automattic/mongoose) at its core. The `bin/server.js` is just the starting point, and in the end, it points to the `api/` folder which contains the logic for your project.
+The main file that runs everything is the `bin/server.js`. It uses [Express](https://github.com/expressjs/express) and [Mongoose](https://github.com/Automattic/mongoose) at its core. The `bin/server.js` is just the starting point, and in the end, it points to the `api/` directory which contains the logic for your project.
 
 You can configure the project by updating the `bin/config.js` object used all around the project. You can view what it contains from [here](https://github.com/nuotron/rapida/blob/master/packages/rapida-api/bin/config.js).
 
-## The API folder
-The API folder has a feature-based structure which it makes it more organized and easy to maintain even with larger projects. The `api/index.js` is the place where you load all of the features you have for your API. And each feature is contained within a dedicated folder that has its name. Check [this demo](https://github.com/nuotron/rapida/tree/master/packages/rapida-api/api/book).
+## The API directory
+The API directory has a feature-based structure which it makes it more organized and easy to maintain even with larger projects. The `api/index.js` is the place where you load all of the features you have for your API. And each feature is contained within a dedicated directory that has its name. Check [this demo](https://github.com/nuotron/rapida/tree/master/packages/rapida-api/api/book).
 
 ## License
 Copyright (c) 2020 Nuotron.
