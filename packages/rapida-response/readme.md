@@ -10,18 +10,18 @@ npm i @rapida/response --save
 ```
 
 Import `@rapida/response` to your project:
-```javascript
+```js
 const response = require('@rapida/response')
 ```
 
 Then create an new instance of the `response`, and send it to the client. You can do that with Express by:
-```javascript
+```js
 res.send(new response.NotFound())
 ```
 
 ## Methods
 The available methods are:
-```javascript
+```js
 // data is required, default message: 'Resource(s) found', status: 200
 new response.Found(data, message)
 
@@ -52,7 +52,7 @@ new response.InternalServerError(message)
 
 ## The response object
 When sending a response, you are expecting to receive a JSON object that looks like this:
-```javascript
+```js
 {
   data: { title: 'Book Title', author: 'Book Author' },
   message: 'Resource(s) found',
@@ -61,7 +61,7 @@ When sending a response, you are expecting to receive a JSON object that looks l
 ```
 
 And if there is an error, then it will looks like this:
-```javascript
+```js
 { status: 404 }
 ```
 
@@ -70,25 +70,25 @@ And if there is an error, then it will looks like this:
 ## Advanced Usage
 ### The `Good` method
 If you need to create a new custom response, you can use the `Good` method:
-```javascript
+```js
 new response.Good({'my': 'data'}, 'Custom response message', 1234)
 ```
 
 ### The `Bad` method
 If you need to create a new custom error, you can use the `Bad` method:
-```javascript
+```js
 new response.Bad('Custom error message', 1234)
 ```
 
 ### The `response.defaults` object
 Also, you might need to access the `response.defaults` object. When working with Express you might need it when setting a `res.status()`:
-```javascript
+```js
 res.status(response.defaults.Created.status).send(new response.Created(resource, response.defaults.Created.message))
 ```
 
 ### Setting a global error handler for Express
 Express provides a great way to handle errors using the [next middleware](https://expressjs.com/en/guide/using-middleware.html).
-```javascript
+```js
 // server.js
 const express = require('express')
 const response = require('@rapida/response')
@@ -109,7 +109,7 @@ app.listen(3000)
 ```
 
 Now anywhere in your project, you can create a response and pass it to the next middleware:
-```javascript
+```js
 const express = require('express')
 const response = require('@rapida/response')
 const router = express.Router()

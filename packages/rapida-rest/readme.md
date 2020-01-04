@@ -10,14 +10,14 @@ npm i express mongoose @rapida/rest --save
 ```
 
 Import `express`, `mongoose`, and `@rapida/rest` to your project:
-```javascript
+```js
 const express = require('express')
 const mongoose = require('mongoose')
 const AbstractController = require('@rapida/rest')
 ```
 
 After setting up express and mongoose, create a new instance of the `AbstractController` and pass a model to it:
-```javascript
+```js
 const app = express()
 mongoose.connect('mongodb://localhost:27017/rapida-rest')
 
@@ -26,7 +26,7 @@ const controller = new AbstractController(Model)
 ```
 
 Now, you have all the endpoints needed for you to use:
-```javascript
+```js
 app.get('/book', controller.getAll)
 ```
 
@@ -42,7 +42,7 @@ The available methods are:
 
 ## Advanced Usage
 You can extend the `AbstractController` to update a specific endpoint (or maybe create a new one):
-```javascript
+```js
 // controller.js
 const AbstractController = require('@rapida/rest')
 const Model = require('./path/to/model')
@@ -64,7 +64,7 @@ module.exports = new Controller(Model)
 **Note**: The code above uses ES6 syntax which uses the `class` keyword. You might need to use [babel](https://github.com/babel/babel) to act as your transpiler.
 
 And now you can use the controller anywhere in your project:
-```javascript
+```js
 // anywhere.js
 const controller = require('./path/to/controller')
 const router = express.Router()

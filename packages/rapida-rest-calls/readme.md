@@ -10,12 +10,12 @@ npm i @rapida/rest-calls --save
 ```
 
 Import `@rapida/rest-calls` to your project:
-```javascript
+```js
 const Api = require('@rapida/rest-calls')
 ```
 
 Then create a new instance of the `Api`, and use it to create a new entity:
-```javascript
+```js
 const api = new Api('http://localhost:3000')
 
 // you can create one entity
@@ -26,12 +26,12 @@ api.createEntities(['book', 'author'])
 ```
 
 And then you can use it in your app. Let's do a `getAll` method:
-```javascript
+```js
 api.endpoints.book.getAll()
 ```
 
 To handle the response and catch the errors, you can chain the `then` and the `catch` keywords after calling the method:
-```javascript
+```js
 api.endpoints.book.getAll()
   .then(data => console.log(data))
   .catch(error => console.log(error))
@@ -39,7 +39,7 @@ api.endpoints.book.getAll()
 
 ## Methods
 The available methods are:
-```javascript
+```js
 // default params: {}, default config: {}
 api.endpoints.book.getAll(params, config)
 
@@ -58,7 +58,7 @@ api.endpoints.book.delete(id, config)
 
 ## Advanced Usage
 You can create an abstract api and use it all around your project by creating a file called `api.js` that contains the following:
-```javascript
+```js
 // api.js
 const Api = require('@rapida/rest-calls')
 
@@ -69,7 +69,7 @@ module.exports = api.endpoints
 ```
 
 And with this, you will have a shorter and more self-descriptive constant to use anywhere in your project:
-```javascript
+```js
 // anywhere.js
 const api = require('./path/to/api')
 
