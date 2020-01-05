@@ -1,6 +1,6 @@
 {
   "name": "@rapida/rest",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "An abstraction helper for REST API that creates an abstract controller that communicate with the database in a consistent way",
   "author": "Nuotron <hi@nuotron.co> (http://nuotron.co)",
   "main": "src/abstract.js",
@@ -11,12 +11,12 @@
     "start": "node demo/index.js"
   },
   "dependencies": {
-    "@rapida/response": "1.0.2",
+    "@rapida/response": "1.1.0",
     "lodash": "4.17.15"
   },
   "devDependencies": {
     "body-parser": "1.19.0",
     "express": "4.17.1",
-    "mongoose": "5.7.13"
+    "mongoose": "5.8.4"
   }
 }

@@ -1,5 +1,6 @@
 {
   "name": "rapida",
+  "version": "1.1.0",
   "description": "A set of node.js starter-kits and helpers that can help you focus on the business requirements for your project and forget about starting from scratch every time",
   "author": "Nuotron <hi@nuotron.co> (http://nuotron.co)",
   "license": "MIT",
@@ -8,8 +9,8 @@
     "lint": "eslint **/*.js --color"
   },
   "devDependencies": {
-    "eslint": "6.7.2",
-    "eslint-config-rapida": "1.0.0"
+    "eslint": "6.8.0",
+    "eslint-config-rapida": "1.1.0"
   },
   "eslintConfig": {
     "root": true,
