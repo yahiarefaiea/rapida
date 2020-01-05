@@ -1,52 +1,53 @@
 ![Rapida Logo](https://user-images.githubusercontent.com/13030990/71755098-db251e80-2e91-11ea-8ce9-25349e6c087f.png)
 
-**Name of the package** - Rapid JavaScript development environment for building RESTful API.
+**Rapida** - A set of node.js starter-kits and helpers that can help you focus on the business requirements for your project and forget about starting from scratch every time.
 
-# Add author + Goal of creating this project
-
-## Description
-Developing a complete Javascript project can be burdensome, even though `nodejs` provides a good boilerplate code to begin with.
-but this boilerplate code needs to be written every single time,we want to build  a new project which contradicts with the 1st role in programming "Do Not repeat yourself".
-that's why we created `Rapida`  a Js library that helps eliminating boilerplate code and helps you focus on developing your logic code as much as possible rather than spending time maintaining boilerplate code.
-
-this library contains several modules, so you can pick and choose what suits you based on your project.
-
-## The main 2 packages are:
-
-## and the other packages (helpers) are:
+Rapida is a set of [packages](#packages) that works together with the goal of helping us improve the projects we build at [Nuotron](https://github.com/nuotron).
 
 ## Packages
-+ [rapida-api](https://github.com/nuotron/rapida/tree/master/packages/rapida-api)
-+ [rapida-response](https://github.com/nuotron/rapida/tree/master/packages/rapida-response)
-+ [rapidae-rest-calls](https://github.com/nuotron/rapida/tree/master/packages/rapida-rest-calls)
-+ [rapida-rest](https://github.com/nuotron/rapida/tree/master/packages/rapida-rest)
-+ [rapida-ui](https://github.com/nuotron/rapida/tree/master/packages/rapida-rest)
+Rapida contains several packages (available in the `./packages` directory):
+
+### Starter-kits
++ [@rapida/api](https://github.com/nuotron/rapida/tree/master/packages/rapida-api) - A starter-kit that creates an environment to help you focus on building a RESTful API.
++ [@rapida/ui](https://github.com/nuotron/rapida/tree/master/packages/rapida-ui) - A starter-kit that creates an environment to help you focus on building UI.
+
+### Helpers
++ [@rapida/response](https://github.com/nuotron/rapida/tree/master/packages/rapida-response) - An abstraction helper that returns a consistent responses all around your RESTful API.
++ [@rapida/rest](https://github.com/nuotron/rapida/tree/master/packages/rapida-rest) - An abstraction helper for REST API that creates an abstract controller that communicate with the database in a consistent way.
++ [@rapida/rest-calls](https://github.com/nuotron/rapida/tree/master/packages/rapida-rest-calls) - An abstraction helper for http calls that returns api endpoints for each entity you create in a consistent way.
++ [eslint-config-rapida](https://github.com/nuotron/rapida/tree/master/packages/eslint-config-rapida) - An extensible shared ESLint configuration to lint JavaScript code.
++ [pug-lint-config-rapida](https://github.com/nuotron/rapida/tree/master/packages/pug-lint-config-rapida) - An extensible shared PugLint configuration to lint Pug code.
++ [stylint-config-rapida](https://github.com/nuotron/rapida/tree/master/packages/stylint-config-rapida) - An extensible shared Stylint configuration to lint Stylus code.
 
 ## TODOs
-+ Write tests for all packages
-+ Use yeoman scaffolding tool
-+ Create @rapida/cli
++ Write tests for all packages.
++ Use Yeoman scaffolding tool to generate the starter-kits.
++ Create @rapida/cli.
 
 ## Author
 **Yahia Refaiea**
-+ [github/YahiaRefaiea](https://github.com/YahiaRefaiea)
-+ [twitter/YahiaRefaiea](https://twitter.com/YahiaRefaiea)
++ [Facebook/YahiaRefaiea](http://facebook.com/YahiaRefaiea)
++ [Twitter/YahiaRefaiea](http://twitter.com/YahiaRefaiea)
++ [Codepen/YahiaRefaiea](http://codepen.io/YahiaRefaiea)
++ [GitHub/YahiaRefaiea](https://github.com/YahiaRefaiea)
++ [Dribbble/YahiaRefaiea](https://dribbble.com/YahiaRefaiea)
++ [Medium/YahiaRefaiea](https://medium.com/@YahiaRefaiea)
 
-## contributors
-+ [Yahia Refaiea](https://github.com/YahiaRefaiea)
+## Contributors
 + [Roduan Kareem Aldeen](https://github.com/RoduanKareemAldeen)
 + [Waleed Alrashed](https://github.com/WaleedAlrashed)
 + [Seif Kowatli](https://github.com/seifkowatli)
 
 ## Contributing
-1. Fork this repository (https://github.com/schneidmaster/sitemap-webpack-plugin/fork)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'add a new feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+1. Fork this repository (https://github.com/nuotron/rapida).
+2. Create your feature branch (`git checkout -b new-feature`).
+3. Commit your changes (`git commit -m 'add a new feature'`).
+4. Push to the branch (`git push origin new-feature`).
+5. Create a new Pull Request.
 
 ## Issues
-To report a specific problem or feature request, open a new issue on Github. For questions, suggestions, or anything else, email us [here] ()
+To report a specific problem or feature request, open a new issue on GitHub.
+For questions, suggestions, or anything else, kindly send an email to [yahia@nuotron.co](mailto:yahia@nuotron.co).
 
 ## License
 Copyright (c) 2020 Nuotron.
