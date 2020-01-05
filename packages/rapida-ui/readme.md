@@ -45,7 +45,7 @@ npm run serve -s
 ```
 
 ### server
-The `server` script fire the [webpack-dev-server](https://github.com/webpack/webpack-dev-server) configured in the `bin/webpack.config.dev.babel.js`. Check the [webpack.config.dev.babel.js](#webpack-config-dev-babel-js) for more details:
+The `server` script fire the [webpack-dev-server](https://github.com/webpack/webpack-dev-server) configured in the `bin/webpack.config.dev.babel.js`. Check the [webpack.config.dev.babel.js](#webpackconfigdevbabeljs) for more details:
 ```
 npm run server -s
 ```
