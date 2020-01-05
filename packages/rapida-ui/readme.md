@@ -124,6 +124,8 @@ npm run serve-mock -s
 
 Before running the `serve-mock` script, npm runs the [generate-mock script](#generate-mock). It's specified by the `pre` prefix (`preserve-mock`) as a convention to run scripts by default before running a script.
 
+You can easily switch between the `mock api` and the `real api` specified in the `bin/config.js` by adding a `?useMockApi` as query parameter at the end of your URL. (For example: `localhost:8080/?useMockApi`)
+
 ### watch
 The `watch` script will watch for all your `.test.js`, `.js`, `.pug`, `.styl`, and the `ui/mockModel.js` files and run the `test`, `eslint`, `puglint`, `stylint`, `serve-mock` scripts when necessary:
 ```
@@ -184,7 +186,7 @@ It's where the `development` configurations are set (merged with the `webpack.co
 ### webpack.config.prod.babel.js
 It's where the `production` configurations are set (merged with the `webpack.config.base.js`). It minify your JavaScript and CSS assets, generate a `sitemap.xml` and `robots.txt`, and add a banner for the generated bundles.
 
-**Note**: You can configure these options from the `./bin/config.js`.
+**Note**: You can configure these options from the `bin/config.js`.
 
 ## The UI directory
 The `ui/` directory is structured based on the [Atomic Design Methodology](http://atomicdesign.bradfrost.com/chapter-2) (atoms, molecules, organisms, templates, and pages) which it makes it more organized and easy to maintain even with larger projects. The `ui/index.js` is the place where you load all of your components. And each component is contained within a dedicated directory that has its name. Check [this demo](https://github.com/nuotron/rapida/tree/master/packages/rapida-ui/ui).
