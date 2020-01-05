@@ -6,6 +6,7 @@ module.exports = class Abstract {
     Abstract.model = model
   }
 
+  // get (read) all resources
   getAll(req, res, next) {
     Abstract.model.find(req.query, function(err, resources) {
       if(err) next(new response.BadRequest(err))
@@ -13,6 +14,7 @@ module.exports = class Abstract {
     })
   }
 
+  // post (create) a new resource
   post(req, res, next) {
     req.body = Abstract.purgeBody(req.body)
     let resource = new Abstract.model(req.body)
@@ -22,12 +24,14 @@ module.exports = class Abstract {
     })
   }
 
+  // get (read) an existing resource
   get(req, res, next) {
     Abstract.findById(req, res, next, function(resource) {
       res.send(new response.Found(resource))
     })
   }
 
+  // patch (update) an existing resource
   patch(req, res, next) {
     Abstract.findById(req, res, next, function(resource) {
       req.body = Abstract.purgeBody(req.body)
@@ -39,6 +43,7 @@ module.exports = class Abstract {
     })
   }
 
+  // delete an existing resource
   delete(req, res, next) {
     Abstract.findById(req, res, next, function(resource) {
       resource.remove(function(err) {
@@ -48,6 +53,7 @@ module.exports = class Abstract {
     })
   }
 
+  // find an existing resource by Id
   static findById(req, res, next, callback) {
     Abstract.model.findById(req.params.id, function(err, resource) {
       if(err) next(new response.BadRequest(err))
@@ -56,6 +62,7 @@ module.exports = class Abstract {
     })
   }
 
+  // purge the body of the request
   static purgeBody(body) {
     return omit(body, ['_id', 'createdAt', 'updatedAt', '__v'])
   }
