@@ -69,7 +69,7 @@ npm test -s
 You need to add your test files inside the `api/` directory, also your files should end with a `.test.js`. You can see a demo from [here](#the-api-directory).
 
 ### lint
-To lint your `.js` files, run the `lint` script. We use [eslint](https://github.com/eslint/eslint) as our linter and it looks for all the `.js` files inside your project.
+To lint your `.js` files, run the `lint` script. We use [eslint](https://github.com/eslint/eslint) as our linter and it looks for all the `.js` files inside your project:
 ```
 npm run lint -s
 ```

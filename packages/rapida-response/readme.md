@@ -88,7 +88,7 @@ res.status(response.defaults.Created.status).send(new response.Created(resource,
 ```
 
 ### Setting a global error handler for Express
-Express provides a great way to handle errors using the [next middleware](https://expressjs.com/en/guide/using-middleware.html).
+Express provides a great way to handle errors using the [next middleware](https://expressjs.com/en/guide/using-middleware.html):
 ```js
 // server.js
 const express = require('express')

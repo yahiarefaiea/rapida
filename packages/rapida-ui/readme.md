@@ -69,7 +69,7 @@ npm test -s
 You need to add your test files inside the `ui/` directory, also your files should end with a `.test.js`. You can see a demo in the `ui/components/atoms/nuotron/`.
 
 ### eslint
-To lint your `.js` files, run the `eslint` script. We use [eslint](https://github.com/eslint/eslint) as our linter and it looks for all the `.js` files inside your project.
+To lint your `.js` files, run the `eslint` script. We use [eslint](https://github.com/eslint/eslint) as our linter and it looks for all the `.js` files inside your project:
 ```
 npm run eslint -s
 ```
@@ -83,7 +83,7 @@ The eslint is configured inside the `package.json` which it extends our [eslint-
 ```
 
 ### puglint
-To lint your `.pug` files, run the `puglint` script. We use [pug-lint](https://github.com/pugjs/pug-lint) as our linter and it looks for all the `.pug` files inside the `ui/` directory.
+To lint your `.pug` files, run the `puglint` script. We use [pug-lint](https://github.com/pugjs/pug-lint) as our linter and it looks for all the `.pug` files inside the `ui/` directory:
 ```
 npm run puglint -s
 ```
@@ -96,7 +96,7 @@ The puglint is configured inside the `package.json` which it extends our [pug-li
 ```
 
 ### stylint
-To lint your `.styl` files, run the `stylint` script. We use [stylint](https://github.com/SimenB/stylint) as our linter and it looks for all the `.styl` files inside the `ui/` directory.
+To lint your `.styl` files, run the `stylint` script. We use [stylint](https://github.com/SimenB/stylint) as our linter and it looks for all the `.styl` files inside the `ui/` directory:
 ```
 npm run stylint -s
 ```
