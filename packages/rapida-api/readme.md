@@ -52,7 +52,7 @@ The `server` script fire the `bin/server.js` using [nodemon](https://github.com/
 npm run server -s
 ```
 
-The access URL for the demo will be `localhost:3000/book`. But you can change the `host` and `port` by [Configuring your project](#configuring-your-project). You can see a demo from [here](the-api-directory).
+The access URL for the demo will be `localhost:3000/book`. But you can change the `host` and `port` by [configuring your project](#configuring-your-project). You can see a demo from [here](#the-api-directory).
 
 ### server:prod
 For production, the `server:prod` will be your script when deploying your project. The [Procfile](https://devcenter.heroku.com/articles/procfile) in the root of the project tells Heroku to run this script by default:
@@ -66,7 +66,7 @@ To run your tests, run the `test` script. We use [mocha](https://mochajs.org) as
 npm test -s
 ```
 
-You need to add your test files inside the `api/` directory, also your files should end with a `.test.js`. You can see a demo from [here](the-api-directory).
+You need to add your test files inside the `api/` directory, also your files should end with a `.test.js`. You can see a demo from [here](#the-api-directory).
 
 ### lint
 To lint your `.js` files, run the `lint` script. We use [eslint](https://github.com/eslint/eslint) as our linter and it looks for all the `.js` files inside your project.

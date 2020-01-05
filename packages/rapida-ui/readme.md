@@ -45,12 +45,12 @@ npm run serve -s
 ```
 
 ### server
-The `server` script fire the [webpack-dev-server](https://github.com/webpack/webpack-dev-server) configured in the `bin/webpack.config.dev.babel.js`. Check the [webpack.config.dev.babel.js](webpack-config-dev-babel-js) for more details:
+The `server` script fire the [webpack-dev-server](https://github.com/webpack/webpack-dev-server) configured in the `bin/webpack.config.dev.babel.js`. Check the [webpack.config.dev.babel.js](#webpack-config-dev-babel-js) for more details:
 ```
 npm run server -s
 ```
 
-Browser will open instantly when serving the app for development. The access URL for the demo will be `localhost:8080`. But you can change the `host` and `port` by [Configuring your project](#configuring-your-project).
+Browser will open instantly when serving the app for development. The access URL for the demo will be `localhost:8080`. But you can change the `host` and `port` by [configuring your project](#configuring-your-project).
 
 ### build
 For production, the `build` will be your script when deploying your project. It's configured in the `bin/webpack.config.prod.babel.js`. And it will build all of your assets into a directory called `./dist`:
