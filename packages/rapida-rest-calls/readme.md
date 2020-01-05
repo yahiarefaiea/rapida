@@ -19,7 +19,7 @@ Then create a new instance of the `Api`, and use it to create a new entity:
 ```js
 const api = new Api('http://localhost:3000')
 
-// you can create one entity
+// you can create a single entity
 api.createEntity('book')
 
 // or multiple entities
