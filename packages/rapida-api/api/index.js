@@ -6,7 +6,6 @@ import book from './book'
 
 export default function() {
   return router
-    // router middlewares
     .use('/book', book())
 
     // error handler

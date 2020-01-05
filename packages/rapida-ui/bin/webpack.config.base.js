@@ -9,6 +9,7 @@ import FaviconsWebpackPlugin from 'favicons-webpack-plugin'
 import CopyPlugin from 'copy-webpack-plugin'
 import ImageminPlugin from 'imagemin-webpack-plugin'
 
+// start message
 // eslint-disable-next-line no-console
 console.log(chalk.cyan(`Running in \`${config.env}\` mode`))
 
@@ -22,7 +23,7 @@ export default {
     path: path.join(__dirname, '../dist')
   },
 
-  // optimization
+  // split bundles to chunks
   optimization: {
     runtimeChunk: 'single',
     splitChunks: {
@@ -38,17 +39,18 @@ export default {
 
   // plugins
   plugins: [
-    // html webpack plugin
+    // generate and inject the necessary tags into the `.pug` template
     new HtmlWebpackPlugin({
       template: 'ui/index.pug',
       meta: config.meta()
     }),
 
-    // mini css extract plugin
+    // extract css into separate files
     new MiniCssExtractPlugin({
       filename: config.devMode() ? '[name].bundle.css' : '[name].bundle.[contenthash].css'
     }),
 
+    // generate icons
     new FaviconsWebpackPlugin({
       logo: './static/images/logo.svg',
       prefix: 'icons',
@@ -58,25 +60,25 @@ export default {
       }
     }),
 
-    // copy plugin
+    // copy the `static/` to the `dist/`
     new CopyPlugin([{
       from: 'static/'
     }]),
 
-    // imagemin plugin
+    // compress all images
     new ImageminPlugin({
       test: /\.(jpe?g|png|gif|svg)$/i,
       disable: config.devMode()
     }),
 
-    // hashed module ids plugin
+    // enable caching
     new webpack.HashedModuleIdsPlugin()
   ],
 
-  // module
+  // loaders
   module: {
     rules: [
-      // babel
+      // babel loader
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -88,7 +90,7 @@ export default {
         }
       },
 
-      // pug
+      // pug loader
       {
         test: /\.pug$/,
         use: ['html-loader', {
@@ -103,7 +105,7 @@ export default {
         }]
       },
 
-      // stylus
+      // stylus loader
       {
         test: /\.styl$/,
         use: [

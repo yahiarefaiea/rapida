@@ -16,6 +16,7 @@ export default Object.freeze({
     if(this.env === 'development') return true
   },
 
+  // configure the base url
   baseUrl: function() {
     const devUrl = `http://${this.host}:${this.port}`
     const prodUrl = `http://${this.project}.surge.sh`
@@ -24,6 +25,7 @@ export default Object.freeze({
     return url
   },
 
+  // configure the api url
   apiUrl: function() {
     const devUrl = `http://${this.host}:${this.port + 1}`
     const prodUrl = 'http://localhost:3000'
@@ -35,6 +37,7 @@ export default Object.freeze({
     return url
   },
 
+  // configure the meta option in the HtmlWebpackPlugin()
   meta: function() {
     return {
       viewport: 'width=device-width, initial-scale=1',
@@ -44,6 +47,7 @@ export default Object.freeze({
     }
   },
 
+  // configure the SitemapPlugin()
   sitemap: function() {
     return {
       base: this.baseUrl(),
@@ -55,6 +59,7 @@ export default Object.freeze({
     }
   },
 
+  // configure the RobotstxtPlugin()
   robotstxt: function() {
     return {
       policy: [

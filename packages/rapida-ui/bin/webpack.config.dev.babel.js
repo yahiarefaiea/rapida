@@ -10,7 +10,7 @@ export default merge(baseConfig, {
   devtool: 'inline-source-map',
   watch: true,
 
-  // dev server
+  // dev server configurations
   devServer: {
     clientLogLevel: 'silent',
     compress: true,
@@ -23,10 +23,10 @@ export default merge(baseConfig, {
 
   // plugins
   plugins: [
-    // hot module replacement plugin
+    // enable hot module replacement (HMR)
     new webpack.HotModuleReplacementPlugin(),
 
-    // browser sync plugin
+    // enable browser sync
     new BrowserSyncPlugin({
       ui: false,
       host: config.host,

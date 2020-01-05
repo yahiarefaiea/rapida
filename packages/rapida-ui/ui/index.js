@@ -1,6 +1,8 @@
 import './styles/index.styl'
 import lodash from 'lodash'
 import api from './api'
+
+// components
 import nuotron from './components/atoms/nuotron'
 import text from './components/atoms/text'
 
