@@ -1,5 +1,7 @@
 {
   "name": "rapida",
+  "description": "A set of node.js starter-kits and helpers that can help you focus on the business requirements for your project and forget about starting from scratch every time",
+  "author": "Nuotron <hi@nuotron.co> (http://nuotron.co)",
   "license": "MIT",
   "private": true,
   "scripts": {
