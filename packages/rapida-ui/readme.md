@@ -158,19 +158,19 @@ We also split the `.js` bundles to `main`, `runtime`, and `vendors` which will a
 #### Plugins
 We're using:
 ```js
-// Inject all the necessary tags into the `ui/index.pug` template.
+// generate and inject the necessary tags into the `.pug` template
 new HtmlWebpackPlugin()
 
-// Extracts the CSS files out of the JS bundle
+// extract css into separate files
 new MiniCssExtractPlugin()
 
-// Generates Favicons for all browsers
+// generate icons
 new FaviconsWebpackPlugin()
 
-// Copy the `static/` directory to the `./dist`
+// copy the `static/` to the `dist/`
 new CopyPlugin()
 
-// Minify the images
+// compress all images
 new ImageminPlugin()
 ```
 
