@@ -184,6 +184,8 @@ It's where the `development` configurations are set (merged with the `webpack.co
 ### webpack.config.prod.babel.js
 It's where the `production` configurations are set (merged with the `webpack.config.base.js`). It minify your JavaScript and CSS assets, generate a `sitemap.xml` and `robots.txt`, and add a banner for the generated bundles.
 
+**Note**: You can configure these options from the `./bin/config.js`.
+
 ## The UI directory
 The `ui/` directory is structured based on the [Atomic Design Methodology](http://atomicdesign.bradfrost.com/chapter-2) (atoms, molecules, organisms, templates, and pages) which it makes it more organized and easy to maintain even with larger projects. The `ui/index.js` is the place where you load all of your components. And each component is contained within a dedicated directory that has its name. Check [this demo](https://github.com/nuotron/rapida/tree/master/packages/rapida-ui/ui).
 
