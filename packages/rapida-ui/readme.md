@@ -192,6 +192,21 @@ The `static/` directory is where you put all of your assets. The static director
 
 **Note**: The images in the static directory will be minified.
 
+## Deploy
+When your project is ready for production, we recommend using [surge](http://surge.sh) to deploy your project. You can set the URL you want your website to be published to by changing the `CNAME` file in your root directory.
+
+To deploy, install `surge` globally on your machine:
+```
+npm i -g surge
+```
+
+And then deploy the `./dist` directory:
+```
+surge ./dist
+```
+
+**Note**: Surge might ask you to create an account if this is the first time you use it.
+
 ## License
 Copyright (c) 2020 Nuotron.
 Released under the [MIT license](https://github.com/github/choosealicense.com/blob/gh-pages/LICENSE.md).
