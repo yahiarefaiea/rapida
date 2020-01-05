@@ -26,10 +26,10 @@ Rapida contains several packages (available in the `./packages` directory):
 
 ## Author
 **Yahia Refaiea**
-+ [Website](http://yahiarefaiea.com)
-+ [Twitter/YahiaRefaiea](http://twitter.com/YahiaRefaiea)
-+ [Codepen/YahiaRefaiea](http://codepen.io/YahiaRefaiea)
-+ [GitHub/YahiaRefaiea](https://github.com/YahiaRefaiea)
++ [Website (yahiarefaiea.com)](http://yahiarefaiea.com)
++ [Twitter (@YahiaRefaiea)](http://twitter.com/YahiaRefaiea)
++ [Codepen (@YahiaRefaiea)](http://codepen.io/YahiaRefaiea)
++ [GitHub (@YahiaRefaiea)](https://github.com/YahiaRefaiea)
 
 ## Contributors
 + [Roduan Kareem Aldeen](https://github.com/RoduanKareemAldeen)
