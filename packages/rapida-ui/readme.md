@@ -8,29 +8,29 @@ This package is part of [Rapida](https://github.com/nuotron/rapida).
 The environment uses [babel](https://github.com/babel/babel) at its core. It also uses `node v12.14.0`.
 
 ## Usage
-+ Clone this repository by running:
+Clone this repository by running:
 ```
 git clone https://github.com/nuotron/rapida.git
 ```
 
-+ Create a copy of `rapida-ui`, add a name for your project, and then change directory to it:
+Create a copy of `rapida-ui`, add a name for your project, and then change directory to it:
 ```
 cp rapida/packages/rapida-ui my-project -r && cd my-project
 ```
 
-+ Create a new git repository by running the following commands (one after one):
+Create a new git repository by running the following commands (one after one):
 ```
 git init
 git add .
 git commit -m 'initial commit'
 ```
 
-+ Install the required dependencies listed in the `package.json`:
+Install the required dependencies listed in the `package.json`:
 ```
 npm i
 ```
 
-+ Now you can run the project by running:
+Now you can run the project by running:
 ```
 npm run serve -s
 ```
