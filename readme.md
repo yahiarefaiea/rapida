@@ -28,6 +28,7 @@ Rapida contains several packages (available in the `./packages` directory):
 **Yahia Refaiea**
 + [Website (yahiarefaiea.com)](http://yahiarefaiea.com)
 + [Twitter (@YahiaRefaiea)](http://twitter.com/YahiaRefaiea)
++ [LinkedIn (@yahiarefaiea)](http://linkedin.com/in/yahiarefaiea)
 + [Codepen (@YahiaRefaiea)](http://codepen.io/YahiaRefaiea)
 + [GitHub (@YahiaRefaiea)](https://github.com/YahiaRefaiea)
 
