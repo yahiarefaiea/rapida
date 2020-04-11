@@ -2,7 +2,7 @@
   "name": "@rapida/rest-calls",
   "version": "1.1.0",
   "description": "An abstraction helper for http calls that returns api endpoints for each entity you create in a consistent way",
-  "author": "Nuotron <hi@nuotron.co> (http://nuotron.co)",
+  "author": "Yahia Refaiea <hi@yahiarefaiea.com> (http://yahiarefaiea.com)",
   "main": "src/api.js",
   "license": "MIT",
   "repository": "https://github.com/YahiaRefaiea/rapida/tree/master/packages/rapida-rest-calls",

@@ -48,7 +48,7 @@ Rapida contains several packages (available in the `./packages` directory):
 
 ## Issues
 To report a specific problem or feature request, open a new issue on GitHub.
-For questions, suggestions, or anything else, kindly send an email to [yahia@nuotron.co](mailto:yahia@nuotron.co).
+For questions, suggestions, or anything else, kindly send an email to [hi@yahiarefaiea.com](mailto:hi@yahiarefaiea.com).
 
 ## License
 Copyright (c) 2020 Nuotron.

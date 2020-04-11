@@ -2,7 +2,7 @@
   "name": "@rapida/response",
   "version": "1.1.0",
   "description": "An abstraction helper that returns a consistent responses all around your RESTful API",
-  "author": "Nuotron <hi@nuotron.co> (http://nuotron.co)",
+  "author": "Yahia Refaiea <hi@yahiarefaiea.com> (http://yahiarefaiea.com)",
   "main": "src/responses.js",
   "license": "MIT",
   "repository": "https://github.com/YahiaRefaiea/rapida/tree/master/packages/rapida-response",

@@ -2,7 +2,7 @@
   "name": "@rapida/api",
   "version": "1.1.0",
   "description": "A starter-kit that creates an environment to help you focus on building a RESTful API",
-  "author": "Nuotron <hi@nuotron.co> (http://nuotron.co)",
+  "author": "Yahia Refaiea <hi@yahiarefaiea.com> (http://yahiarefaiea.com)",
   "license": "MIT",
   "repository": "https://github.com/YahiaRefaiea/rapida/tree/master/packages/rapida-api",
   "homepage": "https://github.com/YahiaRefaiea/rapida",
