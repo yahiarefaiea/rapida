@@ -8,8 +8,8 @@
     "url": "http://nuotron.co"
   },
   "license": "MIT",
-  "repository": "https://github.com/nuotron/rapida/tree/master/packages/rapida-ui",
-  "homepage": "https://github.com/nuotron/rapida",
+  "repository": "https://github.com/YahiaRefaiea/rapida/tree/master/packages/rapida-ui",
+  "homepage": "https://github.com/YahiaRefaiea/rapida",
   "private": true,
   "scripts": {
     "serve": "run-p watch server",

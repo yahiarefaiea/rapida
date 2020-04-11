@@ -2,7 +2,7 @@
 
 **Rapida REST Calls** - An abstraction helper for http calls that returns api endpoints for each entity you create in a consistent way.
 
-This package is part of [Rapida](https://github.com/nuotron/rapida).
+This package is part of [Rapida](https://github.com/YahiaRefaiea/rapida).
 
 ## Usage
 In your project directory, install `@rapida/rest-calls` by running:

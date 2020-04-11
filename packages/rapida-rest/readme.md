@@ -2,7 +2,7 @@
 
 **Rapida REST** - An abstraction helper for REST API that creates an abstract controller that communicate with the database in a consistent way.
 
-This package is part of [Rapida](https://github.com/nuotron/rapida).
+This package is part of [Rapida](https://github.com/YahiaRefaiea/rapida).
 
 ## Usage
 In your project directory, install `express`, `mongoose`, and `@rapida/rest` by running:

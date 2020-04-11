@@ -2,7 +2,7 @@
 
 **Rapida API** - A starter-kit that creates an environment to help you focus on building a RESTful API.
 
-This package is part of [Rapida](https://github.com/nuotron/rapida).
+This package is part of [Rapida](https://github.com/YahiaRefaiea/rapida).
 
 ## Compatibility
 The environment uses [babel](https://github.com/babel/babel) at its core. It also uses `node v12.14.0`.
@@ -10,7 +10,7 @@ The environment uses [babel](https://github.com/babel/babel) at its core. It als
 ## Usage
 Clone this repository by running:
 ```
-git clone https://github.com/nuotron/rapida.git
+git clone https://github.com/YahiaRefaiea/rapida.git
 ```
 
 Create a copy of `rapida-api`, add a name for your project, and then change directory to it:
@@ -74,7 +74,7 @@ To lint your `.js` files, run the `lint` script. We use [eslint](https://github.
 npm run lint -s
 ```
 
-The eslint is configured inside the `package.json` which it extends our [eslint-config-rapida](https://github.com/nuotron/rapida/tree/master/packages/eslint-config-rapida):
+The eslint is configured inside the `package.json` which it extends our [eslint-config-rapida](https://github.com/YahiaRefaiea/rapida/tree/master/packages/eslint-config-rapida):
 ```json
 "eslintConfig": {
   "root": true,
@@ -93,10 +93,10 @@ The `watch` script uses the [npm-watch](https://github.com/M-Zuber/npm-watch). Y
 ## Configuring your project
 The main file that runs everything is the `bin/server.js`. It uses [Express](https://github.com/expressjs/express) and [Mongoose](https://github.com/Automattic/mongoose) at its core. The `bin/server.js` is just the starting point, and in the end, it points to the `api/` directory which contains the logic for your project.
 
-You can configure the project by updating the `bin/config.js` object used all around the project. You can view what it contains from [here](https://github.com/nuotron/rapida/blob/master/packages/rapida-api/bin/config.js).
+You can configure the project by updating the `bin/config.js` object used all around the project. You can view what it contains from [here](https://github.com/YahiaRefaiea/rapida/blob/master/packages/rapida-api/bin/config.js).
 
 ## The API directory
-The `api/` directory has a feature-based structure which it makes it more organized and easy to maintain even with larger projects. The `api/index.js` is the place where you load all of the features you have for your API. And each feature is contained within a dedicated directory that has its name. Check [this demo](https://github.com/nuotron/rapida/tree/master/packages/rapida-api/api/book).
+The `api/` directory has a feature-based structure which it makes it more organized and easy to maintain even with larger projects. The `api/index.js` is the place where you load all of the features you have for your API. And each feature is contained within a dedicated directory that has its name. Check [this demo](https://github.com/YahiaRefaiea/rapida/tree/master/packages/rapida-api/api/book).
 
 ## License
 Copyright (c) 2020 Nuotron.

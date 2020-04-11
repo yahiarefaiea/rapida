@@ -2,7 +2,7 @@
 
 **Pug Lint Config Rapida** - An extensible shared [PugLint](https://github.com/pugjs/pug-lint) configuration to lint Pug code.
 
-This package is part of [Rapida](https://github.com/nuotron/rapida).
+This package is part of [Rapida](https://github.com/YahiaRefaiea/rapida).
 
 ## Usage
 In your project directory, install `pug-lint-config-rapida` by running:

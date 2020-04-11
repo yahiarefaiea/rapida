@@ -10,16 +10,16 @@ Rapida is now at `v1.1.0`.
 Rapida contains several packages (available in the `./packages` directory):
 
 ### Starter-kits
-+ [@rapida/api](https://github.com/nuotron/rapida/tree/master/packages/rapida-api) - A starter-kit that creates an environment to help you focus on building a RESTful API.
-+ [@rapida/ui](https://github.com/nuotron/rapida/tree/master/packages/rapida-ui) - A starter-kit that creates an environment to help you focus on building UI.
++ [@rapida/api](https://github.com/YahiaRefaiea/rapida/tree/master/packages/rapida-api) - A starter-kit that creates an environment to help you focus on building a RESTful API.
++ [@rapida/ui](https://github.com/YahiaRefaiea/rapida/tree/master/packages/rapida-ui) - A starter-kit that creates an environment to help you focus on building UI.
 
 ### Helpers
-+ [@rapida/response](https://github.com/nuotron/rapida/tree/master/packages/rapida-response) - An abstraction helper that returns a consistent responses all around your RESTful API.
-+ [@rapida/rest](https://github.com/nuotron/rapida/tree/master/packages/rapida-rest) - An abstraction helper for REST API that creates an abstract controller that communicate with the database in a consistent way.
-+ [@rapida/rest-calls](https://github.com/nuotron/rapida/tree/master/packages/rapida-rest-calls) - An abstraction helper for http calls that returns api endpoints for each entity you create in a consistent way.
-+ [eslint-config-rapida](https://github.com/nuotron/rapida/tree/master/packages/eslint-config-rapida) - An extensible shared ESLint configuration to lint JavaScript code.
-+ [pug-lint-config-rapida](https://github.com/nuotron/rapida/tree/master/packages/pug-lint-config-rapida) - An extensible shared PugLint configuration to lint Pug code.
-+ [stylint-config-rapida](https://github.com/nuotron/rapida/tree/master/packages/stylint-config-rapida) - An extensible shared Stylint configuration to lint Stylus code.
++ [@rapida/response](https://github.com/YahiaRefaiea/rapida/tree/master/packages/rapida-response) - An abstraction helper that returns a consistent responses all around your RESTful API.
++ [@rapida/rest](https://github.com/YahiaRefaiea/rapida/tree/master/packages/rapida-rest) - An abstraction helper for REST API that creates an abstract controller that communicate with the database in a consistent way.
++ [@rapida/rest-calls](https://github.com/YahiaRefaiea/rapida/tree/master/packages/rapida-rest-calls) - An abstraction helper for http calls that returns api endpoints for each entity you create in a consistent way.
++ [eslint-config-rapida](https://github.com/YahiaRefaiea/rapida/tree/master/packages/eslint-config-rapida) - An extensible shared ESLint configuration to lint JavaScript code.
++ [pug-lint-config-rapida](https://github.com/YahiaRefaiea/rapida/tree/master/packages/pug-lint-config-rapida) - An extensible shared PugLint configuration to lint Pug code.
++ [stylint-config-rapida](https://github.com/YahiaRefaiea/rapida/tree/master/packages/stylint-config-rapida) - An extensible shared Stylint configuration to lint Stylus code.
 
 ## TODOs
 + Write tests for all packages.
@@ -40,7 +40,7 @@ Rapida contains several packages (available in the `./packages` directory):
 + [Seif Kowatli](https://github.com/seifkowatli)
 
 ## Contributing
-1. Fork this repository (https://github.com/nuotron/rapida).
+1. Fork this repository (https://github.com/YahiaRefaiea/rapida).
 2. Create your feature branch (`git checkout -b new-feature`).
 3. Commit your changes (`git commit -m 'add a new feature'`).
 4. Push to the branch (`git push origin new-feature`).
