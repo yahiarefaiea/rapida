@@ -1,6 +1,6 @@
 {
   "name": "@rapida/rest",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "An abstraction helper for REST API that creates an abstract controller that communicate with the database in a consistent way",
   "author": "Yahia Refaiea <hi@yahiarefaiea.com> (http://yahiarefaiea.com)",
   "main": "src/abstract.js",
@@ -11,7 +11,7 @@
     "start": "node demo/index.js"
   },
   "dependencies": {
-    "@rapida/response": "1.1.0",
+    "@rapida/response": "1.2.0",
     "lodash": "4.17.15"
   },
   "devDependencies": {

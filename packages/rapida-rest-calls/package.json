@@ -1,6 +1,6 @@
 {
   "name": "@rapida/rest-calls",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "An abstraction helper for http calls that returns api endpoints for each entity you create in a consistent way",
   "author": "Yahia Refaiea <hi@yahiarefaiea.com> (http://yahiarefaiea.com)",
   "main": "src/api.js",
@@ -15,7 +15,7 @@
     "lodash": "4.17.15"
   },
   "devDependencies": {
-    "@rapida/response": "1.1.0",
+    "@rapida/response": "1.2.0",
     "express": "4.17.1",
     "morgan": "1.9.1"
   }
