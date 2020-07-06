@@ -2,7 +2,7 @@
 
 **ESLint Config Rapida** - An extensible shared [ESLint](https://github.com/eslint/eslint) configuration to lint JavaScript code.
 
-This package is part of [Rapida](https://github.com/YahiaRefaiea/rapida).
+This package is part of [Rapida](https://github.com/yahiarefaiea/rapida).
 
 ## Usage
 In your project directory, install `eslint-config-rapida` by running:

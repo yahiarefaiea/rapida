@@ -2,7 +2,7 @@
 
 **Rapida Response** - An abstraction helper that returns a consistent responses all around your RESTful API.
 
-This package is part of [Rapida](https://github.com/YahiaRefaiea/rapida).
+This package is part of [Rapida](https://github.com/yahiarefaiea/rapida).
 
 ## Usage
 In your project directory, install `@rapida/response` by running:

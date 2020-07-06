@@ -5,8 +5,8 @@
   "author": "Yahia Refaiea <hi@yahiarefaiea.com> (http://yahiarefaiea.com)",
   "main": "src/api.js",
   "license": "MIT",
-  "repository": "https://github.com/YahiaRefaiea/rapida/tree/master/packages/rapida-rest-calls",
-  "homepage": "https://github.com/YahiaRefaiea/rapida",
+  "repository": "https://github.com/yahiarefaiea/rapida/tree/master/packages/rapida-rest-calls",
+  "homepage": "https://github.com/yahiarefaiea/rapida",
   "scripts": {
     "start": "node demo/index.js"
   },

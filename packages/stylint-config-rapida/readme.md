@@ -2,7 +2,7 @@
 
 **Stylint Config Rapida** - An extensible shared [Stylint](https://github.com/SimenB/stylint) configuration to lint Stylus code.
 
-This package is part of [Rapida](https://github.com/YahiaRefaiea/rapida).
+This package is part of [Rapida](https://github.com/yahiarefaiea/rapida).
 
 ## Usage
 In your project directory, install `stylint-config-rapida` by running:

@@ -4,8 +4,8 @@
   "description": "A starter-kit that creates an environment to help you focus on building a RESTful API",
   "author": "Yahia Refaiea <hi@yahiarefaiea.com> (http://yahiarefaiea.com)",
   "license": "MIT",
-  "repository": "https://github.com/YahiaRefaiea/rapida/tree/master/packages/rapida-api",
-  "homepage": "https://github.com/YahiaRefaiea/rapida",
+  "repository": "https://github.com/yahiarefaiea/rapida/tree/master/packages/rapida-api",
+  "homepage": "https://github.com/yahiarefaiea/rapida",
   "private": true,
   "engines": {
     "node": "12.14.0"

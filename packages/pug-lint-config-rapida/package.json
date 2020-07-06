@@ -5,6 +5,6 @@
   "author": "Yahia Refaiea <hi@yahiarefaiea.com> (http://yahiarefaiea.com)",
   "main": "index.js",
   "license": "MIT",
-  "repository": "https://github.com/YahiaRefaiea/rapida/tree/master/packages/pug-lint-config-rapida",
-  "homepage": "https://github.com/YahiaRefaiea/rapida"
+  "repository": "https://github.com/yahiarefaiea/rapida/tree/master/packages/pug-lint-config-rapida",
+  "homepage": "https://github.com/yahiarefaiea/rapida"
 }
