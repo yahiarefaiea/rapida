@@ -2,7 +2,7 @@
   "name": "rapida",
   "version": "1.3.1",
   "description": "A set of node.js starter-kits and helpers that can help you focus on the business requirements for your project and forget about starting from scratch every time",
-  "author": "Yahia Refaiea <hi@yahiarefaiea.com> (http://yahiarefaiea.com)",
+  "author": "Yahia Refaiea <hey@yahiarefaiea.com> (http://yahiarefaiea.com)",
   "license": "MIT",
   "private": true,
   "scripts": {
