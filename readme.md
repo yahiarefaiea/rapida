@@ -6,7 +6,7 @@
 
 Rapida is a set of [packages](#packages) that works together with the goal of helping us improve the projects we build at [Nuotron](https://github.com/nuotron).
 
-Rapida is now at `v1.3.0`.
+Rapida is now at `v1.3.1`.
 
 ## Packages
 Rapida contains several packages (available in the `./packages` directory):
