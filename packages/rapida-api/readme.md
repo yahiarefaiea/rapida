@@ -2,6 +2,8 @@
 
 **Rapida API** - A starter-kit that creates an environment to help you focus on building a RESTful API.
 
+**Warning** - Rapida API has been deprecated and it's no longer maintained.
+
 This package is part of [Rapida](https://github.com/yahiarefaiea/rapida).
 
 ## Compatibility

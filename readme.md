@@ -2,6 +2,8 @@
 
 **Rapida** - A set of node.js starter-kits and helpers that can help you focus on the business requirements for your project and forget about starting from scratch every time.
 
+**Warning** - Rapida has been deprecated and it's no longer maintained.
+
 Rapida is a set of [packages](#packages) that works together with the goal of helping us improve the projects we build at [Nuotron](https://github.com/nuotron).
 
 Rapida is now at `v1.3.0`.

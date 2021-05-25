@@ -2,6 +2,8 @@
 
 **Rapida Response** - An abstraction helper that returns a consistent responses all around your RESTful API.
 
+**Warning** - Rapida Response has been deprecated and it's no longer maintained.
+
 This package is part of [Rapida](https://github.com/yahiarefaiea/rapida).
 
 ## Usage

@@ -2,6 +2,8 @@
 
 **ESLint Config Rapida** - An extensible shared [ESLint](https://github.com/eslint/eslint) configuration to lint JavaScript code.
 
+**Warning** - ESLint Config Rapida has been deprecated and it's no longer maintained.
+
 This package is part of [Rapida](https://github.com/yahiarefaiea/rapida).
 
 ## Usage

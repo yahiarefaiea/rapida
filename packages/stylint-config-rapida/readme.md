@@ -2,6 +2,8 @@
 
 **Stylint Config Rapida** - An extensible shared [Stylint](https://github.com/SimenB/stylint) configuration to lint Stylus code.
 
+**Warning** - Stylint Config Rapida has been deprecated and it's no longer maintained.
+
 This package is part of [Rapida](https://github.com/yahiarefaiea/rapida).
 
 ## Usage

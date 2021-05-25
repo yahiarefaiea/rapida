@@ -2,6 +2,8 @@
 
 **Rapida UI** - A starter-kit that creates an environment to help you focus on building UI.
 
+**Warning** - Rapida UI has been deprecated and it's no longer maintained.
+
 This package is part of [Rapida](https://github.com/yahiarefaiea/rapida).
 
 ## Compatibility

@@ -2,6 +2,8 @@
 
 **Pug Lint Config Rapida** - An extensible shared [PugLint](https://github.com/pugjs/pug-lint) configuration to lint Pug code.
 
+**Warning** - Pug Lint Config Rapida has been deprecated and it's no longer maintained.
+
 This package is part of [Rapida](https://github.com/yahiarefaiea/rapida).
 
 ## Usage

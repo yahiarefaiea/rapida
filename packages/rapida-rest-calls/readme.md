@@ -2,6 +2,8 @@
 
 **Rapida REST Calls** - An abstraction helper for http calls that returns api endpoints for each entity you create in a consistent way.
 
+**Warning** - Rapida REST Calls has been deprecated and it's no longer maintained.
+
 This package is part of [Rapida](https://github.com/yahiarefaiea/rapida).
 
 ## Usage
