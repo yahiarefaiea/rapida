@@ -1,14 +1,16 @@
 {
   "name": "rapid-gulp",
   "version": "0.0.1",
-  "description": "Rapid gulp environment",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/YahiaRefaiea/rapid-gulp.git"
+  "description": "A starter-kit built using Gulp and NodeJS to help you start projects faster",
+  "author": {
+    "name": "Yahia Refaiea",
+    "email": "hey@yahiarefaiea.com",
+    "url": "http://yahiarefaiea.com"
   },
-  "author": "Yahia Refaiea <hello@yahiarefaiea.com>",
   "license": "MIT",
-  "homepage": "https://github.com/YahiaRefaiea/rapid-gulp#readme",
+  "repository": "https://github.com/yahiarefaiea/rapida/tree/master/packages/rapid-gulp",
+  "homepage": "https://github.com/yahiarefaiea/rapida",
+  "private": true,
   "scripts": {
     "dev": "npx gulp",
     "build": "npx gulp release",
