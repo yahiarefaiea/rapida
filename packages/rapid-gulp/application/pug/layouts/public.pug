@@ -1,0 +1,25 @@
+doctype html
+html(lang=app.lang dir=app.dir)
+
+  //- HEAD
+  head
+
+    //- TITLE AND META TAGS
+    block title
+      title= app.title
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    block meta
+      meta(name="description" content=app.description)
+      meta(name="author" content=app.author)
+
+    //- INCLUDES
+    link(rel="icon" type="image/png" href="includes/images/favicon.png")
+    link(rel="stylesheet" href="includes/stylesheets/nuo.lite.css")
+    script(src="includes/javascripts/nuo.lite.js")
+
+  //- BODY
+  body
+
+    //- CONTENT
+    block content

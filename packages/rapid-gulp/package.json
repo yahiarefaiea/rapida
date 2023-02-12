@@ -1,0 +1,27 @@
+{
+  "name": "rapid-gulp",
+  "version": "0.0.1",
+  "description": "Rapid gulp environment",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YahiaRefaiea/rapid-gulp.git"
+  },
+  "author": "Yahia Refaiea <hello@yahiarefaiea.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/YahiaRefaiea/rapid-gulp#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-banner": "^0.1.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-uglifycss": "^1.0.8",
+    "kouto-swiss": "^1.1.0",
+    "run-sequence": "^1.2.2"
+  }
+}
