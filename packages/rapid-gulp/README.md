@@ -1,6 +1,6 @@
 # Rapid gulp environment
 
-A starter kit built using Gulp and NodeJS environment to help you start your projects faster.
+A starter-kit built using Gulp and NodeJS to help you start projects faster.
 
 
 ## Requirements to run

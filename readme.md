@@ -23,6 +23,9 @@ Rapida contains several packages (available in the `./packages` directory):
 + [pug-lint-config-rapida](https://github.com/yahiarefaiea/rapida/tree/master/packages/pug-lint-config-rapida) - An extensible shared PugLint configuration to lint Pug code.
 + [stylint-config-rapida](https://github.com/yahiarefaiea/rapida/tree/master/packages/stylint-config-rapida) - An extensible shared Stylint configuration to lint Stylus code.
 
+### Legacy starter-kits
++ [rapid-gulp](https://github.com/yahiarefaiea/rapida/tree/master/packages/rapid-gulp) - A starter-kit built using Gulp and NodeJS to help you start projects faster.
+
 ## TODOs
 + Write tests for all packages.
 + Use Yeoman scaffolding tool to generate the starter-kits.
