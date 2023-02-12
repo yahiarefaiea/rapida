@@ -3,6 +3,11 @@
 A starter kit built using Gulp and NodeJS environment to help you start your projects faster.
 
 
+## Requirements to run
+Gulp `v3.9.1` with Node `v8.17.0`.
+> Gulp 3.9.1 will work with **Node 8** (latest noded 8 is 8.17.0) and with nothing newer. It's a dead and unsafe node version. So is the gulp project as a whole (last release in 2019). I could understand if it's a legacy project but using it in new projects should be prosecutable (note: it's my personal opinion only). If you are forced to use it and you have other node version already installed I recommend using **nvm** to manage multiple node versions on your environment.
+
+
 ## Used Commands
 Navigate to the project directory then:
 - Use `gulp` to run the project with live reloading using BrowserSync.
