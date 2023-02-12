@@ -112,3 +112,8 @@ gulp.task('watch', function() {
 gulp.task('default', function() {
   runSequence(['del', 'pug', 'babel', 'stylus', 'img', 'browserSync', 'watch']);
 });
+
+//  RELEASE
+gulp.task('release', function() {
+  runSequence(['del', 'pug', 'babel', 'stylus', 'img']);
+});
