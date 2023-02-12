@@ -9,6 +9,11 @@
   "author": "Yahia Refaiea <hello@yahiarefaiea.com>",
   "license": "MIT",
   "homepage": "https://github.com/YahiaRefaiea/rapid-gulp#readme",
+  "scripts": {
+    "dev": "npx gulp",
+    "build": "npx gulp release",
+    "clean": "npx gulp del"
+  },
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "del": "^2.2.2",
