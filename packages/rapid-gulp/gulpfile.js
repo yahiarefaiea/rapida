@@ -29,11 +29,16 @@ var gulp = require('gulp'),
     comment =
       '/*\n'+
       ' *  <%= pkg.name %> <%= pkg.version %>\n'+
+      ' *  \n'+
       ' *  <%= pkg.description %>\n'+
+      ' *  <%= pkg.homepage %>\n'+
+      ' *  <%= pkg.author.email %>\n'+
       ' *  \n'+
       ' *  Last update on: <%= new Date().getUTCFullYear() %>/'+
       '<%= new Date().getUTCMonth()+1 %>/<%= new Date().getUTCDate() %>\n'+
+      ' *  ©<%= new Date().getFullYear() %> <%= pkg.author.name %>. all rights reserved.\n'+
       ' *  Released under the <%= pkg.license %> license.\n'+
+      ' *  \n'+
       ' *  Source code available on GitHub on:\n'+
       ' *  <%= pkg.homepage %>\n'+
       ' */\n\n',
