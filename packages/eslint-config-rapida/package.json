@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-rapida",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "description": "An extensible shared ESLint configuration to lint JavaScript code",
   "author": "Yahia Refaiea <hey@yahiarefaiea.com> (http://yahiarefaiea.com)",
   "main": "index.js",
